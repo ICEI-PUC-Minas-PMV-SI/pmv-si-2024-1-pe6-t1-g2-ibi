@@ -47,9 +47,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Se trata de um instituto de ensino infantil, com grande quantidade de alunos e uma demanda muito alta para os professores, que tem a tarefa de registrar todos os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
-Atualmente todo o processo desse registro de informações é feito de modo manual, com isso o tempo para realizar esses relatórios fica muito extenso e acaba gerando uma sobrecarga para os professores. Sendo assim uma necessidade fundamental a modernização do sistema que vem sendo utilizado.
-Vendo assim a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e responsáveis.
+Daniele Ferreira de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registrada, ela tem muito do seu tempo tomado, fazendo relatórios manuais, já que esse processo é feito de modo individual, a modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
 
 ## Histórias de Usuários
 
