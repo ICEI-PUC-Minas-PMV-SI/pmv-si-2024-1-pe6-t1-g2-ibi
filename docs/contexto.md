@@ -16,12 +16,7 @@ O projeto tem como objetivo fazer uma agenda para o Instituto Batista Itatiaia n
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
-
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+O grupo escolheu trabalhar com esse tema após identificar a necessidade de modernização no processo de comunicação entre escola e responsável da criança. Atualmente o processo é feito de maneira manual pelo Instituto Batista Itatiaia, de forma que ocupa bastante tempo do profissional e não permite uma ciência imediata por parte do responsável. Com a migração desse processo para uma aplicação teria uma melhora na alocação de recursos e gestão de tempo da escola, além de aproximar os pais das rotinas dos filhos, facilitando assim a interação entre professor, família e aluno.
 
 ## Público-Alvo
 
@@ -43,6 +38,8 @@ Jose da Silva e um pedreiro de 45 anos, ele um profissional muito atarefado, que
 Devido as longas jornadas de serviço Jose tem pouco tempo para acompanhar o dia a dia do seu filho, que é aluno do instituto batista Itatiaia.
 Sendo assim Jose gostaria de alguma forma presenciar a rotina do seu filho,
 um aplicativo seria de grande valia para sua interação com os profissionais do instituto e para se sentir um pouco mais próximo do seu filho.
+
+Clara Gomes de 29 anos é mãe solteira e trabalha como gerente de marketing de uma grande empresa. Em meio às responsabilidades do trabalho, Clara da o seu melhor para ser uma mãe carinhosa e presente, e gostaria muito de acompanhar mais ativamente o progresso de sua filha Ana Beatriz na escola, mas devido a sua rotina exaustiva isso se torna muito mais complicado. Um aplicativo que viabilizasse o acompanhamento do desempenho de Ana pelo celular, iria permitir que Clara pudesse se manter atualizada em qualquer hora ou lugar.
 
 ## Histórias de Usuários
 
