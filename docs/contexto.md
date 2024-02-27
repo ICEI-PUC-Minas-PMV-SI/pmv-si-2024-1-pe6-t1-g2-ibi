@@ -12,12 +12,7 @@ Vendo assim a dificuldade de criar um aplicativo responsivo e funcional, em um c
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
-
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+O projeto tem como objetivo fazer uma agenda para o Instituto Batista Itatiaia na qual os pais possam ter acesso a rotina dos filhos dele via o celular, uma forma muito mais simples e eficiente comparado à forma como é feito atualmente, com formulários em papel, na qual exige muito tempo para preencher, e é mais difícil de consultar e armazenar. Sendo assim, a agenda também tem como objetivo otimizar o tempo dos professores e coordenadores, fazendo com que tarefas como gerir as turmas e preencher/acessar documentos de rotina sejam muito mais simples.
 
 ## Justificativa
 
@@ -30,16 +25,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+A agenda para o IBI tem como público-alvo todos os que estão envolvidos no dia a dia do instituto, logo temos, os coordenadores que vão participar da gestão das turmas, os professores que vão ser responsáveis pelas atualizações diárias da agenda e no relacionamento direto com os pais por via do aplicativo, e os pais, que são o público-alvo principal dos aplicativos, vão utilizar o aplicativo para acompanhar a rotina do filho e fazer eventuais comentários aos professores. A agenda vai ter como prioridade um fácil acesso por parte dos pais, mesmo os que não possuem muita familiaridade com celulares, e fazer com que a rotina dos professores seja mais eficiente e menos trabalhosa fazendo relatórios de forma manual.
 
 # Especificações do Projeto
 
@@ -50,6 +36,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 ## Personas
 
 Daniele Ferreira de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registrada, ela tem muito do seu tempo tomado, fazendo relatórios manuais, já que esse processo é feito de modo individual, a modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
+
+Ana Barros Ferreira, 46 anos, é professora por mais de 20 anos e está no instituto há 8 anos. Ana não é particularmente muito chegada na modernização que está ocorrendo atualmente, usando seu celular, por exemplo, apenas para troca de mensagens e acompanhar alguns vídeos sobre notícias diárias, e quando necessita acessar um aplicativo, ela pede auxílio a terceiros. Já no computador, Ana possui um conhecimento básico, já que foi necessitado utilizar para preenchimento de diário em trabalhos anteriores, porém ela se limitou a fazer apenas isso, sem possuir muito conhecimento em outras utilidades do computador.
 
 Jose da Silva e um pedreiro de 45 anos, ele um profissional muito atarefado, que dedica a maior parte do seu dia ao trabalho. 
 Devido as longas jornadas de serviço Jose tem pouco tempo para acompanhar o dia a dia do seu filho, que é aluno do instituto batista Itatiaia.
