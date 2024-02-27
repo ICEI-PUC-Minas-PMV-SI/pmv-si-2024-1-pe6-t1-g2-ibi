@@ -47,19 +47,9 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Se trata de um instituto de ensino infantil, com grande quantidade de alunos e uma demanda muito alta para os professores, que tem a tarefa de registrar todos os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
+Atualmente todo o processo desse registro de informações é feito de modo manual, com isso o tempo para realizar esses relatórios fica muito extenso e acaba gerando uma sobrecarga para os professores. Sendo assim uma necessidade fundamental a modernização do sistema que vem sendo utilizado.
+Vendo assim a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e responsáveis.
 
 ## Histórias de Usuários
 
