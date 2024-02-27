@@ -4,7 +4,9 @@ Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o pr
 
 ## Problema
 Se trata de um instituto de ensino infantil, com grande quantidade de alunos e uma demanda muito alta para os professores, que tem a tarefa de registrar todos os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
+
 Atualmente todo o processo desse registro de informações é feito de modo manual, com isso o tempo para realizar esses relatórios fica muito extenso e acaba gerando uma sobrecarga para os professores. Sendo assim uma necessidade fundamental a modernização do sistema que vem sendo utilizado.
+
 Vendo assim a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e responsáveis.
 
 
