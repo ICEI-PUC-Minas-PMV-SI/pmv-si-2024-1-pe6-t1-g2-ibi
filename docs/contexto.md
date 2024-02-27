@@ -51,6 +51,11 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Daniele Ferreira de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registrada, ela tem muito do seu tempo tomado, fazendo relatórios manuais, já que esse processo é feito de modo individual, a modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
 
+Jose da Silva e um pedreiro de 45 anos, ele um profissional muito atarefado, que dedica a maior parte do seu dia ao trabalho. 
+Devido as longas jornadas de serviço Jose tem pouco tempo para acompanhar o dia a dia do seu filho, que é aluno do instituto batista Itatiaia.
+Sendo assim Jose gostaria de alguma forma presenciar a rotina do seu filho,
+um aplicativo seria de grande valia para sua interação com os profissionais do instituto e para se sentir um pouco mais próximo do seu filho.
+
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
