@@ -1,9 +1,13 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Atualmente, existe a discussão entre facilitar o trabalho desempenhado na sociedade por meio do uso da tecnologia. Embora esteja em nossa volta, ainda há muita resistência em adaptar velhas rotinas a condutas mais eficazes, além disso, existe, também, um desconhecimento do que pode ser proporcionado por meio do uso correto da digitalização.
+
+De mais a mais, o ambiente de ensino é um dos locais que mais vem passando por mudanças nos últimos anos, principalmente com o período pandêmico recente. Dessa forma, instituições escolares devem sempre estar atentas nas inovações que possam trazer benefícios para todos os indivíduos que participam direta e indiretamente de suas atividades.
+
+Diversas vantagens são notadas para os alunos, responsáveis, professores e coordenadores quando a tecnologia é usada como força motor na otimização das atividiades escolares. Diante deste cenário, observando a necessidade de virtualizar a agenda de atividades diárias dos alunos do Instituto Batista Itatiaia (IBI), o presente grupo escolheu criar uma agenda digital para a entidade escolar.
 
 ## Problema
-O Instituto Batista Itatiaia (IBI) é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
+O Instituto Batista Itatiaia é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
 
 Atualmente, todo o processo desse registro de informações é feito de modo manual, com isso, o tempo para realizar esses relatórios tem se tornado muito extenso, gerando uma sobrecarga para os professores e administradores. Sendo assim, é uma necessidade fundamental a modernização do sistema que vem sendo utilizado no ambiente escolar.
 
