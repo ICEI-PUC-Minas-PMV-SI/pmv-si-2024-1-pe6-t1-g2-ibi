@@ -3,24 +3,31 @@
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
-Se trata de um instituto de ensino infantil, com grande quantidade de alunos e uma demanda muito alta para os professores, que tem a tarefa de registrar todos os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
+O Instituto Batista Itatiaia (IBI) é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
 
-Atualmente todo o processo desse registro de informações é feito de modo manual, com isso o tempo para realizar esses relatórios fica muito extenso e acaba gerando uma sobrecarga para os professores. Sendo assim uma necessidade fundamental a modernização do sistema que vem sendo utilizado.
+Atualmente, todo o processo desse registro de informações é feito de modo manual, com isso, o tempo para realizar esses relatórios tem se tornado muito extenso, gerando uma sobrecarga para os professores e administradores. Sendo assim, é uma necessidade fundamental a modernização do sistema que vem sendo utilizado no ambiente escolar.
 
-Vendo assim a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e responsáveis.
+Portanto, existe a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e demais responsáveis.
 
 
 ## Objetivos
+### Objetivo Geral
+- Fazer uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores.
 
-O projeto tem como objetivo fazer uma agenda para o Instituto Batista Itatiaia na qual os pais possam ter acesso a rotina dos filhos dele via o celular, uma forma muito mais simples e eficiente comparado à forma como é feito atualmente, com formulários em papel, na qual exige muito tempo para preencher, e é mais difícil de consultar e armazenar. Sendo assim, a agenda também tem como objetivo otimizar o tempo dos professores e coordenadores, fazendo com que tarefas como gerir as turmas e preencher/acessar documentos de rotina sejam muito mais simples.
+### Objetivos Específicos
+- Tornar mais eficiente o registro de informações pelos professores/coordenadores.
+- Facilitar o acesso dos pais/responsáveis a rotina dos seus filhos.
+- Auxiliar o controle das turmas pelos professores/coordenadores.
 
 ## Justificativa
 
-O grupo escolheu trabalhar com esse tema após identificar a necessidade de modernização no processo de comunicação entre escola e responsável da criança. Atualmente o processo é feito de maneira manual pelo Instituto Batista Itatiaia, de forma que ocupa bastante tempo do profissional e não permite uma ciência imediata por parte do responsável. Com a migração desse processo para uma aplicação teria uma melhora na alocação de recursos e gestão de tempo da escola, além de aproximar os pais das rotinas dos filhos, facilitando assim a interação entre professor, família e aluno.
+O grupo escolheu trabalhar com esse tema após identificar a necessidade de modernização no processo de comunicação entre escola e responsável da criança, conforme exposto nos objetivos supracitados. Atualmente, o processo é feito manualmente pelo Instituto Batista Itatiaia, de forma que ocupa bastante tempo do profissional e não permite uma ciência imediata por parte do responsável.
+
+Com a migração desse processo para uma aplicação, ocorreria uma melhora na alocação de recursos e gestão de tempo da escola, além de aproximar os pais/responsáveis das rotinas das crianças, facilitando assim a interação entre professor, família e aluno.
 
 ## Público-Alvo
 
-A agenda para o IBI tem como público-alvo todos os que estão envolvidos no dia a dia do instituto, logo temos, os coordenadores que vão participar da gestão das turmas, os professores que vão ser responsáveis pelas atualizações diárias da agenda e no relacionamento direto com os pais por via do aplicativo, e os pais, que são o público-alvo principal dos aplicativos, vão utilizar o aplicativo para acompanhar a rotina do filho e fazer eventuais comentários aos professores. A agenda vai ter como prioridade um fácil acesso por parte dos pais, mesmo os que não possuem muita familiaridade com celulares, e fazer com que a rotina dos professores seja mais eficiente e menos trabalhosa fazendo relatórios de forma manual.
+A agenda para o IBI tem como público-alvo todos os que estão envolvidos no dia a dia da instituição. Logo, são os coordenadores que vão participar da gestão das turmas; os professores que vão ser responsáveis pelas atualizações diárias da agenda e no relacionamento direto com os pais por via do aplicativo; e os pais que são o público-alvo principal dos aplicativos, pois vão utilizar o aplicativo para acompanhar a rotina do filho e fazer eventuais comentários aos professores.
 
 # Especificações do Projeto
 
@@ -30,18 +37,16 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Márcia é a coordenadora do Instituto há 15 anos, sempre enfrentou muitas dificuldades como coordenadora, sempre lidando com reclamações diariamente de pais é alunos. Com toda essa dificuldade Márcia decide aderir a um projeto de modernização, onde o Instituto passaria todas suas anotações sobre os alunos para uma forma virtual, assim facilitando a interação entre pais e a coordenação do Instituto. Com a modernização já implantada os pais terão acesso ao rendimento do filho. Com isso Márcia irá enfrentar menos problemas diários.
+**Márcia Moreira** é a coordenadora do Instituto há 15 anos, sempre enfrentou muitas dificuldades como coordenadora, sempre lidando com reclamações diariamente de pais é alunos. Com toda essa dificuldade Márcia decide aderir a um projeto de modernização, onde o Instituto passaria todas suas anotações sobre os alunos para uma forma virtual, assim facilitando a interação entre pais e a coordenação do Instituto. Com a modernização já implantada, os pais terão acesso ao rendimento do filho. Com isso, Márcia irá enfrentar menos problemas diários.
 
-Daniele Ferreira de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registrada, ela tem muito do seu tempo tomado, fazendo relatórios manuais, já que esse processo é feito de modo individual, a modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
+**Daniele Ferreira** de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registradas. Muito do seu tempo tomado decorre de relatórios manuais, já que esse processo é feito de modo individual. A modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
 
-Ana Barros Ferreira, 46 anos, é professora por mais de 20 anos e está no instituto há 8 anos. Ana não é particularmente muito chegada na modernização que está ocorrendo atualmente, usando seu celular, por exemplo, apenas para troca de mensagens e acompanhar alguns vídeos sobre notícias diárias, e quando necessita acessar um aplicativo, ela pede auxílio a terceiros. Já no computador, Ana possui um conhecimento básico, já que foi necessitado utilizar para preenchimento de diário em trabalhos anteriores, porém ela se limitou a fazer apenas isso, sem possuir muito conhecimento em outras utilidades do computador.
+**Ana Barros Ferreira**, 46 anos, é professora por mais de 20 anos e está no instituto há 8 anos. Ana não é particularmente muito favorável na modernização que está ocorrendo atualmente. Usa seu celular, por exemplo, apenas para troca de mensagens e acompanhar alguns vídeos sobre notícias diárias. Quando necessita acessar um aplicativo, pede auxílio a terceiros. Já no computador, Ana possui um conhecimento básico, pois foi necessitado utilizar para preenchimento de diário em trabalhos anteriores. Entretanto, se limitou a fazer apenas isso, sem possuir muito conhecimento em outras utilidades do computador.
 
-Jose da Silva e um pedreiro de 45 anos, ele um profissional muito atarefado, que dedica a maior parte do seu dia ao trabalho. 
-Devido as longas jornadas de serviço Jose tem pouco tempo para acompanhar o dia a dia do seu filho, que é aluno do instituto batista Itatiaia.
-Sendo assim Jose gostaria de alguma forma presenciar a rotina do seu filho,
-um aplicativo seria de grande valia para sua interação com os profissionais do instituto e para se sentir um pouco mais próximo do seu filho.
+**Jose da Silva** é um pedreiro de 45 anos. Por ser um um profissional muito atarefado, dedica a maior parte do seu dia ao trabalho. 
+Devido as longas jornadas de serviço, Jose tem pouco tempo para acompanhar o dia a dia do seu filho, que é aluno do IBI. Sendo assim Jose gostaria de alguma forma presenciar a rotina do seu filho.
 
-Clara Gomes de 29 anos é mãe solteira e trabalha como gerente de marketing de uma grande empresa. Em meio às responsabilidades do trabalho, Clara da o seu melhor para ser uma mãe carinhosa e presente, e gostaria muito de acompanhar mais ativamente o progresso de sua filha Ana Beatriz na escola, mas devido a sua rotina exaustiva isso se torna muito mais complicado. Um aplicativo que viabilizasse o acompanhamento do desempenho de Ana pelo celular, iria permitir que Clara pudesse se manter atualizada em qualquer hora ou lugar.
+**Clara Gomes** de 29 anos é mãe solteira e trabalha como gerente de marketing de uma grande empresa. Em meio às responsabilidades do trabalho, Clara dá o seu melhor para ser uma mãe carinhosa e presente. Dessa forma, gostaria muito de acompanhar mais ativamente o progresso de sua filha Ana Beatriz na escola, mas devido a sua rotina exaustiva isso se torna muito mais complicado. Um aplicativo, que viabilizasse o acompanhamento do desempenho de Ana pelo celular, iria permitir que Clara pudesse se manter atualizada em qualquer hora ou lugar.
 
 ## Histórias de Usuários
 
