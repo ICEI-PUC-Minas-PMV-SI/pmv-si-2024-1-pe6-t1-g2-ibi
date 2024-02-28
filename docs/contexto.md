@@ -30,6 +30,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
+Márcia é a coordenadora do Instituto há 15 anos, sempre enfrentou muitas dificuldades como coordenadora, sempre lidando com reclamações diariamente de pais é alunos. Com toda essa dificuldade Márcia decide aderir a um projeto de modernização, onde o Instituto passaria todas suas anotações sobre os alunos para uma forma virtual, assim facilitando a interação entre pais e a coordenação do Instituto. Com a modernização já implantada os pais terão acesso ao rendimento do filho. Com isso Márcia irá enfrentar menos problemas diários.
+
 Daniele Ferreira de 32 anos é professora de uma turma de 37 alunos, sua turma permanece em tempo integral na instituição, tendo alguns alunos com muitas intercorrências a serem registrada, ela tem muito do seu tempo tomado, fazendo relatórios manuais, já que esse processo é feito de modo individual, a modernização desse sistema daria a ela mais tempo para pensar em outras atividades recreativas para sua turma.
 
 Ana Barros Ferreira, 46 anos, é professora por mais de 20 anos e está no instituto há 8 anos. Ana não é particularmente muito chegada na modernização que está ocorrendo atualmente, usando seu celular, por exemplo, apenas para troca de mensagens e acompanhar alguns vídeos sobre notícias diárias, e quando necessita acessar um aplicativo, ela pede auxílio a terceiros. Já no computador, Ana possui um conhecimento básico, já que foi necessitado utilizar para preenchimento de diário em trabalhos anteriores, porém ela se limitou a fazer apenas isso, sem possuir muito conhecimento em outras utilidades do computador.
