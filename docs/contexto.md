@@ -77,30 +77,27 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Permitir que o administrador crie, edite e exclua usuários****   | ALTA |
+|RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
+|RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
+|RF-004| Acessar o sistema via login   | ALTA | 
+|RF-002| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
+|RF-002| Permitir que os usuários alterem a senha   | MÉDIA |
+|RF-002| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login****   | MÉDIA |
+|RF-002| Emitir credências de usuário de forma automática ****   | MÉDIA |
+|RF-002| Emitir credências de usuário de forma automática ****   | MÉDIA |
+|RF-002| Permitir que os responsáveis façam observações aos professores por via de áudio****   | BAIXA |
+|RF-002| Permitir que os relatórios possam ser baixados****   | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
+|RNF-002| O sistema deve possuir uma interface de baixa complexidade para uso | ALTA | 
+|RNF-003| O sistema será acessado apenas online | MÉDIA | 
+|RNF-004| Deve processar requisições do usuário em no máximo 3s | BAIXA | 
+|RNF-004| O sistema será hospedado na nuvem | BAIXA |
 
 ## Restrições
 
@@ -109,17 +106,16 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+|02| Estar em conformidade com as leis brasileiras de proteção de dados |
+|03| Cada etapa do projeto deve ser entregue nos prazos pré-definidos |
+|04| O projeto não poderá depender de qualquer tipo de orçamento |
+|05| O projeto deverá ser desenvolvido apenas pela equipe pré definida |
 
 # Catálogo de Serviços
 
 Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
+
+O projeto vai oferecer como principal serviço ao Instituo Batista Itatia uma agenda para os pais conseguirem acessar a rotina dos filhos de forma prática no celular, que também irá auxiliar o instituto a otimizar a forma que a rotina do filho é entregue, já que, atualmente, é feita de forma manual preenchendo formulário de cada aluno. Junto com a agenda, o projeto também vai auxiliar o instituto a modernizar a forma como eles acessam dados, já que para o uso da agenda, será necessário criar um banco de dados, o qual será muito útil para consultas mais práticas futuramente.
 
 
 # Gerenciamento de Projeto
@@ -150,17 +146,20 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+
+Visual Studio - É a IDE que será utilizada para o desenvolvimento do projeto 
+
+Git - É a ferramenta para controle de versões de software que será utilizada durante o projeto 
+
+C#/ASP .NET Core – Para o desenvolvimento back-end da agenda será utilizado o Framework ASP .NET Core, um framework que utiliza a linguagem C#, para a criação da API que irá acessar e controlar o back-end a partir de requisições do front-end. 
+
+React JS – Para o desenvolvimento front-end web da aplicação, será utilizado React JS, um framework que utiliza a linguagem Javascript, o qual auxiliará a criar uma interface web responsiva tanto no computador, quanto no mobile da aplicação, 
+
+React Native – Para o desenvolvimento front-end da aplicação, será utilizado o React Native, um framework que utiliza do Javascript, o qual auxiliará a criar uma interface mobile utilizando os recursos nativos de celulares e tablets, por exemplo. 
+
+MySQL – Para o desenvolvimento do back-end, será utilizado o MySQL, um banco de dados relacional, o qual auxiliará na criação e gerenciamento do banco de dados que será utilizado na aplicação 
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A aplicação estará pronta para ser utilizada no Repl.it de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação, e caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem, ou investir em um servidor próprio.
