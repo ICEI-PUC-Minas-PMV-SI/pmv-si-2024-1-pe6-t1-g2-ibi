@@ -1,10 +1,15 @@
 # Introdução
 
-Atualmente, existe a discussão entre facilitar o trabalho desempenhado na sociedade por meio do uso da tecnologia. Embora esteja em nossa volta, ainda há muita resistência em adaptar velhas rotinas a condutas mais eficazes, além disso, existe, também, um desconhecimento do que pode ser proporcionado por meio do uso correto da digitalização.
+Atualmente, existe a discussão entre facilitar o trabalho desempenhado na sociedade por meio do uso da tecnologia, bem como nos demais usos cotidiados. Neste sentido, Alexandre Cappellozza aponta que[1](#sdfootnote1sym):
+*"As Tecnologias de Informação estão amplamente inseridas no cotidiano do ser humano, facilitando **suas atividades rotineiras**, **seja para trabalhar** ou estudar, seja para manter-se informado com relação às notícias de seu interesse, relacionar-se com outras pessoas e comunicar-se com familiares ou amigos (Bargh & Mckenna, 2004). Em 2015, a quantidade de usuários que utilizaram a Internet por meio de computadores ou dispositivos móveis foi estimada em 3,1 bilhões de pessoas em todo o mundo, o que equivale a 40% de toda a população global. No Brasil, o total de usuários atingiu 107 milhões de pessoas, o que representa 53% da população nacional e coloca o país na quinta posição na lista dos que mais acessam a rede, após China, Estados Unidos, Índia e Japão (Emarketer, 2014)"* (grifo nosso)
 
-De mais a mais, o ambiente de ensino é um dos locais que mais vem passando por mudanças nos últimos anos, principalmente com o período pandêmico recente. Dessa forma, instituições escolares devem sempre estar atentas nas inovações que possam trazer benefícios para todos os indivíduos que participam direta e indiretamente de suas atividades.
+Embora esteja em nossa volta, ainda pode haver muita resistência em adaptar velhas rotinas a condutas mais eficazes, além disso, existe, também, um desconhecimento do que pode ser proporcionado por meio do uso correto da digitalização. De mais a mais, o ambiente de ensino é um dos locais que mais vem passando por mudanças nos últimos anos, principalmente com o período pandêmico recente, conforme pode ser observado nas palavras de Jesus Izquierdo [2](#sdfootnote1sym):
+*"**A inclusão digital nos remete à participação das novas gerações na revolução tecnológica**, da qual nos falava Suzman (2021). Assim, falar da necessidade de fortalecer a relação entre a inclusão digital e o desempenho escolar nos dá a oportunidade de pensarmos na possibilidade de transformar o mundo começando pela vida das pessoas. Essa não é tarefa fácil. Nossas vivências junto ao ensino remoto nos permitiu verificar que muitos alunos careciam de condições mínimas para participar das aulas virtuais. Sem conexão à internet, sem equipamento e espaço físico adequado, para esses jovens, **o período da pandemia se tornou sinônimo de ruptura com o sistema escolar**"* (grifo nosso)
 
-Diversas vantagens são notadas para os alunos, responsáveis, professores e coordenadores quando a tecnologia é usada como força motor na otimização das atividiades escolares. Diante deste cenário, observando a necessidade de virtualizar a agenda de atividades diárias dos alunos do Instituto Batista Itatiaia (IBI), o presente grupo escolheu criar uma agenda digital para a entidade escolar.
+Dessa forma, instituições escolares devem sempre estar atentas nas inovações que possam trazer benefícios para todos os indivíduos que participam direta e indiretamente de suas atividades. Diversas vantagens são notadas para os alunos, responsáveis, professores e coordenadores quando a tecnologia é usada como força motor na otimização das atividiades escolares. Diante deste cenário, observando a necessidade de virtualizar a agenda de atividades diárias dos alunos do Instituto Batista Itatiaia (IBI), o presente grupo escolheu criar uma agenda digital para a entidade escolar.
+
+[1](#sdfootnote1sym) CAPPELLOZZA, Alexandre et al. **Uso Pessoal das Tecnologias no Trabalho: Motivadores e Efeitos à Distração Profissional**. Disponível em: <https://doi.org/10.1590/1982-7849rac2017160145>.
+[2](#sdfootnote1sym). IZQUIERDO, Jesus. **Inclusão digital e desempenho escolar no contexto da pandemia: uma análise comparativa entre Brasil e Colômbia**. Disponível em <https://doi.org/10.15448/1984-7289.2023.1.42196>. 
 
 ## Problema
 O Instituto Batista Itatiaia é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
@@ -12,7 +17,6 @@ O Instituto Batista Itatiaia é uma entidade ensino infantil, poussindo uma gran
 Atualmente, todo o processo desse registro de informações é feito de modo manual, com isso, o tempo para realizar esses relatórios tem se tornado muito extenso, gerando uma sobrecarga para os professores e administradores. Sendo assim, é uma necessidade fundamental a modernização do sistema que vem sendo utilizado no ambiente escolar.
 
 Portanto, existe a dificuldade de criar um aplicativo responsivo e funcional, em um curto período de tempo, para o fácil acesso dos professores, coordenadores, pais e demais responsáveis.
-
 
 ## Objetivos
 ### Objetivo Geral
