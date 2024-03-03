@@ -11,6 +11,7 @@ Embora esteja em nossa volta, ainda pode haver muita resistência em adaptar vel
 Dessa forma, instituições escolares devem sempre estar atentas nas inovações que possam trazer benefícios para todos os indivíduos que participam direta e indiretamente de suas atividades. Diversas vantagens são notadas para os alunos, responsáveis, professores e coordenadores quando a tecnologia é usada como força motor na otimização das atividiades escolares. Diante deste cenário, observando a necessidade de virtualizar a agenda de atividades diárias dos alunos do Instituto Batista Itatiaia (IBI), o presente grupo escolheu criar uma agenda digital para a entidade escolar.
 
 [1](#sdfootnote1sym) CAPPELLOZZA, Alexandre et al. **Uso Pessoal das Tecnologias no Trabalho: Motivadores e Efeitos à Distração Profissional**. Disponível em: <https://doi.org/10.1590/1982-7849rac2017160145>.
+
 [2](#sdfootnote1sym). IZQUIERDO, Jesus. **Inclusão digital e desempenho escolar no contexto da pandemia: uma análise comparativa entre Brasil e Colômbia**. Disponível em <https://doi.org/10.15448/1984-7289.2023.1.42196>. 
 
 ## Problema
