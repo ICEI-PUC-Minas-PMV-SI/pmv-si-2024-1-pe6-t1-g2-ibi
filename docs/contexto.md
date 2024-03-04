@@ -12,7 +12,7 @@ Dessa forma, instituições escolares devem sempre estar atentas nas inovações
 
 [1](#sdfootnote1sym) CAPPELLOZZA, Alexandre et al. **Uso Pessoal das Tecnologias no Trabalho: Motivadores e Efeitos à Distração Profissional**. Disponível em: <https://doi.org/10.1590/1982-7849rac2017160145>.
 
-[2](#sdfootnote1sym). IZQUIERDO, Jesus. **Inclusão digital e desempenho escolar no contexto da pandemia: uma análise comparativa entre Brasil e Colômbia**. Disponível em <https://doi.org/10.15448/1984-7289.2023.1.42196>. 
+[2](#sdfootnote1sym). IZQUIERDO, Jesus et al. **Inclusão digital e desempenho escolar no contexto da pandemia: uma análise comparativa entre Brasil e Colômbia**. Disponível em <https://doi.org/10.15448/1984-7289.2023.1.42196>. 
 
 ## Problema
 O Instituto Batista Itatiaia é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
@@ -42,10 +42,6 @@ A agenda para o IBI tem como público-alvo todos os que estão envolvidos no dia
 
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
-
 ## Personas
 
 **Márcia Moreira** é a *coordenadora* do Instituto há 15 anos, sempre enfrentou muitas dificuldades como coordenadora, sempre lidando com reclamações diariamente de pais é alunos. Com toda essa dificuldade Márcia decide aderir a um projeto de modernização, onde o Instituto passaria todas suas anotações sobre os alunos para uma forma virtual, assim facilitando a interação entre pais e a coordenação do Instituto. Com a modernização já implantada, os pais terão acesso ao rendimento do filho. Com isso, Márcia irá enfrentar menos problemas diários.
@@ -62,19 +58,14 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
-|--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE`       |PARA ... `MOTIVO/VALOR`                                         |
+|--------------------|------------------------------------------|----------------------------------------------------------------|
+|Pais/Responsáveis   | Acessar a rotina dos meu filho           | Saber como foi o dia dia dele                                  |
+|Pais/Responsáveis   | Registrar comentário na rotina diária    | Manter comunicação com a escola                                |
+|Professor           | Registrar a rotina de cada aluno         | Comunicar aos pais da rotina dos filhos                        |
+|Professor           | Ler os comentários registrados pelos pais| Verificar se há necessidades específicas de cada aluno         |
+|Coordenador         | Cadastrar usuários                       | Possibilitar o registro e acesso de informações                |
+|Coordenador         | Deletar usuários                         | Possibilitar a retirada de perfis não mais vinculados a escola |
 
 ## Requisitos
 
@@ -88,13 +79,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
 |RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
 |RF-004| Acessar o sistema via login   | ALTA | 
-|RF-002| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
-|RF-002| Permitir que os usuários alterem a senha   | MÉDIA |
-|RF-002| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login****   | MÉDIA |
-|RF-002| Emitir credências de usuário de forma automática ****   | MÉDIA |
-|RF-002| Emitir credências de usuário de forma automática ****   | MÉDIA |
-|RF-002| Permitir que os responsáveis façam observações aos professores por via de áudio****   | BAIXA |
-|RF-002| Permitir que os relatórios possam ser baixados****   | BAIXA |
+|RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
+|RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
+|RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login****   | MÉDIA |
+|RF-008| Emitir credências de usuário de forma automática ****   | MÉDIA |
+|RF-009| Emitir credências de usuário de forma automática ****   | MÉDIA |
+|RF-010| Permitir que os responsáveis façam observações aos professores por via de áudio****   | BAIXA |
+|RF-011| Permitir que os relatórios possam ser baixados****   | BAIXA |
 
 ### Requisitos não Funcionais
 
@@ -104,7 +95,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002| O sistema deve possuir uma interface de baixa complexidade para uso | ALTA | 
 |RNF-003| O sistema será acessado apenas online | MÉDIA | 
 |RNF-004| Deve processar requisições do usuário em no máximo 3s | BAIXA | 
-|RNF-004| O sistema será hospedado na nuvem | BAIXA |
+|RNF-005| O sistema será hospedado na nuvem | BAIXA |
 
 ## Restrições
 
