@@ -111,9 +111,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Catálogo de Serviços
 
-Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
-
-O projeto vai oferecer como principal serviço ao Instituo Batista Itatia uma agenda para os pais conseguirem acessar a rotina dos filhos de forma prática no celular, que também irá auxiliar o instituto a otimizar a forma que a rotina do filho é entregue, já que, atualmente, é feita de forma manual preenchendo formulário de cada aluno. Junto com a agenda, o projeto também vai auxiliar o instituto a modernizar a forma como eles acessam dados, já que para o uso da agenda, será necessário criar um banco de dados, o qual será muito útil para consultas mais práticas futuramente.
+O projeto vai oferecer, como principal serviço ao IBI, uma agenda para os pais acessarem a rotina dos filhos de forma prática no celular. De mais a mais, também irá auxiliar o Instituto a otimizar a forma que a rotina do estudante é entregue aos responsáveis, já que, atualmente, é feita de forma manual, preenchendo formulário de cada aluno. Junto com a agenda, o projeto também vai auxiliar o Instituto a modernizar a forma como eles acessam dados, pois, para o uso da agenda, será necessário criar um banco de dados, o qual será muito útil para consultas futuras.
 
 
 # Gerenciamento de Projeto
@@ -138,26 +136,22 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 # Arquitetura da Solução
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/02-mob-arch.png)
-
 ## Tecnologias Utilizadas
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+No presente projeto, serão utilizadas as seguintes tecnologias:
 
-Visual Studio - É a IDE que será utilizada para o desenvolvimento do projeto 
+**Visual Studio** - É a IDE que será utilizada para o desenvolvimento do projeto 
 
-Git - É a ferramenta para controle de versões de software que será utilizada durante o projeto 
+**Git** - É a ferramenta para controle de versões de software que será utilizada durante o projeto 
 
-C#/ASP .NET Core – Para o desenvolvimento back-end da agenda será utilizado o Framework ASP .NET Core, um framework que utiliza a linguagem C#, para a criação da API que irá acessar e controlar o back-end a partir de requisições do front-end. 
+**C#/ASP .NET Core** – Para o desenvolvimento back-end da agenda será utilizado o Framework ASP .NET Core, um framework que utiliza a linguagem C#, para a criação da API que irá acessar e controlar o back-end a partir de requisições do front-end. 
 
-React JS – Para o desenvolvimento front-end web da aplicação, será utilizado React JS, um framework que utiliza a linguagem Javascript, o qual auxiliará a criar uma interface web responsiva tanto no computador, quanto no mobile da aplicação, 
+**React JS** – Para o desenvolvimento front-end web da aplicação, será utilizado React JS, um framework que utiliza a linguagem Javascript, o qual auxiliará a criar uma interface web responsiva tanto no computador, quanto no mobile da aplicação, 
 
-React Native – Para o desenvolvimento front-end da aplicação, será utilizado o React Native, um framework que utiliza do Javascript, o qual auxiliará a criar uma interface mobile utilizando os recursos nativos de celulares e tablets, por exemplo. 
+**React Native** – Para o desenvolvimento front-end da aplicação, será utilizado o React Native, um framework que utiliza do Javascript, o qual auxiliará a criar uma interface mobile utilizando os recursos nativos de celulares e tablets, por exemplo. 
 
-MySQL – Para o desenvolvimento do back-end, será utilizado o MySQL, um banco de dados relacional, o qual auxiliará na criação e gerenciamento do banco de dados que será utilizado na aplicação 
+**MySQL** – Para o desenvolvimento do back-end, será utilizado o MySQL, um banco de dados relacional, o qual auxiliará na criação e gerenciamento do banco de dados que será utilizado na aplicação 
 
 ## Hospedagem
 
-A aplicação estará pronta para ser utilizada no Repl.it de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação, e caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem, ou investir em um servidor próprio.
+A aplicação estará pronta para ser utilizada no *Repl.it* de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação. Caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem ou investir em um servidor próprio.
