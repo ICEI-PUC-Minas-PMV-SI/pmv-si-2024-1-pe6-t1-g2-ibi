@@ -1,6 +1,6 @@
 # Introdução
 
-Atualmente, existe a discussão entre facilitar o trabalho desempenhado na sociedade por meio do uso da tecnologia, bem como nos demais usos cotidiados. Neste sentido, Alexandre Cappellozza aponta que[1](#sdfootnote1sym):
+Atualmente, existe a discussão entre facilitar o trabalho desempenhado na sociedade por meio do uso da tecnologia, bem como nos demais usos cotidianos. Neste sentido, Alexandre Cappellozza aponta que[1](#sdfootnote1sym):
 
 *"As Tecnologias de Informação estão amplamente inseridas no cotidiano do ser humano, facilitando **suas atividades rotineiras**, **seja para trabalhar** ou estudar, seja para manter-se informado com relação às notícias de seu interesse, relacionar-se com outras pessoas e comunicar-se com familiares ou amigos (Bargh & Mckenna, 2004). Em 2015, a quantidade de usuários que utilizaram a Internet por meio de computadores ou dispositivos móveis foi estimada em 3,1 bilhões de pessoas em todo o mundo, o que equivale a 40% de toda a população global. No Brasil, o total de usuários atingiu 107 milhões de pessoas, o que representa 53% da população nacional e coloca o país na quinta posição na lista dos que mais acessam a rede, após China, Estados Unidos, Índia e Japão (Emarketer, 2014)"* (grifo nosso)
 
