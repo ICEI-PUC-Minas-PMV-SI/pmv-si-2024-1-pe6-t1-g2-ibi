@@ -152,3 +152,5 @@ No presente projeto, serão utilizadas as seguintes tecnologias:
 ## Hospedagem
 
 A aplicação estará pronta para ser utilizada no *Repl.it* de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação. Caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem ou investir em um servidor próprio.
+![image](file:///C:/Users/vandeir/Downloads/image.webp)
+
