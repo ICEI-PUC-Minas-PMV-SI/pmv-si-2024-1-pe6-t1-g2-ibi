@@ -122,7 +122,8 @@ O projeto vai oferecer, como principal serviço ao IBI, uma agenda para os pais 
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/assets/90218407/efa3ce88-a44a-4de9-969d-1e1d309bd5e7)
+
 
 ## Gerenciamento de Equipe
 
