@@ -94,8 +94,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
 |RNF-002| O sistema deve possuir uma interface de baixa complexidade para uso | ALTA | 
 |RNF-003| O sistema será acessado apenas online | MÉDIA | 
-|RNF-004| Deve processar requisições do usuário em no máximo 3s | BAIXA | 
-|RNF-005| O sistema será hospedado na nuvem | BAIXA |
+|RNF-004| O sistema será hospedado na nuvem | BAIXA |
 
 ## Restrições
 
