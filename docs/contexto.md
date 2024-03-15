@@ -82,7 +82,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
 |RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
 |RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login   | MÉDIA |
-|RF-011| Permitir que os relatórios possam ser baixados | BAIXA |
+|RF-008| Permitir que os relatórios possam ser baixados | BAIXA |
 
 ### Requisitos não Funcionais
 
