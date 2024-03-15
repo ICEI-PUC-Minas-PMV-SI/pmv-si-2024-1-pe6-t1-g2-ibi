@@ -75,24 +75,21 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o administrador crie, edite e exclua usuários****   | ALTA |
+|RF-001| Permitir que o administrador gerencie os usuários | ALTA |
 |RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
 |RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
 |RF-004| Acessar o sistema via login   | ALTA | 
 |RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
 |RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
-|RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login****   | MÉDIA |
-|RF-008| Emitir credências de usuário de forma automática ****   | MÉDIA |
-|RF-009| Emitir credências de usuário de forma automática ****   | MÉDIA |
-|RF-010| Permitir que os responsáveis façam observações aos professores por via de áudio****   | BAIXA |
-|RF-011| Permitir que os relatórios possam ser baixados****   | BAIXA |
+|RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login   | MÉDIA |
+|RF-011| Permitir que os relatórios possam ser baixados | BAIXA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
-|RNF-002| O sistema deve possuir uma interface de baixa complexidade para uso | ALTA | 
+|RNF-002| O sistema deve possuir uma interface de boa usabilidade | ALTA | 
 |RNF-003| O sistema será acessado apenas online | MÉDIA | 
 |RNF-004| O sistema será hospedado na nuvem | BAIXA |
 
