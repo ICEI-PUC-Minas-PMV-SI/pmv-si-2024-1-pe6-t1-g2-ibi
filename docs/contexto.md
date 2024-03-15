@@ -107,8 +107,13 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Catálogo de Serviços
 
-O projeto vai oferecer, como principal serviço ao IBI, uma agenda para os pais acessarem a rotina dos filhos de forma prática no celular. De mais a mais, também irá auxiliar o Instituto a otimizar a forma que a rotina do estudante é entregue aos responsáveis, já que, atualmente, é feita de forma manual, preenchendo formulário de cada aluno. Junto com a agenda, o projeto também vai auxiliar o Instituto a modernizar a forma como eles acessam dados, pois, para o uso da agenda, será necessário criar um banco de dados, o qual será muito útil para consultas futuras.
+### Serviço de Gestão de Diário
+- Publicação de relatórios de alunos: Permite que professores possam preencher relatórios diários de seus alunos.
+- Agenda com acesso ao relatório do aluno: Permite que o responsável possa visualizar os relatórios diários, além de poder adicionar observações para o professor.
+- Download de relatórios: Permite que os relatórios possam ser baixados pelo usuário.
 
+### Serviço de Gestão de Usuários
+- Gerenciamento de usuários: Permite que o administrador possa criar, editar e excluir usuários na plataforma.
 
 # Gerenciamento de Projeto
 
