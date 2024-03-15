@@ -129,6 +129,8 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 # Arquitetura da Solução
 
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/arquitetura-servicos.jpg?raw=true)
+
 ## Tecnologias Utilizadas
 
 No presente projeto, serão utilizadas as seguintes tecnologias:
@@ -139,7 +141,9 @@ No presente projeto, serão utilizadas as seguintes tecnologias:
 
 **C#/ASP .NET Core** – Para o desenvolvimento back-end da agenda será utilizado o Framework ASP .NET Core, um framework que utiliza a linguagem C#, para a criação da API que irá acessar e controlar o back-end a partir de requisições do front-end. 
 
-**React JS** – Para o desenvolvimento front-end web da aplicação, será utilizado React JS, um framework que utiliza a linguagem Javascript, o qual auxiliará a criar uma interface web responsiva tanto no computador, quanto no mobile da aplicação, 
+**React JS** – Para o desenvolvimento front-end web da aplicação, será utilizado React JS, um framework que utiliza a linguagem Javascript, o qual auxiliará a criar uma interface web responsiva tanto no computador, quanto no mobile da aplicação.
+
+**Bootstrap** – Para o desenvolvimento front-end da aplicação, será utilizado o Bootstrap, um framework que utiliza do Javascript, o qual auxiliará facilitando a criação de uma interface web, sendo também um framework utilizado durante o desenvolvimento com o ASP .NET Core.
 
 **React Native** – Para o desenvolvimento front-end da aplicação, será utilizado o React Native, um framework que utiliza do Javascript, o qual auxiliará a criar uma interface mobile utilizando os recursos nativos de celulares e tablets, por exemplo. 
 
@@ -147,5 +151,5 @@ No presente projeto, serão utilizadas as seguintes tecnologias:
 
 ## Hospedagem
 
-A aplicação estará pronta para ser utilizada no *Repl.it* de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação. Caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem ou investir em um servidor próprio.
+A aplicação estará pronta para ser utilizada no *Railway* de forma inicial, porém é uma solução a curto prazo para o desenvolvimento e teste da aplicação. Caso o cliente decida dar continuidade a aplicação, é recomendado fazer a hospedagem na nuvem ou investir em um servidor próprio.
 
