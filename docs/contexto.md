@@ -117,7 +117,7 @@ O projeto vai oferecer, como principal serviço ao IBI, uma agenda para os pais 
 
 ## Gerenciamento de Tempo
 
-![Fluxograma Pedido Azul Cinza](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/assets/90218407/243d1fb7-b3fa-463e-85ab-9bd2bc9dc260)
+![https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Fluxograma%20Pedido%20Azul%20Cinza%20(1).png?raw=true)
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
