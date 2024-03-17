@@ -134,6 +134,8 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 # Arquitetura da Solução
 
+Para a arquitetura da aplicação, será utilizado uma arquitetura baseada em serviços, o qual terá como seus serviços a "Gestão do diário" e a "Gestão dos Usuários". Na aplicação, os usuários utilizarão de uma interface de usuário (Desktop/Mobile) a qual fará requisições HTTP que serão direcionadas ao banco de dados pela Rest API, assim podendo utilizar das funcionalidades de cada serviço como, consultar a atualização diária da agenda do filho, ou criar o cadastro de um professor no sistema.
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/arquitetura-servicos.jpg?raw=true)
 
 ## Tecnologias Utilizadas
