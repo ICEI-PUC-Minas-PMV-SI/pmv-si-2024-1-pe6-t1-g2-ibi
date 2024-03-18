@@ -15,7 +15,7 @@ Dessa forma, instituições escolares devem sempre estar atentas nas inovações
 [2](#sdfootnote1sym). IZQUIERDO, Jesus et al. **Inclusão digital e desempenho escolar no contexto da pandemia: uma análise comparativa entre Brasil e Colômbia**. Disponível em <https://doi.org/10.15448/1984-7289.2023.1.42196>. 
 
 ## Problema
-O Instituto Batista Itatiaia é uma entidade ensino infantil, poussindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
+O Instituto Batista Itatiaia é uma entidade ensino infantil, possuindo uma grande quantidade de alunos. Devido a isto, há uma demanda muito alta para os professores e administradores, que detém, dentre outras atividades decorrentes do ensino, a tarefa de registrar os eventos ocorridos de cada aluno durante todo o período do dia em que as crianças se encontram na instituição.
 
 Atualmente, todo o processo desse registro de informações é feito de modo manual, com isso, o tempo para realizar esses relatórios tem se tornado muito extenso, gerando uma sobrecarga para os professores e administradores. Sendo assim, é uma necessidade fundamental a modernização do sistema que vem sendo utilizado no ambiente escolar.
 
