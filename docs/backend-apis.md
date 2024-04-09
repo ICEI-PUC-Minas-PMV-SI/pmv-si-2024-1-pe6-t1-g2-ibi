@@ -27,11 +27,21 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 
 ## Requisitos Funcionais
 
-[Liste os principais requisitos funcionais da aplicação.]
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| Permitir que o administrador gerencie os usuários | ALTA |
+|RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
+|RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
+|RF-004| Acessar o sistema via login   | ALTA | 
+|RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
+|RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
+|RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login   | MÉDIA |
 
-## Requisitos Não Funcionais
+## Requisitos não Funcionais
 
-[Liste os principais requisitos não funcionais da aplicação, como desempenho, segurança, escalabilidade, etc.]
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----| 
+|RNF-001| O sistema será acessado apenas online | MÉDIA 
 
 ## Tecnologias Utilizadas
 
@@ -71,7 +81,15 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+O Instituto Batista Itatiaia é uma entidade ensino infantil de âmbito municipal, possuindo uma grande quantidade de alunos. Por esta razão, a preocupação com a segurança de informação se faz necessária, tendo em vista que lida com dados pessoais dos usuários, sejam funcionários, responsáveis e alunos.
+
+Inicialmente, o cadastro de todos os usuários seria de responsabilidade da coordenação da escola, a qual teria um perfil de Administrador, centralizando os poderes de maior importância na plataforma em um número reduzido de pessoas.
+
+Ademais, existe uma preocupação com o cumprimento da Lei Geral de Proteção de Dados Pessoais - LGPD, tendo em vista se tratar de um banco de dados com informações pesssoais dos usuários, em que, pela natureza econômica da atividade, só poderão ser utilizados para o próprio funcionamento do aplicativo. Ainda, quanto a este tópico, é sugerido que, no momento que o usuário solicita seu cadastro, seja assinado um  Termo de Privacidade, esclarecendo quais dados pessoais estão sendo coletados e como serão utilizados.
+
+Após o cadastro, o Administrador fornecerá uma senha ao usuário cadastrado, em que este poderá substituir por uma de cunho pessoal. O acesso ao sistema será por meio de Login (número de telefone) e Senha.
+
+Com o objetivo de evitar problemas físicos e corte de custos, os dados serão armazenados na nuvem, em plataforma compatível com a segurança digital dos dados, para, dessa forma, evitar, também, eventuais invasões do sistema. Por fim, também será sugerido um espelhamento dos dados produzidos na plataforma, para funcionar como backup, em caso de falha crítica nos dados principais.
 
 ## Implantação
 
