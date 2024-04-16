@@ -21,6 +21,7 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
 Diagrama de Classes
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/diagramaclasse.png)
 
 ## Fluxo de Dados
