@@ -25,8 +25,7 @@ Diagrama de Classes
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/diagramaclasse.png)
 
 ## Fluxo de Dados
-
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+![3b62096e-007f-44cf-b132-152f3872b589](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/assets/90218407/ddfc0824-c87d-46a6-996b-0ef7ce2f3254)
 
 ## Requisitos Funcionais
 
