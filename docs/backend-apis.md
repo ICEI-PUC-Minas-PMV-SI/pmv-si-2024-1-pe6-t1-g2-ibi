@@ -103,15 +103,221 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
 5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
 
+* Requisitos de hardware:
+  * Computador, celular ou tablet com acesso a internet
+  * Roteador Wi-fi
+
+* Requisitos de software:
+  * Acesso ao navegador
+
+* Plataforma de hospedagem: AWS
+  
+
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Gerenciar Usuário (CST01)
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+**Sumário:** O Administrador deve ser capaz de criar, visualizar, atualizar e excluir (CRUD) usuários.
+
+**Executor:** Administrador.
+
+**Pré-Condição:** O administrador deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create de usuário;
+2. Preencher as informações: nome, senha e perfil (administrador, professor ou responsável) e enviar a requisição;
+3. As informações devem ser retornadas com a senha oculta, e o Id do usuário que foi criado;
+4. Acessar a rota GetById de usuário, e acessar o usuário criado, pelo Id;
+5. As informações devem ser retornadas com a senha oculta;
+6. Acessar a rota Update de usuário, acessar o usuário criado, pelo Id e enviar a request com as mudanças do usuário;
+7. A mensagem de “201 created” deve aparecer;
+8. Acessar a rota Delete de usuário, e acessar o usuário criado, pelo Id;
+9. A mensagem de “204 No Content” deve aparecer;
+10. Acessar a rota GetAll de usuário e realizar a requisição;
+11. O usuário criado no início não deve aparecer.
+
+**Resultado esperado:** Todas as etapas do CRUD devem ter acontecido sem erros.
+
+![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST01.png?raw=true)
+
+
+### Visualização geral da Agenda (CST02)
+
+**Sumário:** O professor e o administrador devem ser capazes de visualizar a agenda dos alunos.
+
+**Executor:** Professor e administrador.
+
+**Pré-Condição:** O usuário deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota GetAll da agenda;
+2. As informações de todas as agendas devem ser retornadas e aparecer a mensagem “200 OK”.
+
+**Resultado esperado:** Todas as agendas devem ser visualizadas.
+
+![Print do resultado do teste de caso 2](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST02.png?raw=true)
+
+
+### Edição da Agenda (CST03)
+
+**Sumário:** O professor deve ser capaz de editar a agenda dos alunos.
+
+**Executor:** Professor.
+
+**Pré-Condição:** O professor deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create da agenda;
+2. Preencher as informações: Data, Observação do professor, Repousou, Evacuação (Normal, Diarreia, Não evacuou), Café da manhã (Aceitou tudo, Boa parte, Parte, Rejeitou), Almoço (Aceitou tudo, Boa parte, Parte, Rejeitou), Lanche da tarde (Aceitou tudo, Boa parte, Parte, Rejeitou), Janta (Aceitou tudo, Boa parte, Parte, Rejeitou), Lenço umedecido(true ou false), fralda(true ou false), Pomada De Assadura(true ou false), Lençol(true ou false), Mantinha Cobertor(true ou false), Toalha(true ou false), Bico(true ou false), Chinelo(true ou false), Roupas Para Troca(true ou false), Shampoo(true ou false), Condicionador(true ou false), Sabonete(true ou false), Pente(true ou false), Atividade em família(true ou false), Medicação, Ciente responsável(true ou false), Observação responsável, Ciente Professor(true ou false), ID do Aluno) e enviar a requisição;
+3. As informações devem ser retornadas com o Id da agenda preenchida e retornar a mensagem de “200 OK”;
+
+**Resultado esperado:** A agenda deve ter sido preenchida corretamente.
+
+![Print do resultado do teste de caso 3](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST03.png?raw=true)
+
+
+### Exclusão da Agenda diária (CST04)
+
+**Sumário:** O administrador deve ser capaz de deletar a agenda dos alunos.
+
+**Executor:** Administrador.
+
+**Pré-Condição:** O administrador deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Delete da agenda;
+2. Preencher com o ID da agenda que se deseja deletar;
+3. A mensagem de “204 No Content” deve aparecer;
+4. Acessar a rota GetAll da agenda;
+5. Verifique se a agenda do dia escolhido foi deletada.
+
+**Resultado esperado:** A agenda do dia selecionado deve ter sido deletada.
+
+![Print do resultado do teste de caso 4](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST04.png?raw=true)
+
+
+### Testar permissão (CST05)
+
+**Sumário:** Tentar requisitar uma mudança que o usuário não tenha permissão.
+
+**Executor:** Professor ou responsável
+
+**Pré-Condição:** O usuário deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create da turma, e tentar fazer uma requisição;
+2. A mensagem de erro “403 Forbidden” deve aparecer.
+
+**Resultado esperado:** O usuário não deve ter permissão para criar a turma.
+
+![Print do resultado do teste de caso 5](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST05.png?raw=true)
+
+
+### Observação na Agenda pelo responsável (CST06)
+
+**Sumário:** O Responsável deve ser capaz de realizar uma observação na agenda diária do aluno relacionada ao seu perfil.
+
+**Executor:** Responsável.
+
+**Pré-Condição:** O Responsável deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create da agenda;
+2. Preencher o campo “Observação do responsável” e enviar a requisição;
+3. As informações devem ser retornadas com a observação preenchida.
+
+**Resultado esperado:** O responsável deve ter conseguido preencher a observação na agenda do aluno.
+
+![Print do resultado do teste de caso 6](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST06.png?raw=true)
+
+
+### Alteração de senha (CST07)
+
+**Sumário:** O usuário deve ser capaz de alterar a própria senha.
+
+**Executor:** Responsável ou Administrador ou Professor
+
+**Pré-Condição:** O usuário deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Update de usuário, acessar o próprio usuário e enviar a request com as mudanças de senha;
+2. A mudança deve ter sido salva;
+3. Fazer logout;
+4. Logar novamente com a nova senha;
+5. Verificar se o acesso foi permitido.
+
+**Resultado esperado:** O usuário deve ter conseguido alterar sua senha.v
+
+![Print do resultado do teste de caso 7](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST07.png?raw=true)
+
+
+### Gerenciar Aluno (CST08)
+
+**Sumário:** O Administrador deve ser capaz de criar, visualizar, atualizar e excluir (CRUD) alunos.
+
+**Executor:** Administrador.
+
+**Pré-Condição:** O administrador deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create de aluno;
+2. Preencher as informações: matrícula, nome completo e data de nascimento, e enviar a requisição;
+3. As informações devem ser retornadas com o Id do aluno que foi criado;
+4. Acessar a rota GetById de aluno, e acessar o aluno criado, pelo Id;
+5. As informações devem ser retornadas;
+6. Acessar a rota Update de aluno, acessar o aluno criado, pelo Id e enviar a request com as mudanças do aluno;
+7. A mensagem de sucesso deve aparecer;
+8. Acessar a rota Delete de aluno, e acessar o aluno criado, pelo Id;
+9. A mensagem de “204 No Content” deve aparecer;
+10. Acessar a rota GetAll de aluno e realizar a requisição;
+11. O aluno criado no início não deve aparecer.
+
+**Resultado esperado:** Todas as etapas do CRUD devem ter acontecido sem erros.
+
+![Print do resultado do teste de caso 8](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST08.png?raw=true)
+
+
+### Gerenciar Turma (CST09)
+
+**Sumário:** O Administrador deve ser capaz de criar, visualizar e atualizar turmas.
+
+**Executor:** Administrador.
+
+**Pré-Condição:** O administrador deve estar logado no sistema.
+
+**Passos:**
+
+1. Acessar a rota Create da turma;
+2. Preencher as informações: número da turma e ano letivo, enviar a requisição;
+3. As informações devem ser retornadas com o Id da turma que foi criada;
+4. Acessar a rota GetById da turma, e acessar a turma criada, pelo Id;
+5. As informações devem ser retornadas;
+6. Acessar a rota Update da turma, acessar a turma criada, pelo Id e enviar a request com as mudanças da turma;
+7. A mensagem de “204 No Content” deve aparecer;
+8. Acessar a rota AddAluno da turma;
+9. Preencher as informações: ID do aluno e ID da turma, enviar a requisição;
+10. As informações devem ser retornadas com o aluno relacionado à turma;
+11. Acessar a rota DeleteAluno da turma, e acessar o aluno adicionado, pelo Id;
+12. A mensagem de “no content” deve aparecer;
+13. Acessar a rota AddProfessor da turma;
+14. Preencher as informações: ID do professor e ID da turma, enviar a requisição;
+15. As informações devem ser retornadas com o professor relacionado à turma;
+16. Acessar a rota DeleteProfessor da turma, e acessar o professor adicionado, pelo Id;
+17. A mensagem de “204 No Content” deve aparecer;
+18. Acessar a rota GetAll da turma e realizar a requisição;
+19. O aluno e o professor não devem aparecer.
+
+**Resultado esperado:** Todas as etapas do CRUD devem ter acontecido sem erros.
+
+![Print do resultado do teste de caso 9](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/CST09.png?raw=true)
 
 # Referências
 
