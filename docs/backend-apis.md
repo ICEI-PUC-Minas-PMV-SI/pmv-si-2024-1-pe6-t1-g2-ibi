@@ -55,31 +55,20 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## API Endpoints
 
-### Endpoint 1
-- Método: GET
-- URL: /endpoint1
-- Parâmetros:
-  - param1: [descrição]
-- Resposta:
-  - Sucesso (200 OK)
-    ```
-    {
-      "message": "Success",
-      "data": {
-        ...
-      }
-    }
-    ```
-  - Erro (4XX, 5XX)
-    ```
-    {
-      "message": "Error",
-      "error": {
-        ...
-      }
-    }
-    ```
+Create Agenda [POST]: Endpoint responsável pela criação da agenda que será realizado pelo professor.
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/endpoint-create-agenda.png)
 
+Create Aluno [POST]: Endpoint responsável pela criação do aluno que será realizado pelo administrador.
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/endpoint-create-agenda.png)
+
+Create Usuário [POST]: Endpoint responsável pela criação do usuário que será realizado pelo administrador.
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/endpoint-create-usuario.png)
+
+Authenticate [POST]: Endpoint responsável pela autenticação do usuário ao acessar a aplicação para ter acesso aos seus recursos.
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/endpoint-authenticate.png)
+
+GetByID Agenda [GET]: Endpoint responsável por retornar as agendas existentes com base no seu ID.
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/endpoint-get-agenda.png)
 
 ## Considerações de Segurança
 
