@@ -4,8 +4,6 @@ O presente projeto tem como escopo a elaboração de uma agenda virtual para o I
 
 Entretanto, para isto, a construção de uma aplicação de APIS Web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na seguinte descrição, serão observados dados gerais da API, sendo realizados testes de problemas, além de demais informações que demonstram que a API é segura, escalável e eficiente.
 
-[Inclua uma breve descrição do projeto.]
-
 ## Objetivos da API
 
 O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
