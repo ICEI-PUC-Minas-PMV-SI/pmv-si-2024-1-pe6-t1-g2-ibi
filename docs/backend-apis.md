@@ -1,14 +1,14 @@
 # APIs e Web Services
 
-O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores. Desse modo, será mais eficiente o registro de informações pelos professores/coordenadores, bem como ocorrerá o acesso dos pais/responsáveis a rotina dos seus filhos de forma virtual, otimizando o tempo não só dos trabalhadores do Instituto, mas também dos pais/responsáveis
+O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores. Desse modo, será mais eficiente o registro de informações pelos funcionários e administradores do Instituto, bem como ocorrerá o acesso dos pais/responsáveis a rotina dos seus filhos de forma virtual, otimizando o tempo não só do IBI, mas também dos pais/responsáveis
 
-Entretanto, para isto, a construção de uma aplicação de API web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na presente descrição, serão observados dados gerais da API, bem como serão realizados testes de problemas. DDiante do exposto, as informações que demonstrarão que a API é segura, escalável e eficiente.
+Entretanto, para isto, a construção de uma aplicação de API web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na presente descrição, serão observados dados gerais da API, bem como serão realizados testes de problemas. Diante do exposto, as informações demonstrarão que a API é segura, escalável e eficiente.
 
 ## Objetivos da API
 
 Primeiramente, o que se pretende com a API no backend é que diferentes sistemas se comuniquem e interajam com os dados da agenda de forma padronizada e segura.
 
-O acesso de dados seria um dos principais pontos a serem trabalhadores com a criação de API, pois deverá ocorrer uma interação entre os dados da agenda, como registro das atividades dos alunos e inserção de comentários pelos pais/responsáveis, além da possibilidade de leitura posterior dos dados salvos em nuvem.
+O acesso de dados será um dos principais pontos a serem trabalhados com a criação de API, pois deverá ocorrer uma interação entre os dados da agenda, como registro das atividades dos alunos e inserção de comentários pelos pais/responsáveis, além da possibilidade de leitura posterior dos dados salvos em nuvem.
 
 Ainda, a API deve ter como foco segurança, escalabildiade e flexibilidade, pois o escopo do trabalho desenvolvido pelo IBI pode, com o tempo, demandar uso crescente, com a inserção de novos usuários e funcionalidades. Devendo, neste caso, ser garantida a segurança dos dados ali produzidos/inseridos, em razão dos dados sensíveis que são trabalhados. Logo, apenas, coordenadores/administradores terão permissão de criar/excluir usuários, bem como um maior acesso às informações registradas na agenda.
 
