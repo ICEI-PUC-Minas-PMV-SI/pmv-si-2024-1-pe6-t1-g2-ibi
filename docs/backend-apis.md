@@ -1,8 +1,8 @@
 # APIs e Web Services
 
-O planejamento de uma aplicação de APIS Web é uma etapa fundamental para o sucesso do projeto. Ao planejar adequadamente, você pode evitar muitos problemas e garantir que a sua API seja segura, escalável e eficiente.
+O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores. Desse modo, será mais eficiente o registro de informações pelos professores/coordenadores, bem como ocorrerá o acesso dos pais/responsáveis a rotina dos seus filhos de forma virtual, otimizando o tempo, não só dos trabalhadores do Instituto, também dos pais/responsáveis
 
-Aqui estão algumas etapas importantes que devem ser consideradas no planejamento de uma aplicação de APIS Web.
+Entretanto, para isto, a construção de uma aplicação de APIS Web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na seguinte descrição, serão observados dados gerais da API, sendo realizados testes de problemas, além de demais informações que demonstram que a API é segura, escalável e eficiente.
 
 [Inclua uma breve descrição do projeto.]
 
@@ -18,7 +18,6 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 [Descrição da arquitetura das APIs, incluindo os componentes e suas interações.]
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
 Diagrama de Classes
 
