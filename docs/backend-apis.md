@@ -6,10 +6,13 @@ Entretanto, para isto, a construção de uma aplicação de APIS Web é uma etap
 
 ## Objetivos da API
 
-O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
+Primeiramente, o que se pretende com a API no backend é que  diferentes sistemas se comuniquem e interajam com os dados da agenda de forma padronizada e segura.
 
-[Inclua os objetivos da sua api.]
+O acesso de dados seria um dos principais pontos a serem trabalhadores com a criação de API, pois deverá ocorrer uma intereção entre os dados da agenda, como registro das atividades dos alunos e inserção de comentários pelos pais/responsáveis, além da possibilidade de leitura posterior dos dados salvos em numvem.
 
+Ainda, a API deve ter como foco segurança, escalabildiade e flexibilidade, pois o escopo do trabalho desenvolvido pelo IBI pode, com o tempo, demandar uso crescente, com a inserção de novos usuários e funcionalidades. Devendo, neste caso, ser garantida a segurança dos dados ali produzidos/inseridos, em razão dos dados sensíveis que são trabalhados. Logo, apenas, coordenadores/administradores terão permissão de criar/excluir usuários, bem como um maior acesso às informações registradas na agenda.
+
+Por fim, a API será desenvolvida com o foco de eficiência no desempenho, para que a sua manutenção não seja indevidamente elevada, com o objetivo de redução de custos, portanto, os dados produzidos serão registrados em nuvem.
 
 ## Arquitetura
 
