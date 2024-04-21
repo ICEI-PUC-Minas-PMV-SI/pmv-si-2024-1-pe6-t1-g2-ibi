@@ -1,14 +1,14 @@
 # APIs e Web Services
 
-O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores. Desse modo, será mais eficiente o registro de informações pelos professores/coordenadores, bem como ocorrerá o acesso dos pais/responsáveis a rotina dos seus filhos de forma virtual, otimizando o tempo, não só dos trabalhadores do Instituto, também dos pais/responsáveis
+O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia, com possibilidade de registro de atividades dos alunos pelos professores/coordenadores. Desse modo, será mais eficiente o registro de informações pelos professores/coordenadores, bem como ocorrerá o acesso dos pais/responsáveis a rotina dos seus filhos de forma virtual, otimizando o tempo não só dos trabalhadores do Instituto, mas também dos pais/responsáveis
 
-Entretanto, para isto, a construção de uma aplicação de APIS Web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na seguinte descrição, serão observados dados gerais da API, sendo realizados testes de problemas, além de demais informações que demonstram que a API é segura, escalável e eficiente.
+Entretanto, para isto, a construção de uma aplicação de API web é uma etapa fundamental do projeto, tendo em vista que será o esqueleto de toda a estrutura digital a ser criada, possibilitando a execução da agenda do Instituto. Logo, na presente descrição, serão observados dados gerais da API, bem como serão realizados testes de problemas. DDiante do exposto, as informações que demonstrarão que a API é segura, escalável e eficiente.
 
 ## Objetivos da API
 
-Primeiramente, o que se pretende com a API no backend é que  diferentes sistemas se comuniquem e interajam com os dados da agenda de forma padronizada e segura.
+Primeiramente, o que se pretende com a API no backend é que diferentes sistemas se comuniquem e interajam com os dados da agenda de forma padronizada e segura.
 
-O acesso de dados seria um dos principais pontos a serem trabalhadores com a criação de API, pois deverá ocorrer uma intereção entre os dados da agenda, como registro das atividades dos alunos e inserção de comentários pelos pais/responsáveis, além da possibilidade de leitura posterior dos dados salvos em numvem.
+O acesso de dados seria um dos principais pontos a serem trabalhadores com a criação de API, pois deverá ocorrer uma interação entre os dados da agenda, como registro das atividades dos alunos e inserção de comentários pelos pais/responsáveis, além da possibilidade de leitura posterior dos dados salvos em nuvem.
 
 Ainda, a API deve ter como foco segurança, escalabildiade e flexibilidade, pois o escopo do trabalho desenvolvido pelo IBI pode, com o tempo, demandar uso crescente, com a inserção de novos usuários e funcionalidades. Devendo, neste caso, ser garantida a segurança dos dados ali produzidos/inseridos, em razão dos dados sensíveis que são trabalhados. Logo, apenas, coordenadores/administradores terão permissão de criar/excluir usuários, bem como um maior acesso às informações registradas na agenda.
 
@@ -55,8 +55,6 @@ Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs
 
 ## API Endpoints
 
-[Liste os principais endpoints da API, incluindo as operações disponíveis, os parâmetros esperados e as respostas retornadas.]
-
 ### Endpoint 1
 - Método: GET
 - URL: /endpoint1
@@ -96,14 +94,6 @@ Após o cadastro, o Administrador fornecerá uma senha ao usuário cadastrado, e
 Com o objetivo de evitar problemas físicos e corte de custos, os dados serão armazenados na nuvem, em plataforma compatível com a segurança digital dos dados, para, dessa forma, evitar, também, eventuais invasões do sistema. Por fim, também será sugerido um espelhamento dos dados produzidos na plataforma, para funcionar como backup, em caso de falha crítica nos dados principais.
 
 ## Implantação
-
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
-
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
 
 * Requisitos de hardware:
   * Computador, celular ou tablet com acesso a internet
