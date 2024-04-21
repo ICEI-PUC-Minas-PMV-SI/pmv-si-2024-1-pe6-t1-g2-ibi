@@ -16,7 +16,9 @@ Por fim, a API será desenvolvida com o foco de eficiência no desempenho, para 
 
 ## Arquitetura
 
-[Descrição da arquitetura das APIs, incluindo os componentes e suas interações.]
+A estrutura consiste em uma arquitetura REST (Representational State Transfer), projetada para receber as requisições de diversos tipos de usuários (Coordenador, Professor e Pais/Responsável) em uma interface web/mobile, usando, como base, um banco de dados MySQL.
+
+Além dos Endpoints indicados abaixo, como padrão, serão utilizados métodos HTTP como GET, POST, PUT e DELETE na alteração dos recursos disponíveis no servidor. Como exposto no tópico anterior, com o objetivo na eficiência, será utilizado JSON no formato dos dados registrados.
 
 ## Modelagem da Aplicação
 
