@@ -313,4 +313,5 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 
 # Referências
 
-Foram utilizadas as aulas existentes na matéria APIs e Web Services da Plataforma Canvas da PUC-Minas.
+Foram utilizadas as aulas existentes na matéria APIs e Web Services da Plataforma Canvas da PUC-Minas. Além disso, foram utilizados os seguintes sítios:
+<https://developer.mozilla.org/pt-BR/docs/Web/HTTP>
