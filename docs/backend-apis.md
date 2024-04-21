@@ -313,4 +313,4 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Foram utilizadas as aulas existentes na matéria APIs e Web Services da Plataforma Canvas da PUC-Minas.
