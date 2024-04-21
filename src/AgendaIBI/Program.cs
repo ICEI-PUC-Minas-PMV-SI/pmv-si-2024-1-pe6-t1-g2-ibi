@@ -1,12 +1,15 @@
-using API_IBI_01.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using System.Text.Json.Serialization;
+using System.Text;
+using API_ORIGINAL_01.Controllers;
+using API_ORIGINAL_01.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
 
 // Add services to the container.
 
@@ -36,7 +39,7 @@ builder.Services.AddAuthentication(options =>
         };
     });
 
-    
+
 
 
 

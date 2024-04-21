@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
-using WebApplication_IBI1.Models;
-using static Azure.Core.HttpHeader;
 
-namespace API_IBI_01.Models
+namespace API_ORIGINAL_01.Models
 {
+
     [Table("Usuarios")]
     public class Usuario
     {
@@ -21,23 +20,23 @@ namespace API_IBI_01.Models
         [Required]
         public Perfil Perfil { get; set; }
 
-       
-
         public ICollection<AlunosResponsaveis> Alunos { get; set; }
-        public ICollection<AgendasUsuarios> Agendas { get; set; }
+
+        public ICollection<Turma> Turmas { get; set; }
+
+
 
     }
+
+
     public enum Perfil
     {
-       
+
         [Display(Name = "Administrador")]
         Administrador,
         [Display(Name = "Professor")]
         Professor,
         [Display(Name = "Responsavel")]
         Responsavel
-
     }
 }
-    
-

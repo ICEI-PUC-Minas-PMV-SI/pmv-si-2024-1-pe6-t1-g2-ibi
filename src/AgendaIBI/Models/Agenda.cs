@@ -1,20 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Data;
-using WebApplication_IBI1.Models;
 
-namespace API_IBI_01.Models
+namespace API_ORIGINAL_01.Models
 {
-    [Table("Agendas")]
+    [Table("Agendas")]   
     public class Agenda : LinksHATEOS
     {
+
         [Key]
         public int Id { get; set; }
         [Required]
         public DateTime Data { get; set; }
         [Required]
         public string ObservacaoProfessor { get; set; }
-        public bool Repousou {  get; set; }
+        public bool Repousou { get; set; }
         public Evacuacao Evacuacao { get; set; }
         [Required]
         public Refeicoes CafeDaManha { get; set; }
@@ -23,33 +22,50 @@ namespace API_IBI_01.Models
         public Refeicoes LancheDaTarde { get; set; }
         [Required]
         public Refeicoes Janta { get; set; }
+        
+        //Checklist itens
+
         [Required]
-        public Itens AlunoNaoTrouxe { get; set; }
-       
+        public bool LençoUmedecido { get; set; }
+        [Required]
+        public bool PomadaDeAssadura { get; set; }
+        [Required]
+        public bool Mantinha_Coberta { get; set; }
+        [Required]
+        public bool Toalha { get; set; }
+        [Required]
+        public bool Bico { get; set; }
+        [Required]
+        public bool Chinelo { get; set; }
+        [Required]
+        public bool RoupasParaTroca { get; set; }
+        [Required]
+        public bool Shampoo { get; set; }
+        [Required]
+        public bool Condicionador { get; set; }
+
+        [Required]
+        public bool Sabonete { get; set; }
+        [Required]
+        public bool Pente { get; set; }
+
         public bool Atividade_EmFamilia { get; set; }
 
         public string Medicacao { get; set; }
         [Required]
-        public  Ciente CienteResponsavel { get; set; }
-        public string ObservacaoResponsavel { get; set; } 
+        public bool CienteResponsavel { get; set; }
+        public string ObservacaoResponsavel { get; set; }
 
         [Required]
-        public Ciente CienteProfessor { get; set; }
+        public bool CienteProfessor { get; set; }
 
         [Required]
         public int AlunoId { get; set; }
 
-        [Required]
         
-        public Aluno Aluno { get; set; }
-
-        public ICollection<AgendasAlunos> Alunos { get; set; }
-
-        public ICollection<AgendasUsuarios> Usuarios { get; set; }
 
 
     }
-
 
     public enum Refeicoes
     {
@@ -64,7 +80,7 @@ namespace API_IBI_01.Models
         Normal,
         Diareia,
         Nao_Evaacuo
-       
+
     }
 
     public enum Itens
@@ -84,8 +100,6 @@ namespace API_IBI_01.Models
         Pente
     }
 
-    public enum Ciente
-    {
-        Ciente,
-    }
+    
+    
 }

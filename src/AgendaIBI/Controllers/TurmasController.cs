@@ -1,14 +1,14 @@
-﻿using API_IBI_01.Models;
+﻿using API_ORIGINAL_01.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication_IBI1.Models;
 
-namespace WebApplication_IBI1.Controllers
+namespace API_ORIGINAL_01.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
-   
     public class TurmasController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -17,6 +17,7 @@ namespace WebApplication_IBI1.Controllers
         {
             _context = context;
         }
+
 
         [HttpGet]
         public async Task<ActionResult> GetAll()
@@ -44,7 +45,7 @@ namespace WebApplication_IBI1.Controllers
 
             if (model == null) return NotFound();
 
-            
+
             return Ok(model);
         }
 
@@ -108,6 +109,5 @@ namespace WebApplication_IBI1.Controllers
             return NoContent();
 
         }
-
     }
 }

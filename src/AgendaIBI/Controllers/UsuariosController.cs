@@ -1,22 +1,21 @@
-﻿using API_IBI_01.Models;
+﻿using API_ORIGINAL_01.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using WebApplication_IBI1.Models;
 
-namespace WebApplication_IBI1.Controllers
+namespace API_ORIGINAL_01.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
     {
+
         private readonly AppDbContext _context;
 
         public UsuariosController(AppDbContext context)
@@ -144,7 +143,5 @@ namespace WebApplication_IBI1.Controllers
 
 
 
-
     }
 }
-

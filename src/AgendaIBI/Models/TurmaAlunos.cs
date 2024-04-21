@@ -1,8 +1,8 @@
-﻿using API_IBI_01.Models;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication_IBI1.Models
+namespace API_ORIGINAL_01.Models
 {
+
     [Table("TurmaAlunos")]
     public class TurmaAlunos
     {

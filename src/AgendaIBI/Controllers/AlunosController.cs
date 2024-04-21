@@ -1,12 +1,13 @@
-﻿using API_IBI_01.Models;
+﻿using API_ORIGINAL_01.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.FileProviders;
-using WebApplication_IBI1.Models;
+using System;
 
-namespace WebApplication_IBI1.Controllers
+namespace API_ORIGINAL_01.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class AlunosController : ControllerBase
@@ -32,15 +33,18 @@ namespace WebApplication_IBI1.Controllers
             _context.Alunos.Add(model);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetById", new {id = model.Id}, model);
+            return CreatedAtAction("GetById", new { id = model.Id }, model);
         }
+
+
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
             var model = await _context.Alunos
-                .Include(t => t.Usuarios).ThenInclude(t=>t.Usuario)
-                
+                .Include(t => t.Usuarios).ThenInclude(t => t.Usuario)
+
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (model == null) return NotFound();
@@ -48,9 +52,9 @@ namespace WebApplication_IBI1.Controllers
             GerarLinks(model);
 
             return Ok(model);
-            
 
-            
+
+
         }
 
         [HttpPut("{id}")]
@@ -74,7 +78,7 @@ namespace WebApplication_IBI1.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var model =await _context.Alunos.FindAsync(id);
+            var model = await _context.Alunos.FindAsync(id);
 
             if (model == null) return NotFound();
 
@@ -95,7 +99,7 @@ namespace WebApplication_IBI1.Controllers
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, AlunosResponsaveis model)
         {
-            if (id != model.AlunoId) return BadRequest(); 
+            if (id != model.AlunoId) return BadRequest();
             _context.AlunosResponsaveis.Add(model);
             await _context.SaveChangesAsync();
 
@@ -103,7 +107,7 @@ namespace WebApplication_IBI1.Controllers
         }
 
         [HttpDelete("{id}/usuarios/{UsuarioId}")]
-        public async Task<ActionResult> DeleteUsuario(int id,  int UsuarioId)
+        public async Task<ActionResult> DeleteUsuario(int id, int UsuarioId)
         {
             var model = await _context.AlunosResponsaveis
                 .Where(c => c.AlunoId == id && c.UsuarioId == UsuarioId)

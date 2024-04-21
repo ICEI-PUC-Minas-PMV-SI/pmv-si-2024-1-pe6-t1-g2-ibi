@@ -1,4 +1,4 @@
-﻿namespace WebApplication_IBI1.Models
+﻿namespace API_ORIGINAL_01.Models
 {
     public class AuthenticateDto
     {

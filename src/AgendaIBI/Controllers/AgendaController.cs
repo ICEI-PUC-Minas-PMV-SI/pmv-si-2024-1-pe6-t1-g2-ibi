@@ -1,18 +1,19 @@
-﻿using API_IBI_01.Models;
+﻿using API_ORIGINAL_01.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApplication_IBI1.Models;
 
-namespace WebApplication_IBI1.Controllers
+namespace API_ORIGINAL_01.Controllers
 {
+    [Authorize(Roles = "Administrador, Professor")]
     [Route("api/[controller]")]
     [ApiController]
-    public class AgendaController : ControllerBase
+    public class AgendasController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public AgendaController(AppDbContext context)
+        public AgendasController(AppDbContext context)
         {
             _context = context;
         }
@@ -20,13 +21,14 @@ namespace WebApplication_IBI1.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
+
             var model = await _context.Agendas.ToListAsync();
 
             return Ok(model);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Creat(Agenda model )
+        public async Task<ActionResult> Creat(Agenda model)
         {
             _context.Agendas.Add(model);
             await _context.SaveChangesAsync();
@@ -50,6 +52,9 @@ namespace WebApplication_IBI1.Controllers
 
 
         }
+
+
+       
 
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Agenda model)
@@ -91,3 +96,11 @@ namespace WebApplication_IBI1.Controllers
         }
     }
 }
+
+
+
+
+
+
+
+
