@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1AB24C;
+}
+
+
+/* Imagem logo */
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+
+/* Campos do formulário */
+.input-box {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.input-box label {
+    font-size: 16px;
+    margin: 20px;
+}
+
+.select-box {
+    position: relative;
+}
+
+.select-box::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #666;
+    border-bottom: 2px solid #666;
+    transform: rotate(45deg);
+    right: 10px;
+    top: 50%;
+    margin-top: -8px;
+}
+
+.input-box input, .input-box select {
+    width: 100%;
+    height: 100%;
+    background-color: #EDEDED;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box select {
+    padding: 5px 45px 0 20px;
+    height: 40px !important;
+    appearance: none;
+    cursor: pointer;
+}
+
+.input-box textarea {
+    width: 100%;
+    height: 100%;
+    background-color: #EDEDED;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    margin-top: 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: #EDEDED;
+    border-radius: .60rem;
+    appearance: none;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #74bb8c;
+    border: 3px solid #EDEDED;
+}
+
+
+/* Botões */
+.btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.green-btn {
+    background: #1AB24C;
+}
+
+.red-btn {
+    background: #EE1B24;
+}
+
+.green-btn:hover {
+    border: #1AB24C 2px solid;
+    background-color: #FFF;
+    color: #1AB24C;
+}
+
+.red-btn:hover {
+    border: #EE1B24 2px solid;
+    background-color: #FFF;
+    color: #EE1B24;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.two-buttons {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.button-box .btn {
+    width: 150px;
+}
+
+
+/* Tela de login */
+.wrapper {
+    width: 420px;
+    color: #202020;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    margin: 15px 0;
+    text-align: center;
+    color: #FFF;
+}
+
+.wrapper form {
+    width: 100%;
+    background: #FFF;
+    color: #202020;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper .input-box {
+    position: relative;
+    height: 50px;
+    background-color: #FFF;
+    margin: 35px 0;
+}
+
+.wrapper .forgot {
+    display: flex;
+    justify-content: end;
+    font-size: 14.5px;
+    margin: 20px 5px;
+}
+
+.wrapper .forgot a {
+    color: #EE1B24;
+}
+
+.wrapper .forgot a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sidebar menu */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #FFF;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 20px;
+    color: #202020;
+    padding-left: 40px;
+}
+
+.sidebar li:hover a {
+    background-color: #1AB24C;
+    color: #FFF;
+    font-weight: 500;
+}
+
+
+/* Conteúdo principal */
+.main-content {
+    width: 70%;
+    min-height: 85vh;
+    height: fit-content;
+    margin: 50px 0 50px 250px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 30px 40px;
+    font-size: 20px;
+}
+
+.main-content .busca {
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .busca label {
+    font-size: 20px;
+}
+
+.main-content .busca input {
+    width: 80%; 
+    font-weight: 500;
+    height: 100%;
+    background-color: #EDEDED;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 16px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.main-content .busca button {
+    background: none;
+    border: none;
+    outline: none;
+    width: 20px;
+    margin: 0 5px;
+}
+
+.main-content button:hover {
+    cursor: pointer;
+}
+
+.main-content .busca img {
+    width: 20px;
+    margin-bottom: 0;
+}
+
+
+/* Container */
+.main-content .container {
+    position: relative;
+    width: 100%;
+    padding: 25px;
+}
+
+.container header {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+/* Container - formulário*/
+.container form .input-box label {
+    font-size: 20px;
+}
+
+.container form .input-box input, .container form .input-box select {
+    height: 30px;
+    margin: 5px;
+}
+
+.container form .column-2 {
+    display: flex;
+    column-gap: 15px;
+}
+
+.container form .check-box{
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.container form .check-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    line-height: 30px;
+}
