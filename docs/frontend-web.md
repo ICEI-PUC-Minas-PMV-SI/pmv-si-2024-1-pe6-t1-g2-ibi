@@ -2,6 +2,10 @@
 
 [Inclua uma breve descrição do projeto e seus objetivos.]
 
+Como já indicado, o presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia. Porém, essa etapa se trata da elaboração da página web, principalmente com o foco no registro de atividades dos alunos pelos professores/coordenadores. Além disso, será realizada com a estrutura montada do backend, possibilitando, assim, o registro dos dados na nuvem.
+
+Deste modo, o objetivo desta etapa é desenvolvimento do front-end, por meio da codificação das páginas em html e css, usando as ferramentas disponíveis, como o Visual Code Studio, sendo mais uma etapa na execução da aplicação proposta.
+
 ## Tecnologias Utilizadas
 [Lista das tecnologias principais que serão utilizadas no projeto.]
 
