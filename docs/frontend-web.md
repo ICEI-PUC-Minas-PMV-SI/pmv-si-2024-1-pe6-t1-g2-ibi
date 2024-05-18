@@ -6,7 +6,7 @@ Deste modo, o objetivo desta etapa é desenvolvimento do front-end, por meio da 
 
 ## Tecnologias Utilizadas
 
-Visual Code Studio: Ferramente gratuita disponibilizada pelo Windows em que, nesta etapa, será utilizado na elaboração do front-web, mais especificamente na criação do código em HTML e CSS.
+Visual Code Studio: Ferramente gratuita disponibilizada pelo Windows em que, nesta etapa, será utilizado na elaboração do front-web, mais especificamente na criação do código em HTML e CSS. Além do uso da biblioteca jQuery para complementar o código.
 
 Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (conforme exposto mais a frente), os quais serviram como base de todas as páginas web do projeto.
 
