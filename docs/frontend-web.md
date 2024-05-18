@@ -11,8 +11,8 @@ Deste modo, o objetivo desta etapa é desenvolvimento do front-end, por meio da 
 
 ## Arquitetura
 
-[Descrição da arquitetura das aplicação web, incluindo os componentes e suas interações.]
-
+ A estrutura consiste em uma arquitetura Web composta por HTML e CSS, projetada para fazer acesso através do login, preencher as requisições dispostas pela agenda e colocar observações ao final da mesma, tendo ainda funções de criação no acesso do administrador, como por exemplo criar e excluir alunos de uma determinada turma, tudo isso mantendo o site leve e responsivo.
+ 
 ## Modelagem da Aplicação
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
