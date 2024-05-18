@@ -18,19 +18,50 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (con
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
 ## Projeto da Interface Web
-[Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
 
 ### Wireframes
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+
+* Administrador: Vai poder visualizar todas as telas.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Telas_admin.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/tela_login.png)
+
+* Professor: número limitado de telas com funções que não vão estar à mostra.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Telas_professor.png)
+  
+* Responsável: Número extremamente limitado de telas com poucas funções disponíveis.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/tela_responsavel.png)
 
 ### Design Visual
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+
+* Tipografia: 
+  * Roboto sans-serif
+  * Tamanho: Títulos: 25px / Menu lateral e Nome de campos: 20px / Texto nos campos e Botões: 16px / Links pequenos: 14,5px
+    
+* Paleta de cores: Cores retiradas da logo do próprio Instituto Batista Itatiaia.
+	 * #1AB24C – Primária
+  * #EE1B24 – Secundária
+    
+* Ícones para abrir e fechar o menu lateral no modo para telas pequenas foi retirado do Google Fonts.
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/identidade_visual.png)
+
 
 ### Layout Responsivo
-[Discuta como a interface será adaptada para diferentes tamanhos de tela e dispositivos.]
+
+* Transformar colunas duplas do design original em uma única coluna.
+* Esconder o menu lateral em telas pequenas
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/telas_reponsivas.png)
 
 ### Interações do Usuário
-[Descreva as interações do usuário na interface, como animações, transições entre páginas e outras interações.]
+
+Ao passar o mouse em um botão ou link, deve ter uma mudança na cor do objeto e/ou mudança no cursor para identificar como clicável.
+
+Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma animação do mesmo deslizando para a tela do usuário e saindo, caso seja fechado.
+
 
 ## Fluxo de Dados
 
