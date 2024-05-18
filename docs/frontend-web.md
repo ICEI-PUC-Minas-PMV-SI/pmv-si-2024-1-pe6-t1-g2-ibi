@@ -33,7 +33,8 @@ Deste modo, o objetivo desta etapa é desenvolvimento do front-end, por meio da 
 
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+![Black and White Blue Yellow Basic Fishbone Diagram Whiteboard Brainstorm](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/assets/90218407/091ea765-f403-4edc-9471-8758e6156679)
+
 
 ## Requisitos Funcionais
 
