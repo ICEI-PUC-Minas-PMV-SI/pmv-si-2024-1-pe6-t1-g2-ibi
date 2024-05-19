@@ -113,14 +113,25 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Login na plataforma  (CST01)
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+**Sumário:** O Coordenador/Professor/Responsável deve ser capaz de acessar a plafatorma.
+
+**Executor:** Coordenador/Professor/Responsável.
+
+**Pré-Condição:** O Coordenador/Professor/Responsável deve estar cadastrado no sistema.
+
+**Passos:**
+
+1.  O Coordenador/Professor/Responsável acessa o sítio do Instituto;
+2.  O Coordenador/Professor/Responsável indica os valores de login e senha;
+3.  O Sistema realiza a validação do login e da senha apresentados;
+4.  Se o usuário não informou o login ou a senha corretos, o sistema apresenta mensagem de erro “Login/Senha Incorretos” e o caso de uso retorna ao passo 2; caso contrário o caso de uso terminar.
+
+**Resultado esperado:** O usuário deve ser capaz de acessar o sistema.
+
+![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Acesso.png?raw=true)
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Foram utilizadas as aulas existentes na matéria APIs e Web Services da Plataforma Canvas da PUC-Minas.
