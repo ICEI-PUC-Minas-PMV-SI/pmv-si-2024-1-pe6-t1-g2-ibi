@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="pb">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de login</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gerenciar Alunos</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="wrapper">
-        <h1>Login</h1>
-        <form action=""> 
-            <div class="img"><img src="logo.png" alt="Logo IBB"></div>            
-            <div class="input-box">
-                <label for="phone">Telefone:</label>
-                <input id="phone" type="text" placeholder="(99) 99999-9999" required>
-            </div>
-            <div class="input-box">
-                <label for="password">Senha:</label>
-                <input id="password" type="password" placeholder="Senha" required>
-            </div>
-
-            <div class="forgot">
-                <a href="#">Esqueceu sua senha?</a>
-            </div>
-
-            <button type="submit" class="btn green-btn">Confirmar</button>
-        </form>
+    <div class="sidebar">
+        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
+        <ul>
+            <li><a href="#" active>Calendário</a></li>
+            <li><a href="#">Gerenciar usuários</a></li>
+            <li><a href="#">Gerenciar turmas</a></li>
+            <li><a href="#">Gerenciar alunos</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
     </div>
 
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <div class="container">
+        <h1>Gerenciamento de Alunos</h1>
+        <div class="button-container">
+            <button id="create-user-btn">Criar Aluno</button>
+            <button id="edit-user-btn">Editar Aluno</button>
+        </div>
+    </div>
+
     <script>
-        $('#phone').mask('(00) 00000-0000');
+        document.getElementById('create-user-btn').addEventListener('click', function() {
+            alert('Usuario Criadro!');
+        });
+
+        document.getElementById('edit-user-btn').addEventListener('click', function() {
+            alert('Editar Usuário!');
+        });
     </script>
-    
+
 </body>
 </html>
