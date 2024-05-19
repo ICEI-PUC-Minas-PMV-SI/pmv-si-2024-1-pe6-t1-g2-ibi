@@ -9,15 +9,27 @@
 <body>
 
     <div class="sidebar">
-        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
-        <ul>
-            <li><a href="#" active>Calendário</a></li>
-            <li><a href="#">Gerenciar usuários</a></li>
-            <li><a href="#">Gerenciar turmas</a></li>
-            <li><a href="#">Gerenciar alunos</a></li>
-            <li><a href="#">Sair</a></li>
-        </ul>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <div class="sidebar-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
+            <ul>
+                <li><a href="#" active>Calendário</a></li>
+                <li><a href="#">Gerenciar usuários</a></li>
+                <li><a href="#">Gerenciar turmas</a></li>
+                <li><a href="#">Gerenciar alunos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>           
     </div>
+
+
     <div class="main-content">
         <div class="busca">
             <label for="search">Matrícula:</label>
@@ -205,11 +217,11 @@
 
                 <div class="input-box">
                     <label for="obsresp">Observações responsável:</label>
-                    <textarea name="obsresp" rows="5" style="resize: none" placeholder="Insira as observações de responsável"></textarea>
+                    <textarea name="obsresp" rows="5" style="resize: none" placeholder="Insira as observações de responsável" readonly></textarea>
                 </div>
 
                 <div class="button-box">
-                    <div>
+                    <div class="one-button">
                         <button class="btn red-btn">Excluir</button>
                     </div>
                     <div class="two-buttons">
@@ -221,6 +233,11 @@
             </form>
         </div>        
     </div>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     
 </body>
 </html>
