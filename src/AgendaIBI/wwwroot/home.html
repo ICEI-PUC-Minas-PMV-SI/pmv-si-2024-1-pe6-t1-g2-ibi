@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+        <div class="sidebar-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
+            <ul>
+                <li><a href="#" active>Calendário</a></li>
+                <li><a href="#">Gerenciar usuários</a></li>
+                <li><a href="#">Gerenciar turmas</a></li>
+                <li><a href="#">Gerenciar alunos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>           
+    </div>
+
+
+    <div class="main-content">
+        <div class="busca">
+            <label for="search">Matrícula:</label>
+            <input id="search" type="text" placeholder="Insira a matrícula do aluno">
+            <button id="search" type="submit"><img src="lupa.png" alt="buscar"></button>
+        </div>
+        <div class="container">
+            <header class="date">DD/MM/AAAA</header>
+            <form action="">
+                <div class="input-box">
+                    <label for="aluno">Aluno:</label>
+                    <input id="aluno" type="text" placeholder="Nome de aluno">
+                </div>
+
+                <div class="column-2">
+                    <div class="input-box">
+                        <label for="responsavel">Responsável:</label>
+                        <input id="responsavel" type="text" placeholder="Nome do responsavel">
+                    </div>
+                    <div class="input-box">
+                        <label for="professor">Professor:</label>
+                        <input id="professor" type="text" placeholder="Nome do professor">
+                    </div>
+                </div>
+
+                <div class="column-2">
+                    <div class="input-box">
+                        <label for="cafe">Café da manhã:</label>
+                        <div class="select-box">
+                            <select name="cafe" id="cafe" >
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Aceitou tudo</option>
+                                <option value="boa-parte">Boa parte</option>
+                                <option value="parte">Parte</option>
+                                <option value="rejeitou">Rejeitou</option>
+                            </select>
+                        </div>                       
+                    </div>
+                    <div class="input-box">
+                        <label for="almoco">Almoço:</label>
+                        <div class="select-box">
+                            <select name="almoco" id="almoco">
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Aceitou tudo</option>
+                                <option value="boa-parte">Boa parte</option>
+                                <option value="parte">Parte</option>
+                                <option value="rejeitou">Rejeitou</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column-2">
+                    <div class="input-box">
+                        <label for="lanche">Lanche:</label>
+                        <div class="select-box">
+                            <select name="lanche" id="lanche">
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Aceitou tudo</option>
+                                <option value="boa-parte">Boa parte</option>
+                                <option value="parte">Parte</option>
+                                <option value="rejeitou">Rejeitou</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label for="jantar">Jantar:</label>
+                        <div class="select-box">
+                            <select name="jantar" id="jantar">
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Aceitou tudo</option>
+                                <option value="boa-parte">Boa parte</option>
+                                <option value="parte">Parte</option>
+                                <option value="rejeitou">Rejeitou</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column-2">
+                    <div class="input-box">
+                        <label for="evacuacao">Evacuação:</label>
+                        <div class="select-box">
+                            <select name="evacuacao" id="evacuacao">
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Normal</option>
+                                <option value="boa-parte">Diarreia</option>
+                                <option value="parte">Não evacuou</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label for="repouso">Repousou:</label>
+                        <div class="select-box">
+                            <select name="repouso" id="repouso">
+                                <option value="">Selecione uma das opções</option>
+                                <option value="aceitou">Sim</option>
+                                <option value="boa-parte">Não</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="medicacao">Medicações:</label>
+                    <input id="medicacao" type="text" placeholder="Insira os medicamentos">
+                </div>
+
+                <div class="input-box">
+                    <label for="atividade">Atividades em família:</label>
+                    <input id="atividade" type="text" placeholder="Insira a atividade em família">
+                </div>
+
+                <div class="check-box">
+                    <h3>Checklist:</h3>
+                    <div class="column-2 check-list">
+                        <div class="check-option">
+                            <div class="check">
+                                <input type="checkbox" id="check-lenco" name="check">
+                                <label for="check-lenco">Lenço umedecido</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-fralda" name="check">
+                                <label for="check-fralda">Fralda</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-pomada" name="check">
+                                <label for="check-pomada">Pomada de assadura</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-lencol" name="check">
+                                <label for="check-lencol">Lençol</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-mantinha" name="check">
+                                <label for="check-mantinha">Mantinha</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-cobertor" name="check">
+                                <label for="check-cobertor">Cobertor</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-toalha" name="check">
+                                <label for="check-toalha">Toalha</label>
+                            </div>
+                        </div>
+
+                        <div class="check-option">
+                            <div class="check">
+                                <input type="checkbox" id="check-bico" name="check">
+                                <label for="check-bico">Bico</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-chinelo" name="check">
+                                <label for="check-chinelo">Chinelo</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-roupa" name="check">
+                                <label for="check-roupa">Roupas para troca</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-shampoo" name="check">
+                                <label for="check-shampoo">Shampoo</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-condicionador" name="check">
+                                <label for="check-condicionador">Condicionador</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-sabonete" name="check">
+                                <label for="check-sabonete">Sabonete</label>
+                            </div>
+                            <div class="check">
+                                <input type="checkbox" id="check-pente" name="check">
+                                <label for="check-pente">Pente</label>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="input-box">
+                    <label for="obsprof">Observações professor(a):</label>
+                    <textarea name="obsprof" rows="5" style="resize: none" placeholder="Insira as observações de professor(a)"></textarea>
+                </div>
+
+                <div class="input-box">
+                    <label for="obsresp">Observações responsável:</label>
+                    <textarea name="obsresp" rows="5" style="resize: none" placeholder="Insira as observações de responsável" readonly></textarea>
+                </div>
+
+                <div class="button-box">
+                    <div class="one-button">
+                        <button class="btn red-btn">Excluir</button>
+                    </div>
+                    <div class="two-buttons">
+                        <button class="btn red-btn">Cancelar</button>
+                        <button type="submit" class="btn green-btn">Salvar</button>
+                    </div>
+                </div>
+                
+            </form>
+        </div>        
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    
+</body>
+</html>
