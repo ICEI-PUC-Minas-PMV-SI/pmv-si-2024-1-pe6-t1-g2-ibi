@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Alunos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
+        <ul>
+            <li><a href="#" active>Calendário</a></li>
+            <li><a href="#">Gerenciar usuários</a></li>
+            <li><a href="#">Gerenciar turmas</a></li>
+            <li><a href="#">Gerenciar alunos</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </div>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <h2>Editar Aluno</h2>
+
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Pesquisar Aluno...">
+                <button id="search-btn">Pesquisar</button>
+            </div>
+        
+            <script>
+                document.getElementById('search-btn').addEventListener('click', function() {
+                    let query = document.getElementById('search-bar').value;
+                    alert('Você pesquisou por: ' + query);
+                });
+            </script>
+
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Data de Nascimento:</label>
+            <input type="nome" id="nome" name="nome" required>
+
+            <label for="email">Adicionar Responsável:</label>
+            <input type="nome" id="nome" name="nome" required>
+
+            <label for="email">Turma:</label>
+            <input type="nome" id="nome" name="nome" required>
+
+            <div class="button-container">
+                <button type="submit" class="btn criar">Criar</button>
+                <button type="button" class="btn editar">Cancelar</button>
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>
