@@ -15,7 +15,10 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (con
 A estrutura consiste em uma arquitetura Web composta por HTML e CSS, projetada para fazer acesso por meio do login. Além disso, terá como arquitetura o preenchimento das requisições dispostas na agenda, bem como colocar observações ao final desta. Ainda, terá funções específicas para o perfil de administrador, como, por exemplo, a criação/exclusão de alunos de uma determinada turma. Por fim, em conjunto, será mantido o site leve e responsivo.
  
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+
+Diagrama de Classes
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/diagramaclasse.png)
 
 ## Projeto da Interface Web
 
