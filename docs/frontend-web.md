@@ -12,10 +12,13 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (con
 
 ## Arquitetura
 
- A estrutura consiste em uma arquitetura Web composta por HTML e CSS, projetada para fazer acesso através do login, preencher as requisições dispostas pela agenda e colocar observações ao final da mesma, tendo ainda funções de criação no acesso do administrador, como por exemplo criar e excluir alunos de uma determinada turma, tudo isso mantendo o site leve e responsivo.
+A estrutura consiste em uma arquitetura Web composta por HTML e CSS, projetada para fazer acesso por meio do login. Além disso, terá como arquitetura o preenchimento das requisições dispostas na agenda, bem como colocar observações ao final desta. Ainda, terá funções específicas para o perfil de administrador, como, por exemplo, a criação/exclusão de alunos de uma determinada turma. Por fim, em conjunto, será mantido o site leve e responsivo.
  
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+
+Diagrama de Classes
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/diagramaclasse.png)
 
 ## Projeto da Interface Web
 
@@ -48,7 +51,6 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (con
 
   ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/identidade_visual.png)
 
-
 ### Layout Responsivo
 
 * Transformar colunas duplas do design original em uma única coluna.
@@ -60,8 +62,7 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa (con
 
 Ao passar o mouse em um botão ou link, deve ter uma mudança na cor do objeto e/ou mudança no cursor para identificar como clicável.
 
-Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma animação do mesmo deslizando para a tela do usuário e saindo, caso seja fechado.
-
+Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma animação do objeto deslizando para a tela do usuário e saindo, caso seja fechado.
 
 ## Fluxo de Dados
 
