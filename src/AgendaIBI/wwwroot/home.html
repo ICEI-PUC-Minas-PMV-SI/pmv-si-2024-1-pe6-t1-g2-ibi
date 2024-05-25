@@ -38,20 +38,25 @@
         </div>
         <div class="container">
             <header class="date">DD/MM/AAAA</header>
-            <form action="">
+            <form class="criar-agenda" method="POST">
+                <div class="input-box">
+                    <label for="alunoID">Aluno ID:</label>
+                    <input id="alunoID" name="alunoID" type="text" placeholder="ID do aluno">
+                </div>
+
                 <div class="input-box">
                     <label for="aluno">Aluno:</label>
-                    <input id="aluno" type="text" placeholder="Nome de aluno">
+                    <input id="aluno" name="aluno" type="text" placeholder="Nome de aluno">
                 </div>
 
                 <div class="column-2">
                     <div class="input-box">
                         <label for="responsavel">Responsável:</label>
-                        <input id="responsavel" type="text" placeholder="Nome do responsavel">
+                        <input id="responsavel" name="responsavel" type="text" placeholder="Nome do responsavel">
                     </div>
                     <div class="input-box">
                         <label for="professor">Professor:</label>
-                        <input id="professor" type="text" placeholder="Nome do professor">
+                        <input id="professor" name="professor" type="text" placeholder="Nome do professor">
                     </div>
                 </div>
 
@@ -61,10 +66,10 @@
                         <div class="select-box">
                             <select name="cafe" id="cafe" >
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Aceitou tudo</option>
-                                <option value="boa-parte">Boa parte</option>
-                                <option value="parte">Parte</option>
-                                <option value="rejeitou">Rejeitou</option>
+                                <option value="0">Aceitou tudo</option>
+                                <option value="1">Boa parte</option>
+                                <option value="2">Parte</option>
+                                <option value="3">Rejeitou</option>
                             </select>
                         </div>                       
                     </div>
@@ -73,10 +78,10 @@
                         <div class="select-box">
                             <select name="almoco" id="almoco">
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Aceitou tudo</option>
-                                <option value="boa-parte">Boa parte</option>
-                                <option value="parte">Parte</option>
-                                <option value="rejeitou">Rejeitou</option>
+                                <option value="0">Aceitou tudo</option>
+                                <option value="1">Boa parte</option>
+                                <option value="2">Parte</option>
+                                <option value="3">Rejeitou</option>
                             </select>
                         </div>
                     </div>
@@ -88,10 +93,10 @@
                         <div class="select-box">
                             <select name="lanche" id="lanche">
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Aceitou tudo</option>
-                                <option value="boa-parte">Boa parte</option>
-                                <option value="parte">Parte</option>
-                                <option value="rejeitou">Rejeitou</option>
+                                <option value="0">Aceitou tudo</option>
+                                <option value="1">Boa parte</option>
+                                <option value="2">Parte</option>
+                                <option value="3">Rejeitou</option>
                             </select>
                         </div>
                     </div>
@@ -100,10 +105,10 @@
                         <div class="select-box">
                             <select name="jantar" id="jantar">
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Aceitou tudo</option>
-                                <option value="boa-parte">Boa parte</option>
-                                <option value="parte">Parte</option>
-                                <option value="rejeitou">Rejeitou</option>
+                                <option value="0">Aceitou tudo</option>
+                                <option value="1">Boa parte</option>
+                                <option value="2">Parte</option>
+                                <option value="3">Rejeitou</option>
                             </select>
                         </div>
                     </div>
@@ -115,9 +120,10 @@
                         <div class="select-box">
                             <select name="evacuacao" id="evacuacao">
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Normal</option>
-                                <option value="boa-parte">Diarreia</option>
-                                <option value="parte">Não evacuou</option>
+                                <option value="0">Aceitou tudo</option>
+                                <option value="1">Boa parte</option>
+                                <option value="2">Parte</option>
+                                <option value="3">Rejeitou</option>
                             </select>
                         </div>
                     </div>
@@ -126,8 +132,8 @@
                         <div class="select-box">
                             <select name="repouso" id="repouso">
                                 <option value="">Selecione uma das opções</option>
-                                <option value="aceitou">Sim</option>
-                                <option value="boa-parte">Não</option>
+                                <option value="0">Sim</option>
+                                <option value="1">Não</option>
                             </select>
                         </div>
                     </div>
@@ -135,12 +141,12 @@
 
                 <div class="input-box">
                     <label for="medicacao">Medicações:</label>
-                    <input id="medicacao" type="text" placeholder="Insira os medicamentos">
+                    <input id="medicacao" name="medicacao" type="text" placeholder="Insira os medicamentos">
                 </div>
 
                 <div class="input-box">
                     <label for="atividade">Atividades em família:</label>
-                    <input id="atividade" type="text" placeholder="Insira a atividade em família">
+                    <input id="atividade" name="atividade" type="text" placeholder="Insira a atividade em família">
                 </div>
 
                 <div class="check-box">
@@ -148,62 +154,62 @@
                     <div class="column-2 check-list">
                         <div class="check-option">
                             <div class="check">
-                                <input type="checkbox" id="check-lenco" name="check">
-                                <label for="check-lenco">Lenço umedecido</label>
+                                <input type="checkbox" name="check-lenco">
+                                <label for="check-lenco">Lenço umedecnameo</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-fralda" name="check">
+                                <input type="checkbox" name="check-fralda">
                                 <label for="check-fralda">Fralda</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-pomada" name="check">
+                                <input type="checkbox" name="check-pomada">
                                 <label for="check-pomada">Pomada de assadura</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-lencol" name="check">
+                                <input type="checkbox" name="check-lencol">
                                 <label for="check-lencol">Lençol</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-mantinha" name="check">
+                                <input type="checkbox" name="check-mantinha">
                                 <label for="check-mantinha">Mantinha</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-cobertor" name="check">
+                                <input type="checkbox" name="check-cobertor">
                                 <label for="check-cobertor">Cobertor</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-toalha" name="check">
+                                <input type="checkbox" name="check-toalha">
                                 <label for="check-toalha">Toalha</label>
                             </div>
                         </div>
 
                         <div class="check-option">
                             <div class="check">
-                                <input type="checkbox" id="check-bico" name="check">
+                                <input type="checkbox" name="check-bico">
                                 <label for="check-bico">Bico</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-chinelo" name="check">
+                                <input type="checkbox" name="check-chinelo">
                                 <label for="check-chinelo">Chinelo</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-roupa" name="check">
+                                <input type="checkbox" name="check-roupa">
                                 <label for="check-roupa">Roupas para troca</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-shampoo" name="check">
+                                <input type="checkbox" name="check-shampoo">
                                 <label for="check-shampoo">Shampoo</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-condicionador" name="check">
+                                <input type="checkbox" name="check-condicionador">
                                 <label for="check-condicionador">Condicionador</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-sabonete" name="check">
+                                <input type="checkbox" name="check-sabonete">
                                 <label for="check-sabonete">Sabonete</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="check-pente" name="check">
+                                <input type="checkbox" name="check-pente">
                                 <label for="check-pente">Pente</label>
                             </div>
                         </div>
@@ -217,7 +223,7 @@
 
                 <div class="input-box">
                     <label for="obsresp">Observações responsável:</label>
-                    <textarea name="obsresp" rows="5" style="resize: none" placeholder="Insira as observações de responsável" readonly></textarea>
+                    <textarea name="obsresp" rows="5" style="resize: none" placeholder="Insira as observações de responsável"></textarea>
                 </div>
 
                 <div class="button-box">
@@ -229,7 +235,6 @@
                         <button type="submit" class="btn green-btn">Salvar</button>
                     </div>
                 </div>
-                
             </form>
         </div>        
     </div>
@@ -238,6 +243,7 @@
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="js/script.js"></script>
     
 </body>
 </html>

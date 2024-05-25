@@ -21,7 +21,7 @@ namespace API_ORIGINAL_01.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
+            
             modelBuilder.Entity("API_ORIGINAL_01.Models.Agenda", b =>
                 {
                     b.Property<int>("Id")

@@ -5,7 +5,7 @@
 namespace API_ORIGINAL_01.Migrations
 {
     /// <inheritdoc />
-    public partial class M006 : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

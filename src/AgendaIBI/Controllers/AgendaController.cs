@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    [Authorize(Roles = "Administrador, Professor")]
+    //[Authorize(Roles = "Administrador, Professor")]
     [Route("api/[controller]")]
     [ApiController]
     public class AgendasController : ControllerBase

@@ -10,11 +10,11 @@
 
     <div class="wrapper">
         <h1>Login</h1>
-        <form action=""> 
+        <form id="login-autenticar" action=""> 
             <div class="img"><img src="logo.png" alt="Logo IBB"></div>            
             <div class="input-box">
-                <label for="phone">Telefone:</label>
-                <input id="phone" type="text" placeholder="(99) 99999-9999" required>
+                <label for="id-usuario">ID:</label>
+                <input id="id-usuario" type="text" placeholder="Coloque seu ID" required>
             </div>
             <div class="input-box">
                 <label for="password">Senha:</label>
@@ -26,7 +26,9 @@
             </div>
 
             <button type="submit" class="btn green-btn">Confirmar</button>
+            <div id="login-response"></div>
         </form>
+        <div id="login-response"></div>
     </div>
 
     <!-- JavaScript -->
@@ -35,6 +37,7 @@
     <script>
         $('#phone').mask('(00) 00000-0000');
     </script>
+    <script src="js/script.js"></script>
     
 </body>
 </html>

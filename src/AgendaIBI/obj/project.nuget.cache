@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5FcgqGMvWV3YbXXV7TPpyzTmyhurHAXd0IPD/sa3yF/1Ucc2fsx2iqKAALPF6DyjUhT87GfaLn3ySX0QTeihCA==",
+  "dgSpecHash": "yWV8a1hejt0eRBSUkN0dx7m+hecEA5hAduUjwBQzpzQacuu4TvDxEZtJ2fqL3O74A/8l4k7apVoLPGTZoAtV7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabriel\\Downloads\\API_ORIGINAL_01\\API_ORIGINAL_01\\API_ORIGINAL_01\\API_ORIGINAL_01.csproj",
+  "projectFilePath": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Gabriel\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

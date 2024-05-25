@@ -6,12 +6,26 @@ using System.Text;
 using API_ORIGINAL_01.Controllers;
 using API_ORIGINAL_01.Models;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 
 // Add services to the container.
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        builder =>
+        {
+            builder.WithOrigins("http://127.0.0.1:5500","http://localhost:5500")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod()
+                   .AllowCredentials();
+        });
+});
+
 
 builder.Services.AddControllers()
     .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
@@ -35,7 +49,7 @@ builder.Services.AddAuthentication(options =>
         {
             ValidateIssuer = false,
             ValidateAudience = false,
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Ry74cBQva5dThwbwchR9jhbtRFnJxWSZ"))
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("    "))
         };
     });
 
@@ -51,15 +65,18 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
-{
+{ 
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthentication();
-app.UseAuthorization();
+app.UseRouting();
+app.UseCors("AllowLocalhost");
+app.UseStaticFiles();
+//app.UseAuthentication();
+//app.UseAuthorization();
 
 app.MapControllers();
 
