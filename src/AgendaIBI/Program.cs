@@ -75,8 +75,8 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowLocalhost");
 app.UseStaticFiles();
-//app.UseAuthentication();
-//app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
