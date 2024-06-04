@@ -10,7 +10,7 @@ using System.Text;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    //[Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase

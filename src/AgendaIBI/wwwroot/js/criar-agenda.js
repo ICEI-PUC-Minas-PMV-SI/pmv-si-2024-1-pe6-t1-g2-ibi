@@ -1,42 +1,64 @@
 // criar agenda
-//document.addEventListener('DOMContentLoaded', function() {
-    const criarAgendaForm = document.getElementById('criar-agenda');
-    if (criarAgendaForm) {
-        criarAgendaForm.addEventListener('submit', async function(event) {
-            event.preventDefault();
-            
-            const formData = new FormData(event.target);
-            const dados = {};
 
-            formData.forEach((value, key) => {
-                // Se o campo é um checkbox
-                console.log(dados[key], value)
-                if (key.startsWith('check-')) {
-                    // Define o valor como true se o value é "on", false caso contrário
-                    dados[key] = value === 'on';
-                } else {
-                    dados[key] = value;
+const criarAgendaForm = document.getElementById('criar-agenda');
+if (criarAgendaForm) {
+    criarAgendaForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        
+        const dados = {};
+
+        Array.from(criarAgendaForm.elements).forEach(element => {
+            if(!element.name) return;
+            if (element.type === 'checkbox') {
+                dados[element.name] = element.checked;
+            } else {
+                dados[element.name] = element.value;
+            }
+        });
+
+        function convertStringsToNumbers(obj) {
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    // Verifica se a string pode ser convertida para número
+                    if (typeof obj[key] === "string" && !isNaN(obj[key]) && obj[key].trim() !== "") {
+                        obj[key] = parseInt(obj[key], 10);
+                    }
                 }
-                console.log(dados)
+            }
+            return obj;
+        }
+
+        const dadosConvertidos = convertStringsToNumbers(dados);
+
+        console.log(dados);
+
+        try {
+            const resposta = await fetch('https://localhost:7247/api/Agendas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
             });
 
-
-            try {
-                const resposta = await fetch('https://localhost:7247/api/Agendas', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(dados)
-                });
-
-                if (resposta.ok) {
-                    const resultado = await resposta.json();
-                    document.getElementById('resposta').innerText = `Resposta da API: ${JSON.stringify(resultado)}`;
-                } else {
-                    document.getElementById('resposta').innerText = `Erro na requisição: ${resposta.statusText}`;
-                }
-            } catch (erro) {
-                document.getElementById('resposta').innerText = `Erro: ${erro.message}`;
+            if (resposta.ok) {
+                const resultado = await resposta.json();
+                document.getElementById('resposta').innerText = `Resposta da API: ${JSON.stringify(resultado)}`;
+            } else {
+                document.getElementById('resposta').innerText = `Erro na requisição: ${resposta.statusText}`;
             }
-        })};
+        } catch (erro) {
+            document.getElementById('resposta').innerText = `Erro: ${erro.message}`;
+        }
+    })};
+
+const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+// const checkboxes = document.querySelectorAll('.check');
+

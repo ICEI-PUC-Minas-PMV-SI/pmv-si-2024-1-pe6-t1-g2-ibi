@@ -17,8 +17,8 @@
       "PackagePath": "staticwebassets\\Criarturmas.html"
     },
     {
-      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Criarusuários.html",
-      "PackagePath": "staticwebassets\\Criarusuários.html"
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Criarusuarios.html",
+      "PackagePath": "staticwebassets\\Criarusuarios.html"
     },
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Editaralunos.html",
@@ -51,6 +51,18 @@
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\criar-agenda.js",
+      "PackagePath": "staticwebassets\\js\\criar-agenda.js"
+    },
+    {
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\criar-usuario.js",
+      "PackagePath": "staticwebassets\\js\\criar-usuario.js"
+    },
+    {
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
     },
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\script.js",
