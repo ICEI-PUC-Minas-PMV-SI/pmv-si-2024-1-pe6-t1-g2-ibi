@@ -4,40 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Usuários</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="sidebar">
-        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
-        <ul>
-            <li><a href="#" active>Calendário</a></li>
-            <li><a href="#">Gerenciar usuários</a></li>
-            <li><a href="#">Gerenciar turmas</a></li>
-            <li><a href="#">Gerenciar alunos</a></li>
-            <li><a href="#">Sair</a></li>
-        </ul>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+        </label>
+        <div class="sidebar-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+            </label>
+
+            <div class="img"><img src="logo.png" alt="Logo IBB"></div>
+            <ul>
+                <li><a href="Calendario.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="form-container">
-        <form id="criar-usuario" method="POST">
-            <h2>Gerenciar Usuário</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="perfil">Perfil:</label>
-            <input type="text" id="perfil" name="perfil" required>
-
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required>
-
-            <div class="button-container">
-                <button type="submit" class="btn criar">Criar</button>
-                <button type="button" class="btn editar">Cancelar</button>
-            </div>
-        </form>
+    <div class="main-content">
+        <div class="form-container container">
+            <form id="criar-usuario" action="#" method="POST">
+                <header>Editar Usuário</header>
+                <div class="container">
+                    <div class="input-box">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Senha" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="perfil">Perfil:</label>
+                        <input type="text" id="perfil" name="perfil" placeholder="Selecione o perfil" required>
+                    </div>
+                    <div class="button-container two-buttons">
+                        <button type="button" class="btn editar red-btn">Cancelar</button>
+                        <button type="submit" class="btn criar green-btn">Criar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- JavaScript -->
     <script src="js/criar-usuario.js"></script>
     <!-- <script src="js/script.js"></script> -->
 </body>

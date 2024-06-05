@@ -9,36 +9,62 @@
 <body>
 
     <div class="sidebar">
-        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
-        <ul>
-            <li><a href="#" active>Calendário</a></li>
-            <li><a href="#">Gerenciar usuários</a></li>
-            <li><a href="#">Gerenciar turmas</a></li>
-            <li><a href="#">Gerenciar alunos</a></li>
-            <li><a href="#">Sair</a></li>
-        </ul>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+        </label>
+        <div class="sidebar-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+            </label>
+
+            <div class="img"><img src="logo.png" alt="Logo IBB"></div>
+            <ul>
+                <li><a href="Calendario.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="form-container">
-        <form action="#" method="post">
-            <h2>Gerenciar Aluno</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+    <div class="main-content">
+        <div class="form-container container">
+            <form action="#" method="post">
+                <header>Editar Aluno</header>
 
-            <label for="nome">Data de nascimento</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">Adicionar Responsavel:</label>
-            <input type="nome" id="nome" name="nome" required>
-
-            <label for="senha">Turma:</label>
-            <input type="name" id="name" name="name" required>
-
-            <div class="button-container">
-                <button type="submit" class="btn criar">Criar</button>
-                <button type="button" class="btn editar">Cancelar</button>
-            </div>
-        </form>
+                <div class="container">
+                    <div class="input-box">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome do(a) aluno(a)" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="data">Data de Nascimento:</label>
+                        <input type="text" id="data" name="data" placeholder="Data de nascimento" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="responsavel">Adicionar Responsável:</label>
+                        <input type="text" id="responsavel" name="responsavel" placeholder="Adicione responsáveis do(a) aluno(a)" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="turma">Turma:</label>
+                        <input type="text" id="turma" name="turma" placeholder="Turma do aluno" required>
+                    </div>
+                    <div class="button-container two-buttons">
+                        <button type="button" class="btn editar red-btn">Cancelar</button>
+                        <button type="submit" class="btn criar green-btn">Criar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+    $('#data').mask('00/00/0000');
+    </script>
 </body>
 </html>

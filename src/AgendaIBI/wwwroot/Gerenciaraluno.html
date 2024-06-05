@@ -4,36 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Alunos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="sidebar">
-        <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
-        <ul>
-            <li><a href="#" active>Calendário</a></li>
-            <li><a href="#">Gerenciar usuários</a></li>
-            <li><a href="#">Gerenciar turmas</a></li>
-            <li><a href="#">Gerenciar alunos</a></li>
-            <li><a href="#">Sair</a></li>
-        </ul>
-    </div>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" /></svg>
+        </label>
+        <div class="sidebar-container">
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+            </label>
 
-    <div class="container">
-        <h1>Gerenciamento de Alunos</h1>
-        <div class="button-container">
-            <button id="create-user-btn">Criar Aluno</button>
-            <button id="edit-user-btn">Editar Aluno</button>
+            <div class="img"><img src="logo.png" alt="Logo IBB"></div>
+            <ul>
+                <li><a href="Calendario.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li><a href="#">Sair</a></li>
+            </ul>
         </div>
     </div>
 
+    <div class="main-content">
+        <div class="container">
+            <header>Gerenciamento de Alunos</header>
+            <div class="button-container two-buttons">
+                <button id="create-student-btn" class="btn green-btn">Criar Aluno</button>
+                <button id="edit-student-btn" class="btn green-btn">Editar Aluno</button>
+            </div>
+        </div>
+    </div>
+
+
     <script>
-        document.getElementById('create-user-btn').addEventListener('click', function() {
-            alert('Usuario Criadro!');
+        document.getElementById('create-student-btn').addEventListener('click', function () {
+            alert('Aluno Criadro!');
         });
 
-        document.getElementById('edit-user-btn').addEventListener('click', function() {
-            alert('Editar Usuário!');
+        document.getElementById('edit-student-btn').addEventListener('click', function () {
+            alert('Editar Aluno!');
         });
     </script>
 
