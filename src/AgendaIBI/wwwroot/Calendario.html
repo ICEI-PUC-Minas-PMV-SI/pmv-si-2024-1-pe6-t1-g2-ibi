@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
     <link rel="stylesheet" href="style.css">
+   
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.11/index.global.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@6.1.11/index.global.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid@6.1.11/index.global.min.js" defer></script>
+    <script src="Calendario.js" defer></script>
 </head>
 <body>
 
-    <div class="sidebar">
+    <div class="sidebar-container">
         <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
         <ul>
-            <li><a href="#" active>Calendário</a></li>
+            <li><a href="#" class="active">Calendário</a></li>
             <li><a href="#">Gerenciar usuários</a></li>
             <li><a href="#">Gerenciar turmas</a></li>
             <li><a href="#">Gerenciar alunos</a></li>
@@ -22,7 +28,7 @@
         <div class="busca">
             <label for="search">Matrícula:</label>
             <input id="search" type="text" placeholder="Insira a matrícula do aluno">
-            <button id="search" type="submit"><img src="lupa.png" alt="buscar"></button>
+            <button type="submit"><img src="lupa.png" alt="buscar"></button>
         </div>
         <div class="container">
             <header class="date">DD/MM/AAAA</header>
@@ -30,41 +36,114 @@
                 <div class="input-box">
                     <label for="aluno">Aluno:</label>
                     <input id="aluno" type="text" placeholder="Nome de aluno">
-                
-                    <div class="resposta API">
-
-               
-                    <center>
-                        <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/core@6.1.11/index.global.min.js'></script>
-                        <script src='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@6.1.11/index.global.min.js'></script>
-                        <script>
-                    
-                          document.addEventListener('DOMContentLoaded', function() {
-                            var calendarEl = document.getElementById('calendar');
-                            var calendar = new FullCalendar.Calendar(calendarEl, {
-                              initialView: 'dayGridMonth'
-                            });
-                            calendar.render();
-                          });
-                    
-                        </script>
-                      </head>
-                      <body>
-                        <div id='calendar'></div>
-                    </center>
-                    
-                
-
-
-                    </div>
-                    
-
-                
-
-                
+                </div>
             </form>
-        </div>        
+            <div class="resposta API">
+                <div id="calendar"></div>
+            </div>
+        </div>
     </div>
-    
+
+    <!-- Modal para edição de evento -->
+    <div id="editEventModal" style="display: none;">
+        <h2>Editar Evento</h2>
+        <form id="editEventForm">
+            <label for="eventTitle">Título:</label>
+            <input type="text" id="eventTitle" name="title">
+            <label for="eventStart">Data de Início:</label>
+            <input type="datetime-local" id="eventStart" name="start">
+            <label for="eventEnd">Data de Término:</label>
+            <input type="datetime-local" id="eventEnd" name="end">
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                navLinks: true,
+                locale: 'pt-br', 
+                selectable: true,
+                headerToolbar: {
+                    timeZone: 'UTC',    
+                    left: 'prev next today',
+                    center: 'title',
+                    right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                },
+                editable: true,
+                dayMaxEvents: true,
+                buttonText: {
+                    today: 'Hoje',
+                    month: 'Mês',
+                    week: 'Semana',
+                    day: 'Dia',
+                    list: 'Lista'
+                },
+                events: [
+                    // Exemplo de eventos
+                    {
+                        title: 'Evento 1',
+                        start: '2024-06-01',
+                        end: '2024-06-02'
+                    },
+                    {
+                        title: 'Evento 2',
+                        start: '2024-06-07',
+                        end: '2024-06-09'
+                    }
+                ],
+                dateClick: function(info) {
+                    var date = info.dateStr; // Data clicada no formato YYYY-MM-DD
+                    var url = `pagina.html?data=${date}`;
+                    window.location.href = url;
+                },
+                eventClick: function(info) {
+                    var eventObj = info.event;
+
+                    // Preencher o formulário de edição com os dados do evento
+                    document.getElementById('eventTitle').value = eventObj.title;
+                    document.getElementById('eventStart').value = eventObj.start.toISOString().slice(0, 16);
+                    document.getElementById('eventEnd').value = eventObj.end ? eventObj.end.toISOString().slice(0, 16) : '';
+
+                    // Mostrar o modal de edição
+                    document.getElementById('editEventModal').style.display = 'block';
+
+                    // Adicionar listener ao formulário para salvar alterações
+                    document.getElementById('editEventForm').onsubmit = function(e) {
+                        e.preventDefault();
+                        
+                        // Atualizar o evento com os novos valores
+                        eventObj.setProp('title', document.getElementById('eventTitle').value);
+                        eventObj.setStart(document.getElementById('eventStart').value);
+                        eventObj.setEnd(document.getElementById('eventEnd').value);
+                        
+                        // Fechar o modal de edição
+                        document.getElementById('editEventModal').style.display = 'none';
+                    };
+                },
+                select: function(info) {
+                    alert('selected ' + info.startStr + ' to ' + info.endStr);
+                }
+            });
+
+            calendar.render();
+        });
+    </script>
+
+    <style>
+        #editEventModal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+    </style>
 </body>
 </html>
+
