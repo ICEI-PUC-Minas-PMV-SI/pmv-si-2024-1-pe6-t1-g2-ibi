@@ -6,7 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-allowed-roles="Administrador,Professor">
 
     <div class="sidebar">
         <input type="checkbox" id="sidebar-active">
@@ -24,7 +24,7 @@
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
                 <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a id='logout' href="#">Sair</a></li>
             </ul>
         </div>           
     </div>

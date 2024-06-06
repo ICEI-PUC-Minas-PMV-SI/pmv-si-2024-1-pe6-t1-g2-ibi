@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vandeir\\Desktop\\projeto_IBI\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj": {}
+    "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vandeir\\Desktop\\projeto_IBI\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj": {
+    "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vandeir\\Desktop\\projeto_IBI\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj",
+        "projectUniqueName": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj",
         "projectName": "API_ORIGINAL_01",
-        "projectPath": "C:\\Users\\vandeir\\Desktop\\projeto_IBI\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj",
-        "packagesPath": "C:\\Users\\vandeir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vandeir\\Desktop\\projeto_IBI\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\obj\\",
+        "projectPath": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\API_ORIGINAL_01.csproj",
+        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vandeir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
