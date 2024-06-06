@@ -14,6 +14,8 @@ namespace API_ORIGINAL_01.Models
         [Required]
         public int AnoLetivo { get; set; }
 
+        public ICollection<TurmaUsuarios> Usuarios { get; set; }
+
         public ICollection<TurmaAlunos> Alunos { get; set; }
     }
 }
