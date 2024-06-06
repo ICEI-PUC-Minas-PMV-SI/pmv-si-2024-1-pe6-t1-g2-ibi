@@ -40,7 +40,7 @@ function renderUI() {
             break;
         default:
             // Caso o papel (role) do usuário não seja reconhecido
-            console.log('Papel (role) do usuário não reconhecido');
+            window.location = "https://localhost:7247/index.html";
             break;
     }
 }

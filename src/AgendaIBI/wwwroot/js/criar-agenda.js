@@ -43,7 +43,7 @@ if (criarAgendaForm) {
 
             if (resposta.ok) {
                 const resultado = await resposta.json();
-                document.getElementById('resposta').innerText = `Resposta da API: ${JSON.stringify(resultado)}`;
+                document.getElementById('resposta').innerText = `A agenda foi criada com sucesso`;
             } else {
                 document.getElementById('resposta').innerText = `Erro na requisição: ${resposta.statusText}`;
             }
@@ -51,14 +51,3 @@ if (criarAgendaForm) {
             document.getElementById('resposta').innerText = `Erro: ${erro.message}`;
         }
     })};
-
-const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-// const checkboxes = document.querySelectorAll('.check');
-

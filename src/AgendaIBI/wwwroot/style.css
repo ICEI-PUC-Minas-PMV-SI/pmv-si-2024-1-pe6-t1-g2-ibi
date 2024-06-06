@@ -16,6 +16,14 @@ body {
     background: #1AB24C;
 }
 
+a {
+    color: white;
+}
+
+a:hover {
+    color: #1AB24C;
+    text-decoration: none;
+}
 
 /* Imagem logo */
 .img {

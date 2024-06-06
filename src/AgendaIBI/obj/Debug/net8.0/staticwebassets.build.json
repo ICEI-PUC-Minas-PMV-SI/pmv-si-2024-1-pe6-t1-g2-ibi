@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yE5/GxqC9mFkTaKBdEVD9fabYvctXHjFu5H6qq1dijc=",
+  "Hash": "8xQmRkcAKZvhdDBg5ppDk65W8OBONHg+CH2lY9ApEH0=",
   "Source": "API_ORIGINAL_01",
   "BasePath": "_content/API_ORIGINAL_01",
   "Mode": "Default",
@@ -300,6 +300,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\criar-usuario.js"
+    },
+    {
+      "Identity": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\gerenciar-usuario.js",
+      "SourceId": "API_ORIGINAL_01",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\",
+      "BasePath": "_content/API_ORIGINAL_01",
+      "RelativePath": "js/gerenciar-usuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\gerenciar-usuario.js"
     },
     {
       "Identity": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\login.js",

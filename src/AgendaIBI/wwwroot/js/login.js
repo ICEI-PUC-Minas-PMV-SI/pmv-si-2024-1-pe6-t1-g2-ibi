@@ -16,15 +16,8 @@ document.getElementById('login-autenticar').addEventListener('submit', async fun
 
         if (response.ok) {
             const data = await response.json();
-            console.log('Response data:', data); // Log para ver a estrutura completa da resposta
             
-            // Verifique os campos disponíveis na resposta
-            for (const [key, value] of Object.entries(data)) {
-                console.log(`Response key: ${key}, value: ${value}`);
-            }
-
             const token = data.jwtToken; // Certifique-se de que o nome do campo está correto
-            console.log('Token:', token);
 
             if (token) {
                 // Armazene o token JWT localmente (pode ser no localStorage, sessionStorage ou cookie)

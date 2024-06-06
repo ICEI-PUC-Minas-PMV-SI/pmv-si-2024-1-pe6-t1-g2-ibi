@@ -19,9 +19,7 @@ document.getElementById('criar-usuario').addEventListener('submit', function(eve
       body: JSON.stringify(userData)
     })
     .then(data => {
-      console.log('Usuário registrado com sucesso');
-      // Faça algo com a resposta, se necessário
-    })
+      document.getElementById('resposta').innerText = `O usuário foi criado com sucesso`;    })
     .catch(error => {
       console.error('Erro:', error);
     });
