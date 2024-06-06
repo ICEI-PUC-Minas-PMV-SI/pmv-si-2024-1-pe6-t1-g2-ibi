@@ -22,7 +22,7 @@ namespace API_ORIGINAL_01.Models
 
         public ICollection<AlunosResponsaveis> Alunos { get; set; }
 
-        public ICollection<Turma> Turmas { get; set; }
+        public ICollection<TurmaUsuarios> Turmas { get; set; }
 
 
 
