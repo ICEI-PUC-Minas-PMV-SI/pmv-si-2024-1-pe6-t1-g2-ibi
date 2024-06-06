@@ -42,6 +42,19 @@ namespace API_ORIGINAL_01.Models
 
 
 
+            builder.Entity<TurmaUsuarios>()
+               .HasKey(c => new { c.UsuarioId, c.TurmaId });
+
+            builder.Entity<TurmaUsuarios>()
+                .HasOne(c => c.Usuario).WithMany(c => c.Turmas)
+                .HasForeignKey(c => c.UsuarioId);
+
+            builder.Entity<TurmaUsuarios>()
+                .HasOne(c => c.Turma).WithMany(c => c.Usuarios)
+                .HasForeignKey(c => c.TurmaId);
+
+
+
 
 
 
@@ -54,6 +67,7 @@ namespace API_ORIGINAL_01.Models
         public DbSet<Agenda> Agendas { get; set; }
         public DbSet<Turma> Turmas { get; set; }
         public DbSet<TurmaAlunos> TurmaAluno { get; set; }
+        public DbSet<TurmaUsuarios> TurmaUsuarios { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<AlunosResponsaveis> AlunosResponsaveis { get; set; }
 

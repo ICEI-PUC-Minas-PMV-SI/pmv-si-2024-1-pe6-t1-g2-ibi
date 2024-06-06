@@ -39,7 +39,7 @@ namespace API_ORIGINAL_01.Controllers
         public async Task<ActionResult> AddUsuario(int id, TurmaUsuarios model)
         {
     if (id != model.TurmaId) return BadRequest();
-    _context.TurmaUsuario.Add(model);
+    _context.TurmaUsuarios.Add(model);
     await _context.SaveChangesAsync();
 
     return CreatedAtAction("GetById", new { id = model.TurmaId }, model);

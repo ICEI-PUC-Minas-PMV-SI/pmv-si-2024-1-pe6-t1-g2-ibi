@@ -1,7 +1,7 @@
 using API_ORIGINAL_01.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApplication_IBI1_ORIGINAL.Models
+namespace API_ORIGINAL_01.Models
 {
 
     [Table("TurmaUsuarios")]
