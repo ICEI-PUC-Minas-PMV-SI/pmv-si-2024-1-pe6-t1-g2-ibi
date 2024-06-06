@@ -45,6 +45,14 @@ function renderUI() {
     }
 }
 
+const botaoLogout = document.getElementById('logout')
+botaoLogout.addEventListener("click", function(e){
+    e.preventDefault();
+    
+
+})
+
+
 // Chame renderUI quando a página for carregada
 document.addEventListener('DOMContentLoaded', function() {
     renderUI();
