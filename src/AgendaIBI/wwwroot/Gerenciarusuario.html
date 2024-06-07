@@ -23,8 +23,8 @@
             <ul>
                 <li><a href="Calendario.html">Calendário</a></li>
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
-                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -35,31 +35,45 @@
             <header>Gerenciamento de Usuários</header>
             <div class="button-container two-buttons">
                 <button id="create-user-btn" class="btn green-btn"><a href="Criarusuarios.html">Criar Usuário</a></button>
-                <button id="edit-user-btn" class="btn green-btn">Editar Usuário</button>
+                <button id="edit-user-btn" class="btn green-btn"><a href="Editarusuario.html">Editar Usuário</a></button>
             </div>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h1>Professor</h1>
-                    <table id="grid-contatos" class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Turmas</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-contatos">
-                            
-                        </tbody>
-                    </table>
+            <div class="table-box">
+                <div class="table-header column-2">
+                    <h2>Visualizar qual perfil de usuário?</h2>
+                    <div class="two-buttons">
+                        <button class="btn grey-btn">Professor</button>
+                        <button type="submit" class="btn grey-btn">Responsável</button>
+                    </div>
                 </div>
-            </div>
+                <table class="table">
+                    <tr class="table-header">
+                        <td>ID</td>
+                        <td>Nome usuário</td>
+                        <td>Perfil</td>
+                        <td>Aluno(s)</td>
+                    </tr>
+                    <tr class="table-line">
+                        <td>1</td>
+                        <td>Pai</td>
+                        <td>Responsável</td>
+                        <td>Filho 1<br>Filha 2</td>
+                    </tr>
+                    <tr class="table-line">
+                        <td>2</td>
+                        <td>Mãe</td>
+                        <td>Responsável</td>
+                        <td>Filha</td>
+                    </tr>
+                </table>
+            </div>     
         </div>
     </div>
 
+    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/gerenciar-usuario.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
 
 
 

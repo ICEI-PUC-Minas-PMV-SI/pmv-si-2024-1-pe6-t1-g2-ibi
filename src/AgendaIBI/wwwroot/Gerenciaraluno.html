@@ -21,8 +21,8 @@
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
                 <li><a href="Calendario.html">Calendário</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
-                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
                 <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
@@ -33,14 +33,15 @@
         <div class="container">
             <header>Gerenciamento de Alunos</header>
             <div class="button-container two-buttons">
-                <button id="create-student-btn" class="btn green-btn">Criar Aluno</button>
-                <button id="edit-student-btn" class="btn green-btn">Editar Aluno</button>
+                <button id="create-student-btn" class="btn green-btn"><a href="Criaraluno.html">Criar Aluno</a></button>
+                <button id="edit-student-btn" class="btn green-btn"><a href="Editaralunos.html">Editar Aluno</a></button>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script> 
+    <script src="js/pop-up.js"></script>
 
     <script>
         document.getElementById('create-student-btn').addEventListener('click', function () {

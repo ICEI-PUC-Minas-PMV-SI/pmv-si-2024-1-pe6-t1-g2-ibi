@@ -21,10 +21,10 @@
             <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
             <ul>
                 <li><a href="Calendario.html">Calendário</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
-                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
-                <li><a id='logout' href="#">Sair</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>           
     </div>
@@ -41,11 +41,11 @@
             <form id="criar-agenda" method="POST">
                 <div class="input-box">
                     <label for="alunoID">Aluno ID:</label>
-                    <input id="alunoID" name="alunoID" type="text" placeholder="ID do aluno">
+                    <input id="alunoID" name="alunoID" type="text" placeholder="ID do aluno" required>
                 </div>
                 <div class="input-box">
                     <label for="data">Data:</label>
-                    <input id="data" name="data" type="text" placeholder="Data">
+                    <input id="data" name="data" type="text" placeholder="Data" required>
                 </div>
 
                 <!-- <div class="input-box">
@@ -68,7 +68,7 @@
                     <div class="input-box">
                         <label for="cafe">Café da manhã:</label>
                         <div class="select-box">
-                            <select name="cafe" id="cafe" >
+                            <select name="cafe" id="cafe" required>
                                 <option value="">Selecione uma das opções</option>
                                 <option value="0">Aceitou tudo</option>
                                 <option value="1">Boa parte</option>
@@ -80,7 +80,7 @@
                     <div class="input-box">
                         <label for="almoco">Almoço:</label>
                         <div class="select-box">
-                            <select name="almoco" id="almoco">
+                            <select name="almoco" id="almoco" required>
                                 <option value="">Selecione uma das opções</option>
                                 <option value="0">Aceitou tudo</option>
                                 <option value="1">Boa parte</option>
@@ -95,7 +95,7 @@
                     <div class="input-box">
                         <label for="lanche">Lanche:</label>
                         <div class="select-box">
-                            <select name="lanche" id="lanche">
+                            <select name="lanche" id="lanche" required>
                                 <option value="">Selecione uma das opções</option>
                                 <option value="0">Aceitou tudo</option>
                                 <option value="1">Boa parte</option>
@@ -107,7 +107,7 @@
                     <div class="input-box">
                         <label for="jantar">Jantar:</label>
                         <div class="select-box">
-                            <select name="jantar" id="jantar">
+                            <select name="jantar" id="jantar" required>
                                 <option value="">Selecione uma das opções</option>
                                 <option value="0">Aceitou tudo</option>
                                 <option value="1">Boa parte</option>
@@ -122,19 +122,17 @@
                     <div class="input-box">
                         <label for="evacuacao">Evacuação:</label>
                         <div class="select-box">
-                            <select name="evacuacao" id="evacuacao">
+                            <select name="evacuacao" id="evacuacao" required>
                                 <option value="">Selecione uma das opções</option>
-                                <option value="0">Aceitou tudo</option>
-                                <option value="1">Boa parte</option>
-                                <option value="2">Parte</option>
-                                <option value="3">Rejeitou</option>
+                                <option value="0">Sim</option>
+                                <option value="1">Não</option>
                             </select>
                         </div>
                     </div>
                     <div class="input-box">
                         <label for="repouso">Repousou:</label>
                         <div class="select-box">
-                            <select name="repouso" id="repouso">
+                            <select name="repouso" id="repouso" required>
                                 <option value="">Selecione uma das opções</option>
                                 <option value="0">Sim</option>
                                 <option value="1">Não</option>
@@ -173,13 +171,13 @@
                                 <input type="checkbox" name="toalha">
                                 <label for="check-toalha">Toalha</label>
                             </div>
-                        </div>
-
-                        <div class="check-option">
                             <div class="check">
                                 <input type="checkbox" id="bico" name="bico">
                                 <label for="check-bico">Bico</label>
                             </div>
+                        </div>
+
+                        <div class="check-option">                            
                             <div class="check">
                                 <input type="checkbox" name="chinelo">
                                 <label for="check-chinelo">Chinelo</label>
@@ -233,11 +231,12 @@
     </div>
 
 
-    <!-- JavaScript -->
+    <!-- JavaScript  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="js/criar-agenda.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
 </body>
 </html>

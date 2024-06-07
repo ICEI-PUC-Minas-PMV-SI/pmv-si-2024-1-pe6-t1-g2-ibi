@@ -21,9 +21,9 @@
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
                 <li><a href="Calendario.html">Calendário</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
-                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -56,9 +56,14 @@
                         <label for="turma">Turma:</label>
                         <input type="text" id="turma" name="turma" placeholder="Turma do aluno" required>
                     </div>
-                    <div class="button-container two-buttons">
-                        <button type="button" class="btn editar red-btn">Cancelar</button>
-                        <button type="submit" class="btn criar green-btn">Criar</button>
+                    <div class="button-box">
+                        <div class="one-button">
+                            <button class="btn red-btn">Excluir</button>
+                        </div>
+                        <div class="two-buttons">
+                            <button class="btn red-btn">Cancelar</button>
+                            <button type="submit" class="btn green-btn">Salvar</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -69,7 +74,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
-    <script src="js/script.js"></script>   
+    <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>   
     <script>
         $('#data').mask('00/00/0000');
     </script>
