@@ -4,11 +4,11 @@ document.getElementById('criar-usuario').addEventListener('submit', function(eve
     const nome = document.getElementById('nome').value;
     const password = document.getElementById('password').value;
     const perfil = document.getElementById('perfil').value;
-
+    
     const userData = {
       nome: nome,
       password: password,
-      role: perfil
+      perfil: parseInt(perfil, 10)
     };
 
     fetch('https://localhost:7247/api/usuarios', {
@@ -19,7 +19,9 @@ document.getElementById('criar-usuario').addEventListener('submit', function(eve
       body: JSON.stringify(userData)
     })
     .then(data => {
-      document.getElementById('resposta').innerText = `O usuário foi criado com sucesso`;    })
+      document.getElementById('resposta').innerText = `O usuário foi criado com sucesso`;
+      window.location.reload()   
+    })
     .catch(error => {
       console.error('Erro:', error);
     });

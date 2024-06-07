@@ -26,10 +26,33 @@ namespace API_ORIGINAL_01.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var model = await _context.Usuarios.ToListAsync();
+            var usuarios = await _context.Usuarios
+                .Include(u => u.Turmas)
+                    .ThenInclude(ut => ut.Turma)
+                .Include(u => u.Alunos)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Nome,
+                    u.Perfil,
+                    Alunos = u.Alunos.Select(a => new
+                    {
+                        a.AlunoId,
+                        a.Aluno.Nome,
+                        a.Aluno.Matricula
+                    }).ToList(),
+                    Turmas = u.Turmas.Select(t => new
+                    {
+                        t.TurmaId,
+                        t.Turma.NumeroTurma,
+                        t.Turma.AnoLetivo
+                    }).ToList()
+                })
+                .ToListAsync();
 
-            return Ok(model);
+            return Ok(usuarios);
         }
+
 
         [HttpPost]
 
@@ -53,9 +76,9 @@ namespace API_ORIGINAL_01.Controllers
         public async Task<ActionResult> GetById(int id)
         {
             var model = await _context.Usuarios
-
+                .Include(t => t.Alunos).ThenInclude(t => t.Aluno)
+                .Include(t => t.Turmas).ThenInclude(t => t.Turma)
                 .FirstOrDefaultAsync(c => c.Id == id);
-
             if (model == null) return NotFound();
 
 

@@ -4,7 +4,6 @@ function getUserRole() {
     if (token) {
         try {
             const decodedToken = jwt_decode(token);
-            console.log(decodedToken);
             return decodedToken.role; // Retorna o papel (role) do usuário
         } catch (error) {
             console.error('Erro ao decodificar o token:', error);
@@ -27,12 +26,6 @@ function checkAuthorization(allowedRoles) {
 // Função para renderizar a UI com base na role do usuário
 function renderUI() {
     const role = getUserRole();
-
-    // if (!role) {
-    //     // Caso não consiga obter o papel (role) do usuário
-    //     window.location.href = "https://localhost:7247/login.html";
-    //     return;
-    // }
 
     // Verificar a role do usuário e ocultar elementos de acordo
     switch (role) {

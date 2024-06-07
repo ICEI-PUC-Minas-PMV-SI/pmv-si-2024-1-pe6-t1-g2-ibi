@@ -7,7 +7,7 @@ using System;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    //[Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class AlunosController : ControllerBase
@@ -99,7 +99,7 @@ namespace API_ORIGINAL_01.Controllers
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, AlunosResponsaveis model)
         {
-            if (id != model.AlunoId) return BadRequest();
+            //if (id != model.AlunoId) return BadRequest();
             _context.AlunosResponsaveis.Add(model);
             await _context.SaveChangesAsync();
 

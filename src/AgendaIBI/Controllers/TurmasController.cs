@@ -38,11 +38,11 @@ namespace API_ORIGINAL_01.Controllers
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, TurmaUsuarios model)
         {
-    if (id != model.TurmaId) return BadRequest();
-    _context.TurmaUsuarios.Add(model);
-    await _context.SaveChangesAsync();
+            /*if (id != model.TurmaId) return BadRequest()*/;
+            _context.TurmaUsuarios.Add(model);
+            await _context.SaveChangesAsync();
 
-    return CreatedAtAction("GetById", new { id = model.TurmaId }, model);
+            return CreatedAtAction("GetById", new { id = model.TurmaId }, model);
         }
 
         [HttpGet("{id}")]

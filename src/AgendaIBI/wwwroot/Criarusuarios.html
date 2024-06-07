@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criar Usuários</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-allowed-roles="Administrador">
@@ -31,7 +32,7 @@
 
     <div class="main-content">
         <div class="form-container container">
-            <form id="criar-usuario" action="#" method="POST">
+            <form id="criar-usuario" action="#" method="POST" >
                 <header>Criar Usuário</header>
                 <div class="container">
                     <div class="input-box">
@@ -42,9 +43,14 @@
                         <label for="password">Senha</label>
                         <input type="password" id="password" name="password" placeholder="Senha" required>
                     </div>
-                    <div class="input-box">
+                    <div>
                         <label for="perfil">Perfil:</label>
-                        <input type="text" id="perfil" name="perfil" placeholder="Selecione o perfil" required>
+                        <select id="perfil" name="perfil" required>
+                            <option value="">Escolha o perfil do Usuário</option>
+                            <option value="0">Administrador</option>
+                            <option value="1">Professor</option>
+                            <option value="2">Responsável</option>
+                        </select>
                     </div>
                     <div class="button-container two-buttons">
                         <button type="button" class="btn editar red-btn">Cancelar</button>
@@ -61,7 +67,6 @@
     <script src="js/criar-usuario.js"></script>
     <script src="js/script.js"></script>
     <script src="js/pop-up.js"></script>
-     
 </body>
 </html>
 

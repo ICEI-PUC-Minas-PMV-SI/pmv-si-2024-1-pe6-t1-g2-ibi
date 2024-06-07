@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Calendario.js"
     },
     {
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Criaragenda.html",
+      "PackagePath": "staticwebassets\\Criaragenda.html"
+    },
+    {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Criaraluno.html",
       "PackagePath": "staticwebassets\\Criaraluno.html"
     },
@@ -25,10 +29,6 @@
       "PackagePath": "staticwebassets\\Editaralunos.html"
     },
     {
-      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Editarturmas.html",
-      "PackagePath": "staticwebassets\\Editarturmas.html"
-    },
-    {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Editarusuario.html",
       "PackagePath": "staticwebassets\\Editarusuario.html"
     },
@@ -43,14 +43,6 @@
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\Gerenciarusuario.html",
       "PackagePath": "staticwebassets\\Gerenciarusuario.html"
-    },
-    {
-      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\home.html",
-      "PackagePath": "staticwebassets\\home.html"
-    },
-    {
-      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\criar-agenda.js",
@@ -71,6 +63,10 @@
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
     },
     {
       "Id": "C:\\Users\\Gabriel\\Downloads\\pmv-si-2024-1-pe6-t1-g2-ibi-main\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\wwwroot\\logo.png",
