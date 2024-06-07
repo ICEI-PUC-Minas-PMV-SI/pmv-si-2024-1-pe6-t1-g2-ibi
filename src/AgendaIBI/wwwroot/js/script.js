@@ -18,7 +18,7 @@ function checkAuthorization(allowedRoles) {
     const role = getUserRole();
     if (!role || !allowedRoles.includes(role)) {
         // Redireciona para a página inicial se o usuário não estiver autorizado
-        window.location.href = "https://localhost:7247/index.html";
+        window.location.href = "https://localhost:7247/login.html";
         return false;
     }
     return true;
@@ -28,11 +28,11 @@ function checkAuthorization(allowedRoles) {
 function renderUI() {
     const role = getUserRole();
 
-    if (!role) {
-        // Caso não consiga obter o papel (role) do usuário
-        window.location.href = "https://localhost:7247/index.html";
-        return;
-    }
+    // if (!role) {
+    //     // Caso não consiga obter o papel (role) do usuário
+    //     window.location.href = "https://localhost:7247/login.html";
+    //     return;
+    // }
 
     // Verificar a role do usuário e ocultar elementos de acordo
     switch (role) {
@@ -65,14 +65,25 @@ document.addEventListener("DOMContentLoaded", function() {
         botaoLogout.addEventListener("click", function(e){
             e.preventDefault();
             localStorage.removeItem("jwtToken");
-            window.location.href = "https://localhost:7247/index.html";
+            window.location.href = "https://localhost:7247/login.html";
         });
     } else {
         console.error("Elemento com ID 'logout' não encontrado.");
     }
 
+    // Obter as roles permitidas do atributo data-allowed-roles
+    const allowedRolesString = document.body.getAttribute('data-allowed-roles');
+    if (!allowedRolesString) {
+        console.error("Atributo 'data-allowed-roles' não encontrado no elemento <body>.");
+        window.location.href = "https://localhost:7247/calendario.html";
+        return;
+    }
+    const allowedRoles = allowedRolesString.split(',').map(role => role.trim());
+
+    // Verifique a autorização antes de renderizar a UI
     if (checkAuthorization(allowedRoles)) {
         // Chame renderUI quando a página for carregada e o usuário estiver autorizado
         renderUI();
+
     }
 });

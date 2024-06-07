@@ -25,7 +25,7 @@ document.getElementById('login-autenticar').addEventListener('submit', async fun
                 document.getElementById('login-response').innerText = 'Login successful!';
                 
                 // Redireciona para outra página
-                window.location = "https://localhost:7247/home.html";
+                window.location = "https://localhost:7247/calendario.html";
             } else {
                 document.getElementById('login-response').innerText = 'Login successful, but token is missing!';
             }

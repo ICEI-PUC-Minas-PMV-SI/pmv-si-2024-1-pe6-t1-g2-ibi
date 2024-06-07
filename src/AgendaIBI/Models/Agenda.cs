@@ -11,7 +11,6 @@ namespace API_ORIGINAL_01.Models
         public int Id { get; set; }
         [Required]
         public DateTime Data { get; set; }
-        [Required]
         public string ObservacaoProfessor { get; set; }
         public bool Repousou { get; set; }
         public Evacuacao Evacuacao { get; set; }
