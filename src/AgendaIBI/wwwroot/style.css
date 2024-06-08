@@ -16,13 +16,10 @@ body {
     background: #1AB24C;
 }
 
-a {
-    color: white;
-}
-
-a:hover {
-    color: #1AB24C;
-    text-decoration: none;
+.column-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 15px;
 }
 
 /* Imagem logo */
@@ -143,7 +140,11 @@ textarea:read-only {
     background: #EE1B24;
 }
 
-.green-btn:hover {
+.grey-btn {
+    color: #202020;
+}
+
+.green-btn:hover, .grey-btn:hover {
     border: #1AB24C 2px solid;
     background-color: #FFF;
     color: #1AB24C;
@@ -153,6 +154,15 @@ textarea:read-only {
     border: #EE1B24 2px solid;
     background-color: #FFF;
     color: #EE1B24;
+}
+
+.btn a {
+    color: white;
+}
+
+.green-btn:hover a {
+    color: #1AB24C;
+    text-decoration: none;
 }
 
 .button-box {
@@ -171,6 +181,19 @@ textarea:read-only {
     width: 150px;
 }
 
+/* Links */
+
+.link-red {
+    color: #EE1B24;
+}
+
+.link-green {
+    color: #1AB24C;
+}
+
+.link-red:hover, .link-green:hover {
+    text-decoration: underline;
+}
 
 /* Tela de login */
 .wrapper {
@@ -205,14 +228,6 @@ textarea:read-only {
     justify-content: end;
     font-size: 14.5px;
     margin: 20px 5px;
-}
-
-.wrapper .forgot a {
-    color: #EE1B24;
-}
-
-.wrapper .forgot a:hover {
-    text-decoration: underline;
 }
 
 
@@ -255,6 +270,10 @@ textarea:read-only {
     background-color: #1AB24C;
     color: #FFF;
     font-weight: 500;
+}
+
+.sidebar a:hover {
+    text-decoration: none;
 }
 
 .sidebar .open-sidebar-button svg {
@@ -358,12 +377,6 @@ textarea:read-only {
     margin: 5px;
 }
 
-.container form .column-2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 15px;
-}
-
 .container form .check-box{
     margin: 20px 0;
     padding: 10px;
@@ -375,6 +388,51 @@ textarea:read-only {
     justify-content: space-around;
     padding: 10px;
     line-height: 30px;
+}
+
+/* Tabelas de usuários */
+
+.table-box {
+    padding: 15px;
+    margin-top: 20px;
+    border-top: #666 solid 1px;    
+}
+
+.table-header h2 {
+    font-size: 22px;
+    margin-top: 10px;    
+}
+
+.table {
+    width: 100%;
+    margin: 30px 10px;
+    font-size: 18px;
+    border: solid #74bb8c 2px;
+    border-collapse: collapse;
+}
+
+.table .table-header {
+    background-color: #74bb8c;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 19px;
+    height: 50px;
+}
+
+.table td {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table .end-line {
+    text-align: end;
+}
+
+.table-box .link-table {
+    display: flex;
+    justify-content: end;
+    font-size: 18px;
 }
 
 
@@ -407,7 +465,7 @@ textarea:read-only {
         margin: 50px ;
     }
 
-    form .column-2, form .check-list, .button-box, .two-buttons {
+    .column-2, form .check-list, .button-box, .two-buttons {
         display: grid !important;
         grid-template-columns: 100% !important; 
     }
@@ -455,6 +513,5 @@ textarea:read-only {
     .wrapper img {
         width: 80%;
     }
-
 
 }
