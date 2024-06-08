@@ -132,6 +132,11 @@ textarea:read-only {
     font-weight: 600;
 }
 
+.link-btn {
+    width: 100%;
+    height: 45px;
+}
+
 .green-btn {
     background: #1AB24C;
 }

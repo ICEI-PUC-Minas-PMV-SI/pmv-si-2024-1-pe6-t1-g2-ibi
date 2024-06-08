@@ -4,21 +4,20 @@ document.getElementById('table-contatos');
 fetch('https://localhost:7247/api/Usuarios')
     .then(response => response.json())
     .then(data => {
-        const linhaTabela = document.getElementById('table-contatos');
+        const linhaTabela = document.getElementById('tabela');
         let temp = "";
         data.forEach(usuario => {
             temp += "<tr>";
             temp += "<td>"+ usuario.id +"</td>";
             temp += "<td>"+ usuario.nome +"</td>";
             temp += "<td>" + getPerfilName(usuario.perfil) + "</td>";
-            // temp += "<td>" + (usuario.perfil === 1 ? getTurmas(usuario.turmas) : "") + "</td>";
             switch(usuario.perfil){
                 case 1:
                     return temp += "<td>" + getTurmas(usuario.turmas) + "</td>";
                 case 2:
                     return temp += "<td>" + getAlunos(usuario.alunos) + "</td>";
                 default:
-                    return "<td></td>"
+                    return temp += "<td></td>"
             }
             temp += "</tr>"
         });

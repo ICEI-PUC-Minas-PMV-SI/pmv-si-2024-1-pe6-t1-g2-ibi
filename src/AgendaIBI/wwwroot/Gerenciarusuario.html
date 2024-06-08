@@ -34,8 +34,8 @@
         <div class="container">
             <header>Gerenciamento de Usuários</header>
             <div class="button-container two-buttons">
-                <button id="create-user-btn" class="btn green-btn"><a href="Criarusuarios.html">Criar Usuário</a></button>
-                <button id="edit-user-btn" class="btn green-btn"><a href="Editarusuario.html">Editar Usuário</a></button>
+                <a href="Criarusuarios.html" class="link-btn" ><button class="btn green-btn" id="edit-user-btn">Criar Usuário</button></a>
+                <a href="Editarusuario.html" class="link-btn" ><button class="btn green-btn" id="edit-user-btn">Editar Usuário</button></a>
             </div>
             <div class="table-box">
                 <div class="table-header column-2">
@@ -46,24 +46,22 @@
                     </div>
                 </div>
                 <table class="table">
-                    <tr class="table-header">
-                        <td>ID</td>
-                        <td>Nome usuário</td>
-                        <td>Perfil</td>
-                        <td>Aluno(s)</td>
-                    </tr>
-                    <tr class="table-line">
-                        <td>1</td>
-                        <td>Pai</td>
-                        <td>Responsável</td>
-                        <td>Filho 1<br>Filha 2</td>
-                    </tr>
-                    <tr class="table-line">
-                        <td>2</td>
-                        <td>Mãe</td>
-                        <td>Responsável</td>
-                        <td>Filha</td>
-                    </tr>
+                    <thead>
+                        <tr class="table-header">
+                            <td>ID</td>
+                            <td>Nome usuário</td>
+                            <td>Perfil</td>
+                            <td>Aluno(s)</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela">
+                        <tr class="table-line">
+                            <td>1</td>
+                            <td>Pai</td>
+                            <td>Responsável</td>
+                            <td>Filho 1<br>Filha 2</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>     
         </div>
