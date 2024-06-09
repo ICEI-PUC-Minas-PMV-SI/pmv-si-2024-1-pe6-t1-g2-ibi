@@ -1,52 +1,70 @@
-//receber todos os usuários
-document.getElementById('table-contatos');
+//receber e impprimir todos os usuários na tabela
 
+//----VARIÁVEIS
+const bodyTabela = document.getElementById('table-body');
+const headTabela = document.getElementById('table-head');
+
+
+
+const mostrarProfessor = document.getElementById('mostrar-professor');
+const mostrarResponsavel = document.getElementById('mostrar-responsavel');
+
+
+//----FUNÇÕES----
+
+//get todos os usuários da tabela e a função de imprimir
 fetch('https://localhost:7247/api/Usuarios')
     .then(response => response.json())
-    .then(data => {
-        const linhaTabela = document.getElementById('tabela');
-        let temp = "";
-        data.forEach(usuario => {
-            temp += "<tr>";
-            temp += "<td>"+ usuario.id +"</td>";
-            temp += "<td>"+ usuario.nome +"</td>";
-            temp += "<td>" + getPerfilName(usuario.perfil) + "</td>";
-            switch(usuario.perfil){
-                case 1:
-                    return temp += "<td>" + getTurmas(usuario.turmas) + "</td>";
-                case 2:
-                    return temp += "<td>" + getAlunos(usuario.alunos) + "</td>";
-                default:
-                    return temp += "<td></td>"
-            }
-            temp += "</tr>"
-        });
-
-        linhaTabela.innerHTML = temp;
-    })
+    .then(data => imprimirUsuarios(data))
     .catch(error => {
         console.error('Erro ao ler contatos via API JSONServer:', error);
-    });
+});
 
-    function getPerfilName(perfil) {
-        switch(perfil) {
-            case 0:
-                return "Administrador";
-            case 1:
-                return "Professor";
-            case 2:
-                return "Responsavel";
-            default:
-                return "Desconhecido";
+//Coloca os usuários na tabela com display none para serem mostrados ao pressionar os botões
+function imprimirUsuarios(data){
+    let temp = "";
+    data.forEach(usuario => {
+        if (usuario.perfil==1){
+            temp += '<tr style="display:none;" class="linha-professor">'
+        } else if (usuario.perfil==2){
+            temp += '<tr style="display:none;" class="linha-responsavel">';
+        } else {
+            temp += '<tr style="display:none;">';
         }
-    }
+        temp += "<td>"+ usuario.id +"</td>";
+        temp += "<td>"+ usuario.nome +"</td>";
+        temp += "<td>"+ getPerfilName(usuario.perfil) + "</td>";
+        switch(usuario.perfil){
+            case 1:
+                return temp += "<td>" + getTurmas(usuario.turmas) + "</td></tr>";
+            case 2:
+                return temp += "<td>" + getAlunos(usuario.alunos) + "</td></tr>";
+            default:
+                return temp += "<td></td></tr>"
+        }
+        
+        
+    })
+    bodyTabela.innerHTML = temp;
+};
 
-//Retornar as turmas para impressão no html para usuários professores
+//retornar o nome de cada perfil
+function getPerfilName(perfil) {
+    switch(perfil) {
+        case 0:
+            return "Administrador";
+        case 1:
+            return "Professor";
+        case 2:
+            return "Responsavel";
+    }
+}
+
+//funcão para pegar as turmas que vão vir com os usuários no get e imprimi-los na coluna
 function getTurmas(turmas){
     let tempTurmas = ""
     if (turmas && turmas.length > 0) {
         turmas.forEach(turma => {
-            console.log(turma)
             if (turma) {
                 tempTurmas += "Turma: " + turma.numeroTurma + " - Ano Letivo: " + turma.anoLetivo + "<br>";
             } else {
@@ -57,11 +75,11 @@ function getTurmas(turmas){
     return tempTurmas;
 }
 
+//funcão para pegar os alunos que vão vir com os usuários no get e imprimi-los na coluna
 function getAlunos(alunos){
     let tempAlunos = ""
     if (alunos && alunos.length > 0) {
         alunos.forEach(aluno => {
-            console.log(aluno)
             if (aluno) {
                 tempAlunos += "Aluno: " + aluno.nome + " - Matricula: " + aluno.matricula + "<br>";
             } else {
@@ -74,6 +92,42 @@ function getAlunos(alunos){
     return tempAlunos;
 }
 
+function imprimirProfessores(){
+    const linhasTabela = document.querySelectorAll("#table-body tr");
+    headTabela.innerHTML = `<tr class="table-header">
+                            <td>ID</td>
+                            <td>Nome usuário</td>
+                            <td>Perfil</td>
+                            <td>Turmas</td>
+                        </tr>`;
+    linhasTabela.forEach(linha => {
+        if(linha.classList.contains("linha-professor")==true){
+            linha.style.display= "table-row";
+        }   else {
+            linha.style.display= "none";
+        }
+    })
+}
 
+function imprimirResponsavel(){
+    const linhasTabela = document.querySelectorAll("#table-body tr");
+    headTabela.innerHTML = `<tr class="table-header">
+                            <td>ID</td>
+                            <td>Nome usuário</td>
+                            <td>Perfil</td>
+                            <td>Alunos</td>
+                        </tr>`;
+    linhasTabela.forEach(linha => {
+        if(linha.classList.contains("linha-responsavel")==true){
+            linha.style.display= "table-row";
+        } else {
+            linha.style.display= "none";
+        }
+    })
+}
+
+//
+mostrarProfessor.addEventListener("click", imprimirProfessores);
+mostrarResponsavel.addEventListener("click", imprimirResponsavel);
 
 

@@ -34,32 +34,28 @@
         <div class="container">
             <header>Gerenciamento de Usuários</header>
             <div class="button-container two-buttons">
-                <a href="Criarusuarios.html" class="link-btn" ><button class="btn green-btn" id="edit-user-btn">Criar Usuário</button></a>
+                <a href="Criarusuarios.html" class="link-btn" ><button type="" class="btn green-btn" id="edit-user-btn">Criar Usuário</button></a>
                 <a href="Editarusuario.html" class="link-btn" ><button class="btn green-btn" id="edit-user-btn">Editar Usuário</button></a>
             </div>
             <div class="table-box">
                 <div class="table-header column-2">
                     <h2>Visualizar qual perfil de usuário?</h2>
                     <div class="two-buttons">
-                        <button class="btn grey-btn">Professor</button>
-                        <button type="submit" class="btn grey-btn">Responsável</button>
+                        <button id="mostrar-professor" class="escolha-tabela btn grey-btn">Professor</button>
+                        <button id="mostrar-responsavel" class="escolha-tabela btn grey-btn">Responsável</button>
                     </div>
                 </div>
                 <table class="table">
-                    <thead>
+                    <thead id="table-head">
                         <tr class="table-header">
                             <td>ID</td>
                             <td>Nome usuário</td>
                             <td>Perfil</td>
-                            <td>Aluno(s)</td>
+                            <td>*</td>
                         </tr>
                     </thead>
-                    <tbody id="tabela">
+                    <tbody id="table-body">
                         <tr class="table-line">
-                            <td>1</td>
-                            <td>Pai</td>
-                            <td>Responsável</td>
-                            <td>Filho 1<br>Filha 2</td>
                         </tr>
                     </tbody>
                 </table>
@@ -68,6 +64,7 @@
     </div>
 
     <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/gerenciar-usuario.js"></script>
     <script src="js/script.js"></script>
