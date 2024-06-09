@@ -48,18 +48,6 @@ function imprimirUsuarios(data){
     bodyTabela.innerHTML = temp;
 };
 
-//retornar o nome de cada perfil
-function getPerfilName(perfil) {
-    switch(perfil) {
-        case 0:
-            return "Administrador";
-        case 1:
-            return "Professor";
-        case 2:
-            return "Responsavel";
-    }
-}
-
 //funcão para pegar as turmas que vão vir com os usuários no get e imprimi-los na coluna
 function getTurmas(turmas){
     let tempTurmas = ""

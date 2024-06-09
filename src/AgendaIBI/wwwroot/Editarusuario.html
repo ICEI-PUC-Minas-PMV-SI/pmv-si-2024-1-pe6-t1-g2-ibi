@@ -35,30 +35,35 @@
                 <header>Editar Usuário</header>
 
                 <div class="search-container busca">
-                    <input type="text" id="search-bar" placeholder="Pesquisar Matricula...">
-                    <button id="search-btn" type="submit"><img src="lupa.png" alt="buscar"></button>
+                    <input type="number" id="search-id" placeholder="Pesquisar Usuário...">
+                    <button id="search-btn" type="button"><img src="lupa.png" alt="buscar"></button>
                 </div>
 
                 <div class="container">
                     <div class="input-box">
-                        <label for="phone">Telefone:</label>
-                        <input type="text" id="phone" name="phone" placeholder="(99) 99999-9999" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" placeholder="Senha" required>
+                        <label for="ID">Id:</label>
+                        <input type="number" id="id-form" name="id-form" placeholder="Id" required readonly>
                     </div>
                     <div class="input-box">
                         <label for="perfil">Perfil:</label>
-                        <input type="text" id="perfil" name="perfil" placeholder="Perfil" required readonly>
+                        <input type="hidden" id="perfil" required readonly>
+                        <input type="text" id="perfil-display" name="perfil" placeholder="Perfil" required readonly>
+                    </div>
+                    <div class="input-box">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome">
+                    </div>
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Senha">
                     </div>
                     <div class="button-box">
                         <div class="one-button">
-                            <button class="btn red-btn">Excluir</button>
+                            <button id="btn-excluir" type="button" class="btn red-btn">Excluir</button>
                         </div>
                         <div class="two-buttons">
-                            <button type="button" class="btn red-btn"><a href="https://localhost:7247/Gerenciarusuario.html">Cancelar</a></button>
-                            <button type="submit" class="btn green-btn">Salvar</button>
+                            <button id="btn-voltar" type="button" class="btn red-btn"><a href="https://localhost:7247/Gerenciarusuario.html">Voltar</a></button>
+                            <button id="btn-editar" type="button" class="btn green-btn">Salvar</button>
                         </div>
                     </div>
                 </div>
@@ -92,15 +97,13 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/pop-up.js"></script>
-    <script>
-        $('#phone').mask('(00) 00000-0000');
-    </script>
-    <script>
+    <script src="js/editar-usuario.js"></script>
+    <!-- <script>
         document.getElementById('search-btn').addEventListener('click', function () {
             let query = document.getElementById('search-bar').value;
             alert('Você pesquisou por: ' + query);
         });
-    </script>
+    </script> -->
 
 </body>
 </html>
