@@ -1,6 +1,6 @@
 //receber e impprimir todos os usuários na tabela
 
-//----VARIÁVEIS
+
 const bodyTabela = document.getElementById('table-body');
 const headTabela = document.getElementById('table-head');
 
@@ -10,7 +10,9 @@ const mostrarProfessor = document.getElementById('mostrar-professor');
 const mostrarResponsavel = document.getElementById('mostrar-responsavel');
 
 
-//----FUNÇÕES----
+mostrarProfessor.addEventListener("click", imprimirProfessores);
+mostrarResponsavel.addEventListener("click", imprimirResponsavel);
+
 
 fetch('https://localhost:7247/api/Usuarios')
     .then(response => response.json())
@@ -109,9 +111,5 @@ function imprimirResponsavel(){
         }
     })
 }
-
-//
-mostrarProfessor.addEventListener("click", imprimirProfessores);
-mostrarResponsavel.addEventListener("click", imprimirResponsavel);
 
 

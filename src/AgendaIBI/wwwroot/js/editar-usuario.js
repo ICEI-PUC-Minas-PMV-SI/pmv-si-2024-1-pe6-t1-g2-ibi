@@ -1,4 +1,6 @@
-//get o usuario que será editado
+document.getElementById('btn-editar').addEventListener("click", updateUser);
+document.getElementById('btn-excluir').addEventListener("click", deleteUser);
+document.getElementById('search-btn').addEventListener("click",getUserByID);
 
 const baseUrl = 'https://localhost:7247/api/';
 const idForm = document.getElementById('id-form');
@@ -10,17 +12,6 @@ const headTable = document.getElementById('table-header');
 const titleTable = document.getElementById('table-titulo');
 const btnForm = document.getElementById('novo-TurmaAluno');
 
-
-
-function preencherCampos(data) {
-    idForm.value = data.id;
-    nomeForm.placeholder = `${data.nome}`;
-    perfilForm.value = data.perfil;
-    document.getElementById('perfil-display').value = `${getPerfilName(data.perfil)}`;
-    if(data.perfil === 1){mostrarTurmas(data.turmas)};
-    if (data.perfil === 2){mostrarAlunos(data.alunos)};
-}
-
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
     fetch(baseUrl + `Usuarios/${searchId}`)
@@ -30,6 +21,15 @@ async function getUserByID() {
         console.error('Erro ao ler contatos via API JSONServer:', error);
     });
 }  
+
+function preencherCampos(data) {
+    idForm.value = data.id;
+    nomeForm.placeholder = `${data.nome}`;
+    perfilForm.value = data.perfil;
+    document.getElementById('perfil-display').value = `${getPerfilName(data.perfil)}`;
+    if(data.perfil === 1){mostrarTurmas(data.turmas)};
+    if (data.perfil === 2){mostrarAlunos(data.alunos)};
+}
 
 async function deleteUser(){
     const idToDelete = idForm.value;
@@ -65,45 +65,147 @@ async function updateUser(){
     .catch(err => console.error('Erro ao deletar o usuário via API JSONServer', error))
 }
 
-function deleteTableEntry(button){
-    const linhaTabela = button.closest('tr');
-    const linhaTabelaId = +linhaTabela.id.slice(6);
-    const idUsuario = +idForm.value;
-    
-    fetch(`${baseUrl}Turmas/${linhaTabelaId}/Usuarios/${idUsuario}`, {
-        method: "DELETE",
-    })
-    .then(res => res.json)
-    .then(window.location.reload())
-    .catch(err => console.error('Erro ao deletar o usuário via API JSONServer', error))
-}
-
 function mostrarTurmas(turmas){
     titleTable.innerHTML = '<h2>Turmas</h2>';
     headTable.innerHTML = `<tr class='table-header'>
-                            <td>Numero</td>
+                            <td>Id</td>
+                            <td>Nº da Turma</td>
                             <td>Ano Letivo</td>
                             <td>Numéro de Alunos</td>
                             <td></td>
                             </tr>`;
     let temp = '';
     turmas.forEach(turma => {
-        temp += `<tr id="aluno-${turma.id}" class="linha-professor">`;
+        temp += `<tr id="turma-${turma.id}" class="linha-professor">`;
+        temp += "<td>"+ turma.id +"</td>";
         temp += "<td>"+ turma.numeroTurma +"</td>";
         temp += "<td>"+ turma.anoLetivo +"</td>";
         temp += "<td>"+ turma.numeroAlunos + "</td>";
         return temp += `<td class="end-line"><button type="button" class="btn red-btn" onclick="deleteTableEntry(this)">Remover</button></td></tr>`;
         });
     bodyTable.innerHTML = temp;
-    btnForm.innerHTML = `<button class="btn green-btn" onclick="addAlunoToTurma()">Adicionar turma</button>`;
+    btnForm.innerHTML = `<button class="btn green-btn" onclick="addUsuarioToTurma()">Adicionar turma</button>`;
 }
 
-function addAlunoToTurma (){
-    const idTurma = prompt("Digite a turma que deseja adicionar a este professor");
-    if(idTurma == null || idTurma == "" || isNaN(+idTurma)) alert("Verifique o numéro digitado");
-
+function mostrarAlunos(alunos){
+    titleTable.innerHTML = '<h2>Alunos</h2>';
+    headTable.innerHTML = `<tr class='table-header'>
+                            <td>Id</td>
+                            <td>Nº da Matrícula</td>
+                            <td>Nome</td>
+                            <td>Turma</td>
+                            <td></td>
+                            </tr>`;
+    let temp = '';
+    alunos.forEach(aluno => {
+        temp += `<tr id="aluno-${aluno.id}" class="linha-aluno">`;
+        temp += "<td>"+ aluno.id +"</td>";
+        temp += "<td>"+ aluno.matricula +"</td>";
+        temp += "<td>"+ aluno.nome +"</td>";
+        temp += "<td>" + getTurmas(aluno.turmas) + "</td>";
+        return temp += `<td class="end-line"><button type="button" class="btn red-btn" onclick="deleteTableEntry(this)">Remover</button></td></tr>`;
+        });
+    bodyTable.innerHTML = temp;
+    btnForm.innerHTML = `<button class="btn green-btn" onclick="addUsuarioToTurma()">Adicionar turma</button>`;
 }
 
-document.getElementById('btn-editar').addEventListener("click", updateUser);
-document.getElementById('btn-excluir').addEventListener("click", deleteUser);
-document.getElementById('search-btn').addEventListener("click",getUserByID);
+async function deleteTableEntry(button){
+    const linhaTabela = button.closest('tr');
+    const idLinha = linhaTabela.id;
+    const idToDelete = +linhaTabela.id.slice(6);
+    const idUsuario = +idForm.value;
+    try {
+        let response;
+        if(idLinha.startsWith('turma')){
+            response = await fetch(`${baseUrl}Turmas/${idToDelete}/Usuarios/${idUsuario}`, {
+                method: "DELETE",
+            })
+        }  else if(idLinha.startsWith('aluno')){
+            response = await fetch(`${baseUrl}Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
+                method: "DELETE",
+            })
+        } 
+        if(response.ok){
+            console.log(perfilForm)
+            alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
+            window.location.reload();
+    }}
+    catch(err) {console.log(err)}
+}
+
+
+
+function addUsuarioToTurma (){
+    const idTurma = prompt("Digite o id da turma que deseja adicionar este professor");
+    if(idTurma == null) return;
+    if(idTurma == "" || isNaN(+idTurma)) return alert("Verifique o numéro digitado");
+    addTurma(idTurma);
+}
+
+async function addTurma(idTurma){
+    userData = {
+        usuarioId: +idForm.value,
+        turmaId: +idTurma
+    }
+    try {
+        const response = await fetch(`${baseUrl}Turmas/${idTurma}/Usuarios`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+        },
+            body: JSON.stringify(userData)
+        })
+        if(response.ok) {
+            alert(`Você adicionou o professor a turma de id ${idTurma}`);
+            window.location.reload();
+      }
+    } catch(err){console.log(err);}
+}
+
+function addUsuarioToAluno (){
+    const idAluno = prompt("Digite o id do aluno que deseja adicionar este responsável");
+    if(idAluno == null) return;
+    if(idAluno == "" || isNaN(+idAluno)) return alert("Verifique o numéro digitado");
+    addAluno(idAluno);
+}
+
+async function addAluno(idAluno){
+    userData = {
+        usuarioId: +idForm.value,
+        alunoId: +idAluno
+    }
+    try {
+        const response = await fetch(`${baseUrl}Turmas/${idAluno}/Usuarios`, {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json'
+        },
+            body: JSON.stringify(userData)
+        })
+        if(response.ok) {
+            alert(`Você adicionou o responsável a turma de id ${idAluno}`);
+            window.location.reload();
+      }
+    } catch(err){console.log(err);}
+}
+
+
+
+
+
+
+
+
+function getTurmas(turmas){
+    let tempTurmas = ""
+    if (turmas && turmas.length > 0) {
+        turmas.forEach(turma => {
+            if (turma) {
+                tempTurmas += "Turma: " + turma.numeroTurma + " - Ano Letivo: " + turma.anoLetivo + "<br>";
+            } else {
+                tempTurmas += "Turma não disponível<br>";
+            }
+        });
+    }
+    return tempTurmas;
+}
