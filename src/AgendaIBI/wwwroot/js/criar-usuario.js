@@ -1,5 +1,5 @@
 document.getElementById('criar-usuario').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previne o comportamento padrão do formulário
+    event.preventDefault();
 
     const nome = document.getElementById('nome').value;
     const password = document.getElementById('password').value;

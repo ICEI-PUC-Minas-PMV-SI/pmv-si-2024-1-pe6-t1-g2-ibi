@@ -12,7 +12,6 @@ const mostrarResponsavel = document.getElementById('mostrar-responsavel');
 
 //----FUNÇÕES----
 
-//get todos os usuários da tabela e a função de imprimir
 fetch('https://localhost:7247/api/Usuarios')
     .then(response => response.json())
     .then(data => imprimirUsuarios(data))
@@ -20,7 +19,6 @@ fetch('https://localhost:7247/api/Usuarios')
         console.error('Erro ao ler contatos via API JSONServer:', error);
 });
 
-//Coloca os usuários na tabela com display none para serem mostrados ao pressionar os botões
 function imprimirUsuarios(data){
     let temp = "";
     data.forEach(usuario => {
@@ -48,7 +46,6 @@ function imprimirUsuarios(data){
     bodyTabela.innerHTML = temp;
 };
 
-//funcão para pegar as turmas que vão vir com os usuários no get e imprimi-los na coluna
 function getTurmas(turmas){
     let tempTurmas = ""
     if (turmas && turmas.length > 0) {
@@ -63,7 +60,6 @@ function getTurmas(turmas){
     return tempTurmas;
 }
 
-//funcão para pegar os alunos que vão vir com os usuários no get e imprimi-los na coluna
 function getAlunos(alunos){
     let tempAlunos = ""
     if (alunos && alunos.length > 0) {
@@ -87,7 +83,7 @@ function imprimirProfessores(){
                             <td>Nome usuário</td>
                             <td>Perfil</td>
                             <td>Turmas</td>
-                        </tr>`;
+                            </tr>`;
     linhasTabela.forEach(linha => {
         if(linha.classList.contains("linha-professor")==true){
             linha.style.display= "table-row";
