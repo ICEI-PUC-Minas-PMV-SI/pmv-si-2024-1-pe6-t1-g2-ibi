@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    //[Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class TurmasController : ControllerBase
@@ -38,12 +38,29 @@ namespace API_ORIGINAL_01.Controllers
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, TurmaUsuarios model)
         {
-            /*if (id != model.TurmaId) return BadRequest()*/;
+            if (id != model.TurmaId) return BadRequest();
             _context.TurmaUsuarios.Add(model);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetById", new { id = model.TurmaId }, model);
         }
+
+        [HttpDelete("{id}/Usuarios/{UsuarioId}")]
+        public async Task<ActionResult> DeleteUsuario(int id, int UsuarioId)
+        {
+            var model = await _context.TurmaUsuarios
+                .Where(c => c.TurmaId == id && c.UsuarioId == UsuarioId)
+                .FirstOrDefaultAsync();
+            if (model == null) return NotFound();
+
+            _context.TurmaUsuarios.Remove(model);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+
+        }
+
+
 
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)

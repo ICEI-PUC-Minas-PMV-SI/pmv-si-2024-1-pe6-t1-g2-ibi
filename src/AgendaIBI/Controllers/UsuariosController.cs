@@ -43,7 +43,6 @@ namespace API_ORIGINAL_01.Controllers
                     }).ToList(),
                     Turmas = u.Turmas.Select(t => new
                     {
-                        t.TurmaId,
                         t.Turma.NumeroTurma,
                         t.Turma.AnoLetivo
                     }).ToList()
@@ -78,7 +77,29 @@ namespace API_ORIGINAL_01.Controllers
             var model = await _context.Usuarios
                 .Include(t => t.Alunos).ThenInclude(t => t.Aluno)
                 .Include(t => t.Turmas).ThenInclude(t => t.Turma)
-                .FirstOrDefaultAsync(c => c.Id == id);
+                .Where(c => c.Id == id)
+                .Select(user => new
+                {
+                    user.Id,
+                    user.Nome,
+                    user.Perfil,
+                    Alunos = user.Alunos.Select(a => new {
+                        a.Aluno.Id,
+                        a.Aluno.Matricula,
+                        a.Aluno.Nome,
+                        Turmas = a.Aluno.Turmas.Select(t => new {
+                            t.Turma.AnoLetivo,
+                            t.Turma.NumeroTurma
+                        }).ToList()
+                    }).ToList(),
+                    Turmas = user.Turmas.Select(t => new {
+                        t.Turma.Id,
+                        t.Turma.NumeroTurma,
+                        t.Turma.AnoLetivo,
+                        NumeroAlunos = t.Turma.Alunos == null ? 0 : t.Turma.Alunos.Count()
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
             if (model == null) return NotFound();
 
 
