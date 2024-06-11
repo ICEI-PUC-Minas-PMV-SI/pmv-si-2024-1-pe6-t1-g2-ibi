@@ -33,16 +33,17 @@ function preencherCampos(data) {
 
 async function deleteUser(){
     const idToDelete = idForm.value;
-    fetch(`Usuarios/${idToDelete}`, {
+    try {
+    const response = await fetch(`${baseUrl}Usuarios/${idToDelete}`, {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json)
-    .then(data => data)
-    .catch(error => console.error('Erro ao deletar o usuário via API JSONServer', error)
-    );
+        }})
+        if(response.ok) {
+            alert(`Você excluiu o usuário ${idToDelete}`);
+            window.location.reload();
+      }
+    } catch(err){console.log(err);}
 }
 
 async function updateUser(){
@@ -53,17 +54,19 @@ async function updateUser(){
         "perfil": +perfilForm.value,
         "password": passwordForm.value
     }
-    fetch(`${baseUrl}Usuarios/${idToUpdate}`, {
+    try {const response = await fetch(`${baseUrl}Usuarios/${idToUpdate}`, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(formUpdate)
     })
-    .then(res => res.json)
-    .then(data => window.location.reload())
-    .catch(err => console.error('Erro ao deletar o usuário via API JSONServer', error))
+    if(response.ok) {
+        alert(`Você atualizou o usuário ${idToUpdate}`);
+        window.location.reload();
+  }} catch(err){console.log(err);}
 }
+
 
 function mostrarTurmas(turmas){
     titleTable.innerHTML = '<h2>Turmas</h2>';
@@ -106,7 +109,7 @@ function mostrarAlunos(alunos){
         return temp += `<td class="end-line"><button type="button" class="btn red-btn" onclick="deleteTableEntry(this)">Remover</button></td></tr>`;
         });
     bodyTable.innerHTML = temp;
-    btnForm.innerHTML = `<button class="btn green-btn" onclick="addUsuarioToTurma()">Adicionar turma</button>`;
+    btnForm.innerHTML = `<button class="btn green-btn" onclick="addUsuarioToAluno()">Adicionar aluno</button>`;
 }
 
 async function deleteTableEntry(button){
@@ -120,16 +123,19 @@ async function deleteTableEntry(button){
             response = await fetch(`${baseUrl}Turmas/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
             })
-        }  else if(idLinha.startsWith('aluno')){
+            if(response.ok){
+                alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
+                window.location.reload();
+        }}  else if(idLinha.startsWith('aluno')){
             response = await fetch(`${baseUrl}Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
             })
+            if(response.ok){
+                alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} do aluno ${idToDelete}`);
+                window.location.reload();
+        }
         } 
-        if(response.ok){
-            console.log(perfilForm)
-            alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
-            window.location.reload();
-    }}
+        }
     catch(err) {console.log(err)}
 }
 
@@ -175,7 +181,7 @@ async function addAluno(idAluno){
         alunoId: +idAluno
     }
     try {
-        const response = await fetch(`${baseUrl}Turmas/${idAluno}/Usuarios`, {
+        const response = await fetch(`${baseUrl}Alunos/${idAluno}/Usuarios`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -183,7 +189,7 @@ async function addAluno(idAluno){
             body: JSON.stringify(userData)
         })
         if(response.ok) {
-            alert(`Você adicionou o responsável a turma de id ${idAluno}`);
+            alert(`Você adicionou o responsável ao aluno de id ${idAluno}`);
             window.location.reload();
       }
     } catch(err){console.log(err);}
