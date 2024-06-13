@@ -1,69 +1,121 @@
 # Front-end Móvel
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+O presente projeto tem como escopo o desenvolvimento de uma agenda virtual para o Instituto Batista Itatiaia. Porém, essa etapa se trata da elaboração da página web móvel, principalmente na criação de toda estrutura utilizando o react. Além disso, será realizada a integração do backend e frontend web, possibilitando, assim, a finalização do projeto desenvolvido.
+
+Deste modo, o objetivo desta etapa é desenvolvimento do frontend mobile, por meio da codificação utilizando o react, usando as ferramentas disponíveis, como o Expo.dev, sendo mais uma etapa na execução da aplicação proposta.
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+
+Expo.dev: Sítio que possibilita a criação conjunta do aplicativo mobile utilizando react, além da exibição do preview em tempo real, possibilitando a correção de eventuais erros no código.
+
+Visual Code Studio: Ferramente gratuita disponibilizada pelo Windows em que, nesta etapa, será utilizado como suplemento do trabalho desenvolvido no Expo.dev.
+
+Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa, os quais serviram como base de todas as páginas web do projeto.
 
 ## Arquitetura
 
-[Descrição da arquitetura das aplicação móvel, incluindo os componentes e suas interações.]
+A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, projetada para fazer acesso por meio do login. Além disso, terá como arquitetura o preenchimento das requisições dispostas na agenda, bem como colocar observações ao final desta. Ainda, terá funções específicas para o perfil de administrador, como, por exemplo, a criação/exclusão de alunos de uma determinada turma. Por fim, em conjunto, será mantido o aplicativo leve e responsivo.
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/diagramaclasse.png)
 
 ## Projeto da Interface
-[Descreva o projeto da interface móvel da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
-
 ### Wireframes
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/telas_reponsivas.png)
 
 ### Design Visual
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+
+* Tipografia: 
+  * Roboto sans-serif
+  * Tamanho: Títulos: 25px / Menu lateral e Nome de campos: 20px / Texto nos campos e Botões: 16px / Links pequenos: 14,5px
+    
+* Paleta de cores: Cores retiradas da logo do próprio Instituto Batista Itatiaia.
+	 * #1AB24C – Primária
+  * #EE1B24 – Secundária
+    
+* Ícones para abrir e fechar o menu lateral no modo para telas pequenas foi retirado do Google Fonts.
 
 ### Layout Responsivo
 [Discuta como a interface será adaptada para diferentes tamanhos de tela e dispositivos.]
 
 ### Interações do Usuário
-[Descreva as interações do usuário na interface, como animações, transições entre páginas e outras interações.]
+
+Ao clicar com o dedo na tela do celular/tablet, deve ter uma mudança na cor do objeto e/ou mudança no cursor para identificar como o objeto que fora clicado.
+
+Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma animação do objeto deslizando para a tela do usuário e saindo, caso seja fechado.
 
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+![Black and White Blue Yellow Basic Fishbone Diagram Whiteboard Brainstorm](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/assets/90218407/091ea765-f403-4edc-9471-8758e6156679)
 
-## Requisitos Funcionais
+### Requisitos Funcionais
 
-[Liste os principais requisitos funcionais da aplicação.]
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| Permitir que o administrador gerencie os usuários | ALTA |
+|RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
+|RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
+|RF-004| Acessar o sistema via login   | ALTA | 
+|RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
+|RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
+|RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login   | MÉDIA |
+|RF-008| Permitir que os relatórios possam ser baixados | BAIXA |
+|RF-009| Permitir a integração com o back-end e front-end web | BAIXA |
 
-## Requisitos Não Funcionais
+### Requisitos não Funcionais
 
-[Liste os principais requisitos não funcionais da aplicação, como desempenho, segurança, escalabilidade, etc.]
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----|
+|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
+|RNF-002| O sistema deve possuir uma interface de boa usabilidade | ALTA | 
+|RNF-003| O sistema será acessado apenas online | MÉDIA | 
+|RNF-004| O sistema deve ter a identidade visual do instituto | MÉDIA |
+|RNF-005| O sistema será hospedado na nuvem | BAIXA |
+|RNF-006| O sistema deverá permitir a redifição de senha, apenas, por sms | BAIXA |
 
 
 ## Considerações de Segurança
 
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+Como já informado durante a elaboração do back-end e front-end erb, permanecerá a preocupação com a segurança de informação, tendo em vista que o projeto lida com dados pessoais dos usuários, sejam funcionários, responsáveis e alunos. Portanto, tem-se que a tela de login não oferece a opção de cadastro, pois esta seria responsabilidade da coordenação da escola, com o perfil de Administrador. Na tela login, ainda, existira a possibilidade de redifinição da senha por meio do envio de sms.
+
+Além disso, reitera-se a preocupação com o cumprimento da Lei Geral de Proteção de Dados Pessoais - LGPD, tendo em vista se tratar de um banco de dados com informações pesssoais dos usuários, sendo sugerido, mais uma vez, a assinatura de um Termo de Privacidade.
+
+Com o objetivo de evitar problemas físicos e corte de custos, os dados serão armazenados na nuvem, em plataforma compatível com a segurança digital dos dados, para, dessa forma, evitar, também, eventuais invasões do sistema. Por fim, também será sugerido um espelhamento dos dados produzidos na plataforma, para funcionar como backup, em caso de falha crítica nos dados principais.
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+* Requisitos de hardware:
+  * Computador, celular ou tablet com acesso a internet
+  * Roteador Wi-fi
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+* Requisitos de software:
+  * Acesso ao navegador
+
+* Plataforma de hospedagem: AWS
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+### Login na plataforma  (CST01)
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+**Sumário:** O Coordenador/Professor/Responsável deve ser capaz de acessar a plafatorma.
+
+**Executor:** Coordenador/Professor/Responsável.
+
+**Pré-Condição:** O Coordenador/Professor/Responsável deve estar cadastrado no sistema.
+
+**Passos:**
+
+1.  O Coordenador/Professor/Responsável acessa o aplicativo do Instituto;
+2.  O Coordenador/Professor/Responsável indica os valores de login e senha;
+3.  O Sistema realiza a validação do login e da senha apresentados;
+4.  Se o usuário não informou o login ou a senha corretos, o sistema apresenta mensagem de erro “Login/Senha Incorretos” e o caso de uso retorna ao passo 2; caso contrário o caso de uso terminar.
+
+**Resultado esperado:** O usuário deve ser capaz de acessar o sistema.
+
+![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Acesso.png?raw=true)
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Foram utilizadas as aulas existentes da Plataforma Canvas da PUC-Minas.
