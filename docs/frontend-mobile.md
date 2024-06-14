@@ -1,12 +1,12 @@
 # Front-end Móvel
 
-O presente projeto tem como escopo o desenvolvimento de uma agenda virtual para o Instituto Batista Itatiaia. Porém, essa etapa se trata da elaboração da página web móvel, principalmente na criação de toda estrutura utilizando o react. Além disso, será realizada a integração do backend e frontend web, possibilitando, assim, a finalização do projeto desenvolvido.
+O presente projeto tem como escopo o desenvolvimento de uma agenda virtual para o Instituto Batista Itatiaia. Porém, essa etapa se trata da elaboração do aplicativo móvel, principalmente na criação de toda estrutura utilizando o react. Além disso, será realizada a integração com o backend e  o frontend web, possibilitando, assim, a finalização do projeto desenvolvido.
 
-Deste modo, o objetivo desta etapa é desenvolvimento do frontend mobile, por meio da codificação utilizando o react, usando as ferramentas disponíveis, como o Expo.dev, sendo mais uma etapa na execução da aplicação proposta.
+Deste modo, o objetivo desta etapa é desenvolvimento do aplicativo mobile, por meio da codificação utilizando o react, usando as ferramentas disponíveis, como o Expo.dev, sendo mais uma etapa na execução da aplicação proposta.
 
 ## Tecnologias Utilizadas
 
-Expo.dev: Sítio que possibilita a criação conjunta do aplicativo mobile utilizando react, além da exibição do preview em tempo real, possibilitando a correção de eventuais erros no código.
+Expo.dev: Sítio que permite a criação conjunta do aplicativo mobile utilizando react, além da exibição do preview em tempo real, possibilitando a correção de eventuais erros no código.
 
 Visual Code Studio: Ferramente gratuita disponibilizada pelo Windows em que, nesta etapa, será utilizado como suplemento do trabalho desenvolvido no Expo.dev.
 
@@ -14,7 +14,7 @@ Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa, os 
 
 ## Arquitetura
 
-A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, projetada para fazer acesso por meio do login. Além disso, terá como arquitetura o preenchimento das requisições dispostas na agenda, bem como colocar observações ao final desta. Ainda, terá funções específicas para o perfil de administrador, como, por exemplo, a criação/exclusão de alunos de uma determinada turma. Por fim, em conjunto, será mantido o aplicativo leve e responsivo.
+A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, projetada para ter acesso por meio do login. Além disso, terá como arquitetura o preenchimento das requisições dispostas na agenda, bem como colocar observações ao final desta. Ainda, terá funções específicas para o perfil de administrador, como, por exemplo, a criação/exclusão de alunos de uma determinada turma. Por fim, em conjunto, será mantido o aplicativo leve e responsivo.
 
 ## Modelagem da Aplicação
 
@@ -42,7 +42,7 @@ A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, proje
 
 ### Interações do Usuário
 
-Ao clicar com o dedo na tela do celular/tablet, deve ter uma mudança na cor do objeto e/ou mudança no cursor para identificar como o objeto que fora clicado.
+Ao clicar com o dedo na tela do celular/tablet, deve ter uma mudança na cor do objeto para identificá-lo como clicado.
 
 Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma animação do objeto deslizando para a tela do usuário e saindo, caso seja fechado.
 
@@ -57,9 +57,9 @@ Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma anima
 |RF-001| Permitir que o administrador gerencie os usuários | ALTA |
 |RF-002| Permitir que os professores publiquem e edite a rotina dos alunos no sistema   | ALTA |  
 |RF-003| Permitir que os responsáveis dos alunos tenham acesso aos relatórios dos professores pelo calendário   | ALTA | 
-|RF-004| Acessar o sistema via login   | ALTA | 
+|RF-004| Acessar o sistema via login  | ALTA | 
 |RF-005| Permitir que os responsáveis possam fazer observações nos relatórios dos professores   | MÉDIA |
-|RF-006| Permitir que os usuários alterem a senha   | MÉDIA |
+|RF-006| Permitir que os usuários alterem a senha por meio de sms | MÉDIA |
 |RF-007| Permitir que os responsáveis tenham acesso a mais de uma matrícula com o mesmo login   | MÉDIA |
 |RF-008| Permitir que os relatórios possam ser baixados | BAIXA |
 |RF-009| Permitir a integração com o back-end e front-end web | BAIXA |
@@ -73,12 +73,10 @@ Quando a tela for pequena e o menu lateral estiver escondido, deve ter uma anima
 |RNF-003| O sistema será acessado apenas online | MÉDIA | 
 |RNF-004| O sistema deve ter a identidade visual do instituto | MÉDIA |
 |RNF-005| O sistema será hospedado na nuvem | BAIXA |
-|RNF-006| O sistema deverá permitir a redifição de senha, apenas, por sms | BAIXA |
-
 
 ## Considerações de Segurança
 
-Como já informado durante a elaboração do back-end e front-end erb, permanecerá a preocupação com a segurança de informação, tendo em vista que o projeto lida com dados pessoais dos usuários, sejam funcionários, responsáveis e alunos. Portanto, tem-se que a tela de login não oferece a opção de cadastro, pois esta seria responsabilidade da coordenação da escola, com o perfil de Administrador. Na tela login, ainda, existira a possibilidade de redifinição da senha por meio do envio de sms.
+Como já informado durante a elaboração do back-end e front-end web, permanecerá a preocupação com a segurança de informação, tendo em vista que o projeto lida com dados pessoais dos usuários, sejam funcionários, responsáveis e alunos. Portanto, tem-se que a tela de login não oferece a opção de cadastro, pois esta seria responsabilidade da coordenação da escola, com o perfil de Administrador. Na tela login, ainda, existira a possibilidade de redifinição da senha por meio do envio de sms.
 
 Além disso, reitera-se a preocupação com o cumprimento da Lei Geral de Proteção de Dados Pessoais - LGPD, tendo em vista se tratar de um banco de dados com informações pesssoais dos usuários, sendo sugerido, mais uma vez, a assinatura de um Termo de Privacidade.
 
