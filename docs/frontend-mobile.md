@@ -38,7 +38,10 @@ A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, proje
 * Ícones para abrir e fechar o menu lateral no modo para telas pequenas foi retirado do Google Fonts.
 
 ### Layout Responsivo
-[Discuta como a interface será adaptada para diferentes tamanhos de tela e dispositivos.]
+
+Como pode ser observado nos demais tópicos do projeto, o foco do aplicativo será em manter-se leve e responsivo. Ainda, existirá, após a tela de login, um menu lateral reversível, sendo escondido quando não acionado para que um das suas opções sejam escolhidas. Ademais, por se tratar de um aplicativo acessado em celulares/tablets, os icones devem ser proporcionais ao tamanho da tela para, além de serem intuitivos por meio de imagem (utilizando a biblioteca de icones do react), facilitar o acionamento com os dedos, evitando cliques errados.
+
+Por fim, como o objetivo é a utilização do aplicativo por usuários das mais diversos background, sendo, também, subentendindo o uso por pessoas com baixa experiência em tecnologia, o aplicativo mobile deve ser intuitivo, com baixo número de telas e fácil acessibilidade. 
 
 ### Interações do Usuário
 
