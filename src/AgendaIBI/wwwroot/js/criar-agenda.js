@@ -19,7 +19,6 @@ if (criarAgendaForm) {
         function convertStringsToNumbers(obj) {
             for (let key in obj) {
                 if (obj.hasOwnProperty(key)) {
-                    // Verifica se a string pode ser convertida para número
                     if (typeof obj[key] === "string" && !isNaN(obj[key]) && obj[key].trim() !== "") {
                         obj[key] = parseInt(obj[key], 10);
                     }

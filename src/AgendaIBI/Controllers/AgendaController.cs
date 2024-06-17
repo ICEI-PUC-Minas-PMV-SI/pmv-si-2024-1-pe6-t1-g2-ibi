@@ -53,8 +53,22 @@ namespace API_ORIGINAL_01.Controllers
 
         }
 
+        [HttpGet("Aluno/{alunoId}")]
+        public async Task<ActionResult> GetAllByAlunoId(int alunoId)
+        {
+            var agendas = await _context.Agendas
+                .Where(a => a.AlunoId == alunoId)
+                .ToListAsync();
 
-       
+            if (agendas == null || agendas.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(agendas);
+        }
+
+
 
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Agenda model)
@@ -85,7 +99,6 @@ namespace API_ORIGINAL_01.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-
         }
 
         private void GerarLinks(Agenda model)
