@@ -52,6 +52,21 @@ namespace API_ORIGINAL_01.Controllers
 
 
         }
+         [HttpGet("data/{alunoId}")]
+         public async Task<ActionResult> GetByData(DateTime data, int  alunoId)
+         {
+         var model = _context.Agendas
+         .Where(r => EF.Functions.DateDiffDay(r.Data, data) == 0 && r.AlunoId == alunoId)
+         .ToList();
+    
+         // .FirstOrDefaultAsync(c => c.Data == data);
+    
+         if (model == null) return NotFound();
+
+     
+
+         return Ok(model);
+         }
 
         [HttpGet("Aluno/{alunoId}")]
         public async Task<ActionResult> GetAllByAlunoId(int alunoId)
