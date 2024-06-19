@@ -115,7 +115,7 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 
 **Resultado esperado:** O usuário deve ser capaz de acessar o sistema.
 
-![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/Acesso.png?raw=true)
+![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/LoginReact.png?raw=true)
 
 # Referências
 
