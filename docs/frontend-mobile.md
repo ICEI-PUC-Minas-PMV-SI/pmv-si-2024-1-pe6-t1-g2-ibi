@@ -114,8 +114,7 @@ Com o objetivo de evitar problemas físicos e corte de custos, os dados serão a
 4.  Se o usuário não informou o login ou a senha corretos, o sistema apresenta mensagem de erro “Login/Senha Incorretos” e o caso de uso retorna ao passo 2; caso contrário o caso de uso terminar.
 
 **Resultado esperado:** O usuário deve ser capaz de acessar o sistema.
-
-![Print do resultado do teste de caso 1](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/LoginReact.png?raw=true)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe6-t1-g2-ibi/blob/main/docs/img/LoginReact.png)
 
 # Referências
 
