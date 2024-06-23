@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -36,22 +42,31 @@
                 <button id="create-student-btn" class="btn green-btn"><a href="Criaraluno.html">Criar Aluno</a></button>
                 <button id="edit-student-btn" class="btn green-btn"><a href="Editaralunos.html">Editar Aluno</a></button>
             </div>
+            <div class="table-box">
+                <div class="table-scroll">
+                    <table class="table">
+                        <thead id="table-head">
+                            <tr class="table-header">
+                                <td>ID</td>
+                                <td>Nome</td>                                
+                                <td>Turma</td>
+                                <td>Responsável</td>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr class="table-line">
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script> 
     <script src="js/pop-up.js"></script>
-
-    <script>
-        document.getElementById('create-student-btn').addEventListener('click', function () {
-            alert('Aluno Criadro!');
-        });
-
-        document.getElementById('edit-student-btn').addEventListener('click', function () {
-            alert('Editar Aluno!');
-        });
-    </script>
+    <script src="js/gerenciar-aluno.js"></script>
 
 </body>
 </html>

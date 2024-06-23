@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -31,38 +37,39 @@
 
     <div class="main-content">
         <div class="form-container container">
-            <form action="#" method="post">
+            <form action="#" method="POST">
                 <header>Editar Aluno</header>
 
                 <div class="search-container busca">
-                    <input type="text" id="search-bar" placeholder="Pesquisar Aluno...">
-                    <button id="search-btn" type="submit"><img src="lupa.png" alt="buscar"></button>
+                    <input type="number" id="search-id" placeholder="Pesquisar ID do Aluno...">
+                    <button id="search-btn" type="button"><img src="lupa.png" alt="buscar"></button>
                 </div>
 
                 <div class="container">
                     <div class="input-box">
+                        <label for="ID">ID:</label>
+                        <input type="number" id="id-form" name="id-form" placeholder="ID" required readonly>
+                    </div>
+                    <div class="input-box">
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome do(a) aluno(a)" required>
+                        <input type="text" id="nome" name="nome" placeholder="Nome do aluno" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="matricula">Matricula:</label>
+                        <input type="text" id="matricula" name="matricula" placeholder="Matricula do aluno" required>
                     </div>
                     <div class="input-box">
                         <label for="data">Data de Nascimento:</label>
                         <input type="text" id="data" name="data" placeholder="Data de nascimento" required>
                     </div>
-                    <div class="input-box">
-                        <label for="responsavel">Adicionar Responsável:</label>
-                        <input type="text" id="responsavel" name="responsavel" placeholder="Adicione responsáveis do(a) aluno(a)" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="turma">Turma:</label>
-                        <input type="text" id="turma" name="turma" placeholder="Turma do aluno" required>
-                    </div>
+                    
                     <div class="button-box">
                         <div class="one-button">
-                            <button class="btn red-btn">Excluir</button>
+                            <button id="btn-excluir" type="button" class="btn red-btn">Excluir</button>
                         </div>
                         <div class="two-buttons">
-                            <button class="btn red-btn">Cancelar</button>
-                            <button type="submit" class="btn green-btn">Salvar</button>
+                            <button id="btn-voltar" type="button" class="btn red-btn"><a href="https://localhost:7247/Gerenciaraluno.html">Voltar</a></button>
+                            <button id="btn-editar" type="button" class="btn green-btn">Salvar</button>
                         </div>
                     </div>
                 </div>
@@ -75,15 +82,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/pop-up.js"></script>   
+    <script src="js/pop-up.js"></script>
+    <script src="js/editar-aluno.js"></script>
     <script>
         $('#data').mask('00/00/0000');
-    </script>
-    <script>
-        document.getElementById('search-btn').addEventListener('click', function () {
-            let query = document.getElementById('search-bar').value;
-            alert('Você pesquisou por: ' + query);
-        });
     </script>
 </body>
 </html>

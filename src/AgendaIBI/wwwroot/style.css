@@ -22,6 +22,16 @@ body {
     column-gap: 15px;
 }
 
+.back {
+    font-size: 18px;
+    color: #666;
+}
+
+.back:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* Imagem logo */
 .img {
     display: flex;
@@ -114,8 +124,12 @@ input[type="checkbox"]:checked {
     border: 3px solid #EDEDED;
 }
 
-textarea:read-only {
+textarea:read-only, input:read-only {
     background-color: #d8d8d8;
+}
+
+textarea:read-only:hover, input:read-only:hover {
+    cursor:default;
 }
 
 
@@ -149,6 +163,10 @@ textarea:read-only {
     color: #202020;
 }
 
+.btn a {
+    color: white;
+}
+
 .green-btn:hover, .grey-btn:hover {
     border: #1AB24C 2px solid;
     background-color: #FFF;
@@ -158,11 +176,7 @@ textarea:read-only {
 .red-btn:hover {
     border: #EE1B24 2px solid;
     background-color: #FFF;
-    color: #EE1B24;
-}
-
-.btn a {
-    color: white;
+    color: #EE1B24 !important;
 }
 
 .green-btn:hover a {
@@ -180,6 +194,11 @@ textarea:read-only {
     display: flex;
     justify-content: space-between;
     column-gap: 20px;
+}
+
+.red-btn:hover a {
+    color: #EE1B24;
+    text-decoration: none;
 }
 
 .button-box .btn {
@@ -233,6 +252,10 @@ textarea:read-only {
     justify-content: end;
     font-size: 14.5px;
     margin: 20px 5px;
+}
+
+.wrapper a {
+    color: #EE1B24;
 }
 
 
@@ -387,6 +410,20 @@ textarea:read-only {
     padding: 10px;
 }
 
+.container .checkbox-line{
+    padding: 20px;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.check input[type="checkbox"] {
+    margin-right: 10px;
+}
+
 .container form .check-list {
     display: flex;
     align-items: center;
@@ -400,7 +437,7 @@ textarea:read-only {
 .table-box {
     padding: 15px;
     margin-top: 20px;
-    border-top: #666 solid 1px;    
+    border-top: #666 solid 1px; 
 }
 
 .table-header h2 {
@@ -430,6 +467,24 @@ textarea:read-only {
     border-top: 1px solid #dee2e6;
 }
 
+.table-line .column-1 {
+    font-weight: 600;
+}
+
+.table .page {
+    color: #1b8f42;
+}
+
+.table .page:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.table .btn {
+    padding: 10px;
+    width: 100px;
+}
+
 .table .end-line {
     text-align: end;
 }
@@ -438,6 +493,19 @@ textarea:read-only {
     display: flex;
     justify-content: end;
     font-size: 18px;
+}
+
+/* Calendário */
+
+#editEventModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
 }
 
 
@@ -476,8 +544,12 @@ textarea:read-only {
     }
     
     
-    .one-button, .two-buttons button {
+    .one-button, .two-buttons button, .two-buttons a {
         margin: 10px auto;
+    }
+
+    .back {
+        display: none;
     }
     
 }
@@ -517,6 +589,11 @@ textarea:read-only {
 
     .wrapper img {
         width: 80%;
+    }
+
+    .table-scroll {
+        overflow-x: auto;
+        margin-bottom: 10px;
     }
 
 }

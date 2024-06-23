@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -31,7 +37,8 @@
 
     <div class="main-content">
         <div class="form-container container">
-            <form action="#" method="post">
+            <a href="#" class="back" onclick="goBack()">Voltar</a>   
+            <form id="criar-aluno" action="#" method="post">
                 <header>Criar Aluno</header>
 
                 <div class="container">
@@ -40,19 +47,15 @@
                         <input type="text" id="nome" name="nome" placeholder="Nome do(a) aluno(a)" required>
                     </div>
                     <div class="input-box">
+                        <label for="matricula">Matricula:</label>
+                        <input type="text" id="matricula" name="matricula" placeholder="Matricula do(a) aluno(a)" required>
+                    </div>
+                    <div class="input-box">
                         <label for="data">Data de Nascimento:</label>
                         <input type="text" id="data" name="data" placeholder="Data de nascimento" required>
                     </div>
-                    <div class="input-box">
-                        <label for="responsavel">Adicionar Responsável:</label>
-                        <input type="text" id="responsavel" name="responsavel" placeholder="Adicione responsáveis do(a) aluno(a)" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="turma">Turma:</label>
-                        <input type="text" id="turma" name="turma" placeholder="Turma do aluno" required>
-                    </div>
                     <div class="button-container two-buttons">
-                        <button type="button" class="btn editar red-btn">Cancelar</button>
+                        <button type="button" class="btn editar red-btn"><a href="https://localhost:7247/Gerenciaraluno.html">Cancelar</a></button>
                         <button type="submit" class="btn criar green-btn">Criar</button>
                     </div>
                 </div>
@@ -69,5 +72,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/pop-up.js"></script>
+    <script src="js/criar-aluno.js"></script>
 </body>
 </html>

@@ -22,7 +22,29 @@ namespace API_ORIGINAL_01.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var model = await _context.Turmas.ToListAsync();
+            //var model = await _context.Turmas.ToListAsync();
+            var model = await _context.Turmas
+                .Include(u => u.Usuarios)
+                    .ThenInclude(ut => ut.Usuario)
+                .Include(u => u.Alunos)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.NumeroTurma,
+                    u.AnoLetivo,
+                    Usuarios = u.Usuarios.Select(a => new
+                    {
+                        a.UsuarioId,
+                        a.Usuario.Nome
+                    }).ToList(),
+                    Alunos = u.Alunos.Select(t => new
+                    {                     
+                        t.AlunoId,
+                        t.Aluno.Nome,
+                        t.Aluno.Matricula
+                    }).ToList()
+                })
+                .ToListAsync();
             return Ok(model);
         }
 
@@ -66,15 +88,34 @@ namespace API_ORIGINAL_01.Controllers
         public async Task<ActionResult> GetById(int id)
         {
             var model = await _context.Turmas
-
+                .Include(t => t.Usuarios).ThenInclude(t => t.Usuario)
                 .Include(t => t.Alunos).ThenInclude(t => t.Aluno)
-                .FirstOrDefaultAsync(c => c.Id == id);
+                .Where(c => c.Id == id)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.NumeroTurma,
+                    u.AnoLetivo,
+                    Usuarios = u.Usuarios.Select(a => new
+                    {
+                        a.UsuarioId,
+                        a.Usuario.Nome
+                    }).ToList(),
+                    Alunos = u.Alunos.Select(t => new
+                    {
+                        t.AlunoId,
+                        t.Aluno.Nome,
+                        t.Aluno.Matricula
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
 
             if (model == null) return NotFound();
 
 
             return Ok(model);
         }
+
 
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Turma model)

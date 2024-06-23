@@ -8,7 +8,7 @@ function getUserRole() {
         } catch (error) {
             console.error('Erro ao decodificar o token:', error);
             return null;
-        }
+        }        
     }
     return null;
 }
@@ -91,4 +91,8 @@ function getPerfilName(perfil) {
         case 2:
             return "Responsavel";
     }
+}
+
+function goBack() {
+    history.back();
 }

@@ -19,7 +19,8 @@ document.getElementById('criar-usuario').addEventListener('submit', function(eve
       body: JSON.stringify(userData)
     })
     .then(data => {
-      document.getElementById('resposta').innerText = `O usuário foi criado com sucesso`;
+      //document.getElementById('resposta').innerText = `O usuário foi criado com sucesso`;
+      alert('O usuário ' + nome + ' foi criado com sucesso!');
       window.location.reload()   
     })
     .catch(error => {

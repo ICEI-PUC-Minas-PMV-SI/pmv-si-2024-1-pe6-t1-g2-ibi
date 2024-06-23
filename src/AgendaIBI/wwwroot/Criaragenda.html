@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Criar relátorio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-allowed-roles="Professor,Administrador">
@@ -20,10 +20,16 @@
 
             <div class="img"><img src="logo.png" alt="Logo IBB"></div> 
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>           
@@ -31,39 +37,17 @@
 
 
     <div class="main-content">
-        <div class="busca">
-            <label for="search">Matrícula:</label>
-            <input id="search" type="text" placeholder="Insira a matrícula do aluno">
-            <button id="search" type="submit"><img src="lupa.png" alt="buscar"></button>
-        </div>
         <div class="container">
-            <header class="date">DD/MM/AAAA</header>
+            <header class="date" id="nome-aluno"></header>
             <form id="criar-agenda" method="POST">
                 <div class="input-box">
                     <label for="alunoID">Aluno ID:</label>
-                    <input id="alunoID" name="alunoID" type="text" placeholder="ID do aluno" required>
+                    <input id="alunoID" name="alunoID" type="text" placeholder="ID do aluno">
                 </div>
                 <div class="input-box">
                     <label for="data">Data:</label>
-                    <input id="data" name="data" type="text" placeholder="Data" required>
+                    <input id="data" name="data" type="date" placeholder="Data">
                 </div>
-
-                <!-- <div class="input-box">
-                    <label for="aluno">Aluno:</label>
-                    <input id="aluno" name="aluno" type="text" placeholder="Nome de aluno">
-                </div> -->
-
-                <!-- <div class="column-2">
-                    <div class="input-box">
-                        <label for="responsavel">Responsável:</label>
-                        <input id="responsavel" name="responsavel" type="text" placeholder="Nome do responsavel">
-                    </div>
-                    <div class="input-box">
-                        <label for="professor">Professor:</label>
-                        <input id="professor" name="professor" type="text" placeholder="Nome do professor">
-                    </div>
-                </div> -->
-
                 <div class="column-2">
                     <div class="input-box">
                         <label for="cafe">Café da manhã:</label>
@@ -117,38 +101,31 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="column-2">
-                    <div class="input-box">
-                        <label for="evacuacao">Evacuação:</label>
-                        <div class="select-box">
-                            <select name="evacuacao" id="evacuacao" required>
-                                <option value="">Selecione uma das opções</option>
-                                <option value="0">Sim</option>
-                                <option value="1">Não</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-box">
-                        <label for="repouso">Repousou:</label>
-                        <div class="select-box">
-                            <select name="repouso" id="repouso" required>
-                                <option value="">Selecione uma das opções</option>
-                                <option value="0">Sim</option>
-                                <option value="1">Não</option>
-                            </select>
-                        </div>
+                <div class="input-box">
+                    <label for="evacuacao">Evacuação:</label>
+                    <div class="select-box">
+                        <select name="evacuacao" id="evacuacao" required>
+                            <option value="">Selecione uma das opções</option>
+                            <option value="0">Normal</option>
+                            <option value="1">Diareia</option>
+                            <option value="1">Não Evaacuo</option>
+                        </select>
                     </div>
                 </div>
-
                 <div class="input-box">
                     <label for="medicacao">Medicações:</label>
                     <input id="medicacao" name="medicacao" type="text" placeholder="Insira os medicamentos">
                 </div>
 
-                <div class="input-box">
-                    <label for="atividade">Atividades em família:</label>
-                    <input id="atividade" name="atividade" type="text" placeholder="Insira a atividade em família">
+                <div class="column-2 checkbox-line">                    
+                    <div class="check">
+                        <input id="atividade" name="atividade" type="checkbox">
+                        <label for="atividade">Atividades em família</label>                        
+                    </div>
+                    <div class="check">
+                        <input id="repouso" name="repouso" type="checkbox">
+                        <label for="repouso">Repousou</label>
+                    </div>
                 </div>
 
                 <div class="check-box">
@@ -156,50 +133,50 @@
                     <div class="column-2 check-list">
                         <div class="check-option">
                             <div class="check">
-                                <input type="checkbox" name="lençoUmedecido">
-                                <label for="check-lenco">Lenço umedecnameo</label>
+                                <input id="check-lenco" type="checkbox" name="lençoUmedecido">
+                                <label for="check-lenco">Lenço umedecido</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="pomadaDeAssadura">
+                                <input id="check-pomada" type="checkbox" name="pomadaDeAssadura">
                                 <label for="check-pomada">Pomada de assadura</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="mantinha_Coberta">
+                                <input id="check-mantinha" type="checkbox" name="mantinha_Coberta">
                                 <label for="check-mantinha">Mantinha</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="toalha">
+                                <input id="check-toalha" type="checkbox" name="toalha">
                                 <label for="check-toalha">Toalha</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" id="bico" name="bico">
+                                <input id="check-bico" type="checkbox" id="bico" name="bico">
                                 <label for="check-bico">Bico</label>
                             </div>
                         </div>
 
                         <div class="check-option">                            
                             <div class="check">
-                                <input type="checkbox" name="chinelo">
+                                <input id="check-chinelo" type="checkbox" name="chinelo">
                                 <label for="check-chinelo">Chinelo</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="roupasParaTroca">
+                                <input id="check-roupa" type="checkbox" name="roupasParaTroca">
                                 <label for="check-roupa">Roupas para troca</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="shampoo">
+                                <input id="check-shampoo" type="checkbox" name="shampoo">
                                 <label for="check-shampoo">Shampoo</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="condicionador">
+                                <input id="check-condicionador" type="checkbox" name="condicionador">
                                 <label for="check-condicionador">Condicionador</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="sabonete">
+                                <input id="check-sabonete" type="checkbox" name="sabonete">
                                 <label for="check-sabonete">Sabonete</label>
                             </div>
                             <div class="check">
-                                <input type="checkbox" name="pente">
+                                <input id="check-pente" type="checkbox" name="pente">
                                 <label for="check-pente">Pente</label>
                             </div>
                         </div>
@@ -208,26 +185,22 @@
 
                 <div class="input-box">
                     <label for="obsprof">Observações professor(a):</label>
-                    <textarea name="observacaoProfessor" rows="5" style="resize: none" placeholder="Insira as observações de professor(a)"></textarea>
+                    <textarea id="obsprof" name="observacaoProfessor" rows="5" style="resize: none" placeholder="Insira as observações de professor(a)"></textarea>
                 </div>
 
                 <div class="input-box">
                     <label for="obsresp">Observações responsável:</label>
-                    <textarea name="observacaoResponsavel" rows="5" style="resize: none" placeholder="Insira as observações de responsável"></textarea>
+                    <textarea id="obsresp" name="observacaoResponsavel" rows="5" style="resize: none" placeholder="Insira as observações de responsável"></textarea>
                 </div>
 
                 <div class="button-box">
                     <div class="one-button">
-                        <button class="btn red-btn">Excluir</button>
+                        <a href="Calendario.html" class="link-btn" style="width: fit-content;" ><button type="button" class="btn red-btn">Cancelar</button></a>
                     </div>
-                    <div class="two-buttons">
-                        <button class="btn red-btn">Cancelar</button>
-                        <button type="submit" class="btn green-btn">Salvar</button>
+                    <div class="one-button">
+                        <button id="btn-editar" type="submit" class="btn green-btn">Salvar</button>
                     </div>
                 </div>
-                <div id="resposta"></div>
-            </form>
-        </div>        
     </div>
 
 
@@ -239,3 +212,4 @@
     <script src="js/pop-up.js"></script>
 </body>
 </html>
+

@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -33,9 +39,26 @@
     <div class="main-content">
         <div class="container">
             <header>Gerenciamento de Turmas</header>
-            <div class="button-container two-buttons">
-                <button id="create-class-btn" class="btn green-btn"><a href="Criarturmas.html">Criar Turma</a></button>
-                <button id="edit-class-btn" class="btn green-btn"><a href="#">Editar Turma</a></button>
+            <div class="button-container .one-button">
+                <a href="Criarturmas.html"><button id="create-class-btn" class="btn green-btn">Criar Turma</button></a>
+            </div>
+            <div class="table-box">
+                <div class="table-scroll">
+                    <table class="table">
+                        <thead id="table-head">
+                            <tr class="table-header">
+                                <td>ID</td>
+                                <td>Número da turma</td>
+                                <td>Ano Letivo</td>
+                                <td>Professor(a)</td>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr class="table-line">
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
             </div>
         </div>
     </div>
@@ -44,15 +67,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/pop-up.js"></script>
-    <script>
-        document.getElementById('create-class-btn').addEventListener('click', function () {
-            alert('Turma Criada!');
-        });
-
-        document.getElementById('edit-class-btn').addEventListener('click', function () {
-            alert('Editar Turma!');
-        });
-    </script>
+    <script src="js/gerenciar-turmas.js"></script>
 
 </body>
 </html>

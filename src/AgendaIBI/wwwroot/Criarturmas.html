@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -31,31 +37,25 @@
 
     <div class="main-content">
         <div class="form-container container">
-            <form action="#" method="POST">
+            <a href="#" class="back" onclick="goBack()">Voltar</a>   
+            <form id="criar-turma" action="#" method="POST">
                 <header>Criar Turma</header>
 
                 <div class="container">
                     <div class="input-box">
-                        <label for="turma">Nome da Turma:</label>
-                        <input type="text" id="turma" name="turma" placeholder="Nome da turma" required>
+                        <label for="turma">Número da Turma:</label>
+                        <input type="text" id="turma" name="turma" placeholder="Número da turma" required>
                     </div>
                     <div class="input-box">
                         <label for="ano">Ano Letivo:</label>
                         <input type="text" id="ano" name="ano" placeholder="Ano letivo" required>
                     </div>
-                    <div class="input-box">
-                        <label for="aluno">Adicionar Aluno:</label>
-                        <input type="text" id="aluno" name="aluno" placeholder="Adicione alunos na turma" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="professor">Adicionar Professor:</label>
-                        <input type="text" id="professor" name="professor" placeholder="Adicione professor na turma" required>
-                    </div>
                     <div class="button-container two-buttons">
-                        <button type="button" class="btn editar red-btn">Cancelar</button>
+                        <button type="button" class="btn editar red-btn"><a href="Gerenciarturmas.html">Cancelar</a></button>
                         <button type="submit" class="btn criar green-btn">Criar</button>
                     </div>
                 </div>
+                <div id="resposta"></div>
             </form>
         </div>
     </div>
@@ -66,6 +66,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/pop-up.js"></script>
+    <script src="js/criar-turma.js"></script>
     <script>
     $('#ano').mask('0000');
     </script>

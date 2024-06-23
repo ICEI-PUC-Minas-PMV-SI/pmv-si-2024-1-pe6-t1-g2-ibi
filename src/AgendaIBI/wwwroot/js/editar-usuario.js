@@ -15,7 +15,14 @@ const btnForm = document.getElementById('novo-TurmaAluno');
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
     fetch(baseUrl + `Usuarios/${searchId}`)
-    .then(response => response.json())
+    .then(response => {
+        if (response.status === 404) {
+          alert('Usuário não encontrado');
+          throw new Error('Erro 404: Recurso não encontrado');
+        } else {
+          return response.json();
+        }
+      })
     .then(data=> preencherCampos(data))
     .catch(error => {
         console.error('Erro ao ler contatos via API JSONServer:', error);
@@ -23,8 +30,9 @@ async function getUserByID() {
 }  
 
 function preencherCampos(data) {
+
     idForm.value = data.id;
-    nomeForm.placeholder = `${data.nome}`;
+    nomeForm.value = data.nome;
     perfilForm.value = data.perfil;
     document.getElementById('perfil-display').value = `${getPerfilName(data.perfil)}`;
     if(data.perfil === 1){mostrarTurmas(data.turmas)};
@@ -74,14 +82,14 @@ function mostrarTurmas(turmas){
                             <td>Id</td>
                             <td>Nº da Turma</td>
                             <td>Ano Letivo</td>
-                            <td>Numéro de Alunos</td>
+                            <td>Número de Alunos</td>
                             <td></td>
                             </tr>`;
     let temp = '';
     turmas.forEach(turma => {
         temp += `<tr id="turma-${turma.id}" class="linha-professor">`;
         temp += "<td>"+ turma.id +"</td>";
-        temp += "<td>"+ turma.numeroTurma +"</td>";
+        temp += "<td><a href='Paginaturma.html?id=" + turma.id + "' class='page'>"+ turma.numeroTurma +"</td>";
         temp += "<td>"+ turma.anoLetivo +"</td>";
         temp += "<td>"+ turma.numeroAlunos + "</td>";
         return temp += `<td class="end-line"><button type="button" class="btn red-btn" onclick="deleteTableEntry(this)">Remover</button></td></tr>`;
@@ -94,17 +102,17 @@ function mostrarAlunos(alunos){
     titleTable.innerHTML = '<h2>Alunos</h2>';
     headTable.innerHTML = `<tr class='table-header'>
                             <td>Id</td>
-                            <td>Nº da Matrícula</td>
                             <td>Nome</td>
+                            <td>Nº da Matrícula</td>                            
                             <td>Turma</td>
                             <td></td>
                             </tr>`;
     let temp = '';
     alunos.forEach(aluno => {
         temp += `<tr id="aluno-${aluno.id}" class="linha-aluno">`;
-        temp += "<td>"+ aluno.id +"</td>";
+        temp += "<td>"+ aluno.id +"</td>";        
+        temp += "<td> <a href='Paginaaluno.html?id=" + aluno.id + "' class='page'>"+ aluno.nome +"</td>";
         temp += "<td>"+ aluno.matricula +"</td>";
-        temp += "<td>"+ aluno.nome +"</td>";
         temp += "<td>" + getTurmas(aluno.turmas) + "</td>";
         return temp += `<td class="end-line"><button type="button" class="btn red-btn" onclick="deleteTableEntry(this)">Remover</button></td></tr>`;
         });

@@ -7,7 +7,7 @@ using System;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    //[Authorize(Roles = "Administrador")]
     [Route("api/[controller]")]
     [ApiController]
     public class AlunosController : ControllerBase
@@ -22,8 +22,30 @@ namespace API_ORIGINAL_01.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
-            var model = await _context.Alunos.ToListAsync();
-
+            //var model = await _context.Alunos.ToListAsync();
+            var model = await _context.Alunos
+                .Include(u => u.Usuarios)
+                    .ThenInclude(ut => ut.Usuario)
+                .Include(u => u.Turmas)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Matricula,
+                    u.Nome,
+                    u.DataNascimento,
+                    Usuarios = u.Usuarios.Select(a => new
+                    {
+                        a.UsuarioId,
+                        a.Usuario.Nome
+                    }).ToList(),
+                    Turmas = u.Turmas.Select(t => new
+                    {
+                        t.TurmaId,
+                        t.Turma.NumeroTurma,
+                        t.Turma.AnoLetivo
+                    }).ToList()
+                })
+                .ToListAsync();
             return Ok(model);
         }
 
@@ -44,17 +66,33 @@ namespace API_ORIGINAL_01.Controllers
         {
             var model = await _context.Alunos
                 .Include(t => t.Usuarios).ThenInclude(t => t.Usuario)
-
-                .FirstOrDefaultAsync(c => c.Id == id);
+                .Include(t => t.Turmas).ThenInclude(t => t.Turma)
+                .Where(c => c.Id == id)
+                .Select(u => new
+                {
+                    u.Id,
+                    u.Matricula,
+                    u.Nome,
+                    u.DataNascimento,
+                    Usuarios = u.Usuarios.Select(a => new
+                    {
+                        a.UsuarioId,
+                        a.Usuario.Nome
+                    }).ToList(),
+                    Turmas = u.Turmas.Select(t => new
+                    {
+                        t.TurmaId,
+                        t.Turma.NumeroTurma,
+                        t.Turma.AnoLetivo
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
 
             if (model == null) return NotFound();
 
-            GerarLinks(model);
+            //GerarLinks(model);
 
             return Ok(model);
-
-
-
         }
 
         [HttpPut("{id}")]

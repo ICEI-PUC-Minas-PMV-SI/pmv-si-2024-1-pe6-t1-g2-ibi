@@ -20,10 +20,16 @@
 
         <div class="img"><img src="logo.png" alt="Logo IBB"></div>
             <ul>
-                <li><a href="Calendario.html">Calendário</a></li>
+                <li><a href="Gerenciaragenda.html">Calendário</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciarusuario.html">Gerenciar usuários</a></li>
+                <li class="user-only"><a href="Gerenciarturmas.html">Gerenciar turmas</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html">Gerenciar alunos</a></li>
+                <!-- Lista pedindo senha-->
+                <!-- 
                 <li class="user-only teacher-only"><a href="Gerenciarusuario.html" onclick="pedirSenha()">Gerenciar usuários</a></li>
                 <li class="user-only"><a href="Gerenciarturmas.html" onclick="pedirSenha()">Gerenciar turmas</a></li>
-                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li>
+                <li class="user-only teacher-only"><a href="Gerenciaraluno.html" onclick="pedirSenha()">Gerenciar alunos</a></li> 
+                -->
                 <li><a id="logout" href="#">Sair</a></li>
             </ul>
         </div>
@@ -35,14 +41,14 @@
                 <header>Editar Usuário</header>
 
                 <div class="search-container busca">
-                    <input type="number" id="search-id" placeholder="Pesquisar Usuário...">
+                    <input type="number" id="search-id" placeholder="Pesquisar ID do Usuário...">
                     <button id="search-btn" type="button"><img src="lupa.png" alt="buscar"></button>
                 </div>
 
                 <div class="container">
                     <div class="input-box">
-                        <label for="ID">Id:</label>
-                        <input type="number" id="id-form" name="id-form" placeholder="Id" required readonly>
+                        <label for="ID">ID:</label>
+                        <input type="number" id="id-form" name="id-form" placeholder="ID" required readonly>
                     </div>
                     <div class="input-box">
                         <label for="perfil">Perfil:</label>
@@ -55,14 +61,14 @@
                     </div>
                     <div class="input-box">
                         <label for="password">Senha</label>
-                        <input type="password" id="password" name="password" placeholder="Senha">
+                        <input type="password" id="password" name="password" placeholder="********">
                     </div>
                     <div class="button-box">
                         <div class="one-button">
                             <button id="btn-excluir" type="button" class="btn red-btn">Excluir</button>
                         </div>
                         <div class="two-buttons">
-                            <button id="btn-voltar" type="button" class="btn red-btn"><a href="https://localhost:7247/Gerenciarusuario.html">Voltar</a></button>
+                            <a href="https://localhost:7247/Gerenciarusuario.html"><button id="btn-voltar" type="button" class="btn red-btn">Voltar</a></button>
                             <button id="btn-editar" type="button" class="btn green-btn">Salvar</button>
                         </div>
                     </div>
@@ -70,14 +76,16 @@
             </form>
             <div id="table-editar" class="table-box">
                 <div id="table-titulo"></div>
-                <table class="table">
-                    <thead id="table-header">
-                        <tr class="table-header">
-                        </tr>
-                    </thead>
-                    <tbody id="table-body" class="table-body"> 
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table class="table">
+                        <thead id="table-header">
+                            <tr class="table-header">
+                            </tr>
+                        </thead>
+                        <tbody id="table-body" class="table-body"> 
+                        </tbody>
+                    </table>
+                </div>                
                 <div id="novo-TurmaAluno"></div>
             </div>
         </div>

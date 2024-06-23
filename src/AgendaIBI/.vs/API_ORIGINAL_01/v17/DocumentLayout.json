@@ -1,0 +1,167 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\models\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:models\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\controllers\\turmascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:controllers\\turmascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:controllers\\alunoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\models\\turma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:models\\turma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\models\\turmausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:models\\turmausuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\models\\turmaalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:models\\turmaalunos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|c:\\users\\mariana\\documents\\meus documentos\\faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\agendaibi\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2DCBF9-4761-46AF-9FE3-4AB34506A2E3}|API_ORIGINAL_01.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Agenda.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Agenda.cs",
+              "RelativeDocumentMoniker": "Models\\Agenda.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Agenda.cs",
+              "RelativeToolTip": "Models\\Agenda.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAmwAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-22T05:13:33.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AlunosController.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\AlunosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AlunosController.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\AlunosController.cs",
+              "RelativeToolTip": "Controllers\\AlunosController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwFgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T00:42:19.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TurmasController.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\TurmasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TurmasController.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\TurmasController.cs",
+              "RelativeToolTip": "Controllers\\TurmasController.cs",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAcwG4AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T02:17:30.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TurmaAlunos.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\TurmaAlunos.cs",
+              "RelativeDocumentMoniker": "Models\\TurmaAlunos.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\TurmaAlunos.cs",
+              "RelativeToolTip": "Models\\TurmaAlunos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T02:32:50.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TurmaUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\TurmaUsuarios.cs",
+              "RelativeDocumentMoniker": "Models\\TurmaUsuarios.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\TurmaUsuarios.cs",
+              "RelativeToolTip": "Models\\TurmaUsuarios.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T02:22:33.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\UsuariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Controllers\\UsuariosController.cs",
+              "RelativeToolTip": "Controllers\\UsuariosController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwGoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T02:17:33.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Turma.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Turma.cs",
+              "RelativeDocumentMoniker": "Models\\Turma.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Turma.cs",
+              "RelativeToolTip": "Models\\Turma.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:53:07.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Mariana\\Documents\\Meus documentos\\Faculdade\\6\u00B0 per\u00EDodo\\pmv-si-2024-1-pe6-t1-g2-ibi\\src\\AgendaIBI\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwCIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T00:53:07.174Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
