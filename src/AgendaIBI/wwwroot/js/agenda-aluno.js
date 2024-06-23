@@ -27,7 +27,7 @@ function displayUserDetails(userId, dia) {
     document.getElementById('btn-editar').addEventListener("click", updateAgenda);
     document.getElementById('btn-excluir').addEventListener("click", deleteAgenda);
 
-    const baseUrl = 'https://localhost:7247/api/';
+    const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
     const idAlunoForm = document.getElementById('alunoID');
     const dataForm = document.getElementById('data');
     const cafe = document.getElementById('cafe');

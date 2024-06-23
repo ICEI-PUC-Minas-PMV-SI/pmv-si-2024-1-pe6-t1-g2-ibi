@@ -1,3 +1,4 @@
+const baseUrl = 'https://garods-001-site1.dtempurl.com/';
 
 function getUserRole() {
     const token = localStorage.getItem('jwtToken');
@@ -16,7 +17,7 @@ function getUserRole() {
 function checkAuthorization(allowedRoles) {
     const role = getUserRole();
     if (!role || !allowedRoles.includes(role)) {
-        window.location.href = "https://localhost:7247/login.html";
+        window.location.href = baseUrl + "login.html";
         return false;
     }
     return true;
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
         botaoLogout.addEventListener("click", function(e){
             e.preventDefault();
             localStorage.removeItem("jwtToken");
-            window.location.href = "https://localhost:7247/login.html";
+            window.location.href = baseUrl + "login.html";
         });
     } else {
         console.error("Elemento com ID 'logout' não encontrado.");
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const allowedRolesString = document.body.getAttribute('data-allowed-roles');
     if (!allowedRolesString) {
         console.error("Atributo 'data-allowed-roles' não encontrado no elemento <body>.");
-        window.location.href = "https://localhost:7247/calendario.html";
+        window.location.href = baseUrl + "Calendario.html";
         return;
     }
     const allowedRoles = allowedRolesString.split(',').map(role => role.trim());

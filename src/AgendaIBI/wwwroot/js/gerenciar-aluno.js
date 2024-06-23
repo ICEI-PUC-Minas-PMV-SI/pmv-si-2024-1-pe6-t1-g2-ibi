@@ -1,7 +1,7 @@
 const bodyTabela = document.getElementById('table-body');
 
 
-fetch('https://localhost:7247/api/Alunos')
+fetch('https://garods-001-site1.dtempurl.com/api/Alunos')
     .then(response => response.json())
     .then(data => imprimirTurmas(data))
     .catch(error => {

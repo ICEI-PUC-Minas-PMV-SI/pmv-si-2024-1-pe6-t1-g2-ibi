@@ -1,6 +1,6 @@
 document.getElementById('search-btn').addEventListener("click",getUserByID);
 
-const baseUrl = 'https://localhost:7247/api/';
+const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;

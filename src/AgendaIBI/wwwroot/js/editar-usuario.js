@@ -2,7 +2,7 @@ document.getElementById('btn-editar').addEventListener("click", updateUser);
 document.getElementById('btn-excluir').addEventListener("click", deleteUser);
 document.getElementById('search-btn').addEventListener("click",getUserByID);
 
-const baseUrl = 'https://localhost:7247/api/';
+const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 const idForm = document.getElementById('id-form');
 const nomeForm = document.getElementById('nome');
 const passwordForm = document.getElementById('password');

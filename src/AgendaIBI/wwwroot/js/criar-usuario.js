@@ -11,7 +11,7 @@ document.getElementById('criar-usuario').addEventListener('submit', async functi
     perfil: +perfil
   };
   try {
-    const response = await fetch('https://localhost:7247/api/usuarios', {
+    const response = await fetch(baseUrl + 'api/usuarios', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

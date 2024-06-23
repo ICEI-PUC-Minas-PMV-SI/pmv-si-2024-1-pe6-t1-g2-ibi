@@ -15,7 +15,7 @@ document.getElementById('criar-aluno').addEventListener('submit', function(event
       dataNascimento: datanova
     };
 
-    fetch('https://localhost:7247/api/alunos', {
+    fetch('https://garods-001-site1.dtempurl.com/api/alunos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

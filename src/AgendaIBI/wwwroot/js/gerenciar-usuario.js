@@ -13,8 +13,7 @@ const mostrarResponsavel = document.getElementById('mostrar-responsavel');
 mostrarProfessor.addEventListener("click", imprimirProfessores);
 mostrarResponsavel.addEventListener("click", imprimirResponsavel);
 
-
-fetch('https://localhost:7247/api/Usuarios')
+fetch(baseUrl +'api/Usuarios')
     .then(response => response.json())
     .then(data => imprimirUsuarios(data))
     .catch(error => {

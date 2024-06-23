@@ -9,7 +9,7 @@ document.getElementById('criar-turma').addEventListener('submit', function(event
       anoLetivo: ano
     };
 
-    fetch('https://localhost:7247/api/turmas', {
+    fetch('https://garods-001-site1.dtempurl.com/api/turmas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -1,4 +1,4 @@
-const baseUrl = 'https://localhost:7247/api/';
+const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 
 // Função para obter os parâmetros da URL
 function getQueryParams() {
@@ -159,7 +159,7 @@ async function excluirTurma () {
                 }})
                 if(response.ok) {
                     alert(`Você excluiu a turma ${turmaId}`);
-                    window.location.assign('https://localhost:7247/Gerenciarturmas.html');
+                    window.location.assign('https://garods-001-site1.dtempurl.com/Gerenciarturmas.html');
               }
             } catch(err){console.log(err);}
     }

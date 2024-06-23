@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     alunoIDInput.addEventListener('blur', function() {
         const alunoID = alunoIDInput.value.trim();
-        const baseUrl = 'https://localhost:7247/api/';        
+        const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';        
         
         if (alunoID) {
             fetch(baseUrl + `Alunos/${alunoID}`)
@@ -74,7 +74,7 @@ if (criarAgendaForm) {
 
         // Verificar se já existe uma agenda para o aluno e data especificados
         try {
-            const checkResponse = await fetch(`https://localhost:7247/api/Agendas`);
+            const checkResponse = await fetch(`https://garods-001-site1.dtempurl.com/api/Agendas`);
             if (checkResponse.ok) {
                 const existingAgendas = await checkResponse.json();
                 if (existingAgendas.length > 0) {
@@ -103,7 +103,7 @@ if (criarAgendaForm) {
         }
 
         try {
-            const resposta = await fetch('https://localhost:7247/api/Agendas', {
+            const resposta = await fetch('https://garods-001-site1.dtempurl.com/api/Agendas', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

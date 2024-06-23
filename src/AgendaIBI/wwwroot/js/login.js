@@ -1,4 +1,6 @@
 //login 
+const baseURL = 'https://garods-001-site1.dtempurl.com'
+
 document.getElementById('login-autenticar').addEventListener('submit', async function(event) {
     event.preventDefault();
     
@@ -6,7 +8,7 @@ document.getElementById('login-autenticar').addEventListener('submit', async fun
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('https://localhost:7247/api/Usuarios/authenticate', {
+        const response = await fetch(`${baseURL}/api/Usuarios/authenticate`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
