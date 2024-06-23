@@ -52,9 +52,38 @@ namespace API_ORIGINAL_01.Controllers
 
 
         }
+         [HttpGet("data/{alunoId}")]
+         public async Task<ActionResult> GetByData(DateTime data, int  alunoId)
+         {
+         var model = _context.Agendas
+         .Where(r => EF.Functions.DateDiffDay(r.Data, data) == 0 && r.AlunoId == alunoId)
+         .ToList();
+    
+         // .FirstOrDefaultAsync(c => c.Data == data);
+    
+         if (model == null) return NotFound();
+
+     
+
+         return Ok(model);
+         }
+
+        [HttpGet("Aluno/{alunoId}")]
+        public async Task<ActionResult> GetAllByAlunoId(int alunoId)
+        {
+            var agendas = await _context.Agendas
+                .Where(a => a.AlunoId == alunoId)
+                .ToListAsync();
+
+            if (agendas == null || agendas.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(agendas);
+        }
 
 
-       
 
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Agenda model)
@@ -85,7 +114,6 @@ namespace API_ORIGINAL_01.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-
         }
 
         private void GerarLinks(Agenda model)
