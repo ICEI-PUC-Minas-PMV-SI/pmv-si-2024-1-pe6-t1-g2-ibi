@@ -61,9 +61,6 @@ namespace API_ORIGINAL_01.Models
         [Required]
         public int AlunoId { get; set; }
 
-        
-
-
     }
 
     public enum Refeicoes

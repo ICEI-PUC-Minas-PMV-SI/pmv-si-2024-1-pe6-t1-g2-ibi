@@ -134,7 +134,7 @@ async function deleteTableEntry(button){
             if(response.ok){
                 alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
                 window.location.reload();
-        }}  else if(idLinha.startsWith('aluno')){
+            }}  else if(idLinha.startsWith('aluno')){
             response = await fetch(`${baseUrl}Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
             })
