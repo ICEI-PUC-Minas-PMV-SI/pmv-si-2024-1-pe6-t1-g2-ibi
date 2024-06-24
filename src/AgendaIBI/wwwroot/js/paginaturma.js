@@ -1,4 +1,3 @@
-const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 
 // Função para obter os parâmetros da URL
 function getQueryParams() {
@@ -26,7 +25,7 @@ if (turmaId) {
 // Função para exibir os detalhes do usuário
 function displayUserDetails(turmaId) {
     
-    fetch(baseUrl + `Turmas/${turmaId}`)
+    fetch( baseUrl + `api/Turmas/${turmaId}`)
     .then(response => response.json())
     .then(data => imprimirTurma(data))
     .catch(error => {
@@ -108,7 +107,7 @@ async function addAluno(idAluno){
     }
 
     try {
-        const response = await fetch(`${baseUrl}Turmas/${turmaId}/Alunos`, {
+        const response = await fetch(baseUrl + `api/Turmas/${turmaId}/Alunos`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -137,7 +136,7 @@ async function deleteTableEntry(idAlunoDel){
 
     try {
         let response;
-        response = await fetch(`${baseUrl}Turmas/${idTurmaDelete}/Alunos/${idAlunoDelete}`, {
+        response = await fetch(baseUrl + `api/Turmas/${idTurmaDelete}/Alunos/${idAlunoDelete}`, {
             method: "DELETE",
         })
         if(response.ok){
@@ -149,10 +148,10 @@ async function deleteTableEntry(idAlunoDel){
 
 //Excluir turma
 async function excluirTurma () {
-    var confirmado = confirm('Ceteza que deseja excluir essa turma?');
+    var confirmado = confirm('Certeza que deseja excluir essa turma?');
     if(confirmado){
         try {
-            const response = await fetch(`${baseUrl}Turmas/${turmaId}`, {
+            const response = await fetch(baseUrl + `api/Turmas/${turmaId}`, {
                 method: "DELETE",
                 headers: {
                     'Content-Type': 'application/json'

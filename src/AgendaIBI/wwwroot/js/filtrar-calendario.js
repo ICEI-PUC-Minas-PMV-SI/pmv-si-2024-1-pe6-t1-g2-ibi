@@ -1,10 +1,9 @@
 document.getElementById('search-btn').addEventListener("click",getUserByID);
 
-const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`)
     .then(response => {
         if (response.status === 404) {
           alert('Aluno não encontrado');

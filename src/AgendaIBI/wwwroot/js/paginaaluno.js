@@ -23,10 +23,8 @@ if (userId) {
 
 // Função para exibir os detalhes do usuário
 function displayUserDetails(userId) {
-
-    const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
     
-    fetch(baseUrl + `Alunos/${userId}`)
+    fetch(baseUrl + `api/Alunos/${userId}`)
     .then(response => response.json())
     .then(data => imprimirAluno(data))
     .catch(error => {

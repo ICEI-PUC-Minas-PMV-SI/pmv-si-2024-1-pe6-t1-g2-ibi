@@ -2,7 +2,6 @@ document.getElementById('btn-editar').addEventListener("click", updateUser);
 document.getElementById('btn-excluir').addEventListener("click", deleteUser);
 document.getElementById('search-btn').addEventListener("click",getUserByID);
 
-const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 const idForm = document.getElementById('id-form');
 const nomeForm = document.getElementById('nome');
 const matriculaForm = document.getElementById('matricula');
@@ -11,7 +10,7 @@ const dataForm = document.getElementById('data');
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`)
     .then(response => {
         if (response.status === 404) {
           alert('Aluno não encontrado');
@@ -42,7 +41,7 @@ function preencherCampos(data) {
 async function deleteUser(){
     const idToDelete = idForm.value;
     try {
-    const response = await fetch(`${baseUrl}Alunos/${idToDelete}`, {
+    const response = await fetch(baseUrl + "api/Alunos/${idToDelete}", {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'
@@ -67,7 +66,7 @@ async function updateUser(){
         "matricula": matriculaForm.value,
         "dataNascimento": dataFormatada2
     }
-    try {const response = await fetch(`${baseUrl}Alunos/${idToUpdate}`, {
+    try {const response = await fetch(baseUrl + "api/Alunos/${idToUpdate}", {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'

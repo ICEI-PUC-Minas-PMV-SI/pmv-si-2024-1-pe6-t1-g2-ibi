@@ -2,7 +2,6 @@ document.getElementById('btn-editar').addEventListener("click", updateUser);
 document.getElementById('btn-excluir').addEventListener("click", deleteUser);
 document.getElementById('search-btn').addEventListener("click",getUserByID);
 
-const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
 const idForm = document.getElementById('id-form');
 const nomeForm = document.getElementById('nome');
 const passwordForm = document.getElementById('password');
@@ -14,7 +13,7 @@ const btnForm = document.getElementById('novo-TurmaAluno');
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `Usuarios/${searchId}`)
+    fetch(baseUrl + `api/Usuarios/${searchId}`)
     .then(response => {
         if (response.status === 404) {
           alert('Usuário não encontrado');
@@ -42,7 +41,7 @@ function preencherCampos(data) {
 async function deleteUser(){
     const idToDelete = idForm.value;
     try {
-    const response = await fetch(`${baseUrl}Usuarios/${idToDelete}`, {
+    const response = await fetch(baseUrl + `api/Usuarios/${idToDelete}`, {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'
@@ -62,7 +61,7 @@ async function updateUser(){
         "perfil": +perfilForm.value,
         "password": passwordForm.value
     }
-    try {const response = await fetch(`${baseUrl}Usuarios/${idToUpdate}`, {
+    try {const response = await fetch(baseUrl + `api/Usuarios/${idToDelete}`, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'
@@ -128,14 +127,14 @@ async function deleteTableEntry(button){
     try {
         let response;
         if(idLinha.startsWith('turma')){
-            response = await fetch(`${baseUrl}Turmas/${idToDelete}/Usuarios/${idUsuario}`, {
+            response = await fetch(baseUrl + `api/Turmas/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
             })
             if(response.ok){
                 alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
                 window.location.reload();
             }}  else if(idLinha.startsWith('aluno')){
-            response = await fetch(`${baseUrl}Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
+            response = await fetch(baseUrl + `api/Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
             })
             if(response.ok){
@@ -162,7 +161,7 @@ async function addTurma(idTurma){
         turmaId: +idTurma
     }
     try {
-        const response = await fetch(`${baseUrl}Turmas/${idTurma}/Usuarios`, {
+        const response = await fetch(baseUrl + `api/Turmas/${idTurma}/Usuarios`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
@@ -189,7 +188,7 @@ async function addAluno(idAluno){
         alunoId: +idAluno
     }
     try {
-        const response = await fetch(`${baseUrl}Alunos/${idAluno}/Usuarios`, {
+        const response = await fetch(baseUrl + `api/Alunos/${idAluno}/Usuarios`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'

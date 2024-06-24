@@ -27,7 +27,6 @@ function displayUserDetails(userId, dia) {
     document.getElementById('btn-editar').addEventListener("click", updateAgenda);
     document.getElementById('btn-excluir').addEventListener("click", deleteAgenda);
 
-    const baseUrl = 'https://garods-001-site1.dtempurl.com/api/';
     const idAlunoForm = document.getElementById('alunoID');
     const dataForm = document.getElementById('data');
     const cafe = document.getElementById('cafe');
@@ -52,14 +51,14 @@ function displayUserDetails(userId, dia) {
     const obsProf = document.getElementById('obsprof');
     const obsResp = document.getElementById('obsresp');
     
-    fetch(baseUrl + `Agendas`)
+    fetch(baseUrl + `api/Agendas`)
     .then(response => response.json())
     .then(data => imprimirAgenda(data, userId, dia))    
     .catch(error => {
         console.error('Erro ao ler contatos via API JSONServer:', error);
     });
 
-    fetch(baseUrl + `Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`)
     .then(response => response.json())
     .then(aluno=> preencherAluno(aluno))
     .catch(error => {
@@ -124,7 +123,7 @@ function displayUserDetails(userId, dia) {
 
     async function updateAgenda(){        
 
-        fetch(baseUrl + `Agendas`)
+        fetch(baseUrl + `api/Agendas`)
         .then(response => response.json())
         .then(data => updateAgenda2(data, userId, dia))  
         .catch(error => {
@@ -173,7 +172,7 @@ function displayUserDetails(userId, dia) {
                         "alunoId": idAluno
                     }
 
-                    try {const response = await fetch(`${baseUrl}Agendas/${idToUpdate}`, {
+                    try {const response = await fetch(baseUrl + `api/Agendas/${idToUpdate}`, {
                         method: "PUT",
                         headers: {
                             'Content-Type': 'application/json'
@@ -197,7 +196,7 @@ function displayUserDetails(userId, dia) {
 
     async function deleteAgenda(){
 
-        fetch(baseUrl + `Agendas`)
+        fetch(baseUrl + `api/Agendas`)
         .then(response => response.json())
         .then(data => deleteAgenda2(data, userId, dia))  
         .catch(error => {
@@ -215,7 +214,7 @@ function displayUserDetails(userId, dia) {
                     const idToDelete = agenda.id;
 
                     try {
-                        const response = await fetch(`${baseUrl}Agendas/${idToDelete}`, {
+                        const response = await fetch(baseUrl + `api/Agendas/${idToDelete}`, {
                             method: "DELETE",
                             headers: {
                                 'Content-Type': 'application/json'
