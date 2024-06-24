@@ -10,7 +10,7 @@ Expo.dev: Sítio que permite a criação conjunta do aplicativo mobile utilizand
 
 Visual Code Studio: Ferramente gratuita disponibilizada pelo Windows em que, nesta etapa, será utilizado como suplemento do trabalho desenvolvido no Expo.dev.
 
-Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa, os quais serviram como base de todas as páginas web do projeto.
+Figma: Editor gráfico utilizado na elaboração dos wireframes desta etapa.
 
 ## Arquitetura
 
@@ -39,7 +39,7 @@ A estrutura consiste em uma arquitetura Web Mobile criada utilizada react, proje
 
 ### Layout Responsivo
 
-Como pode ser observado nos demais tópicos do projeto, o foco do aplicativo será em manter-se leve e responsivo. Ainda, existirá, após a tela de login, um menu lateral reversível, sendo escondido quando não acionado para que um das suas opções sejam escolhidas. Ademais, por se tratar de um aplicativo acessado em celulares/tablets, os icones devem ser proporcionais ao tamanho da tela para, além de serem intuitivos por meio de imagem (utilizando a biblioteca de icones do react), facilitar o acionamento com os dedos, evitando cliques errados.
+Como pode ser observado nos demais tópicos do projeto, o foco do aplicativo será em se manter leve e responsivo. Ainda, existirá, após a tela de login, um menu lateral reversível, sendo escondido quando não acionado para que um das suas opções sejam escolhidas. Ademais, por se tratar de um aplicativo acessado em celulares/tablets, os icones devem ser proporcionais ao tamanho da tela para, além de serem intuitivos por meio de imagem (utilizando a biblioteca de icones do react), facilitar o acionamento com os dedos, evitando cliques errados.
 
 Por fim, como o objetivo é a utilização do aplicativo por usuários das mais diversos background, sendo, também, subentendindo o uso por pessoas com baixa experiência em tecnologia, o aplicativo mobile deve ser intuitivo, com baixo número de telas e fácil acessibilidade. 
 
