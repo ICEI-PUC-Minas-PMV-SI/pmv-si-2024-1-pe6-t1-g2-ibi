@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    //[Authorize(Roles = "Administrador")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TurmasController : ControllerBase
@@ -18,7 +18,7 @@ namespace API_ORIGINAL_01.Controllers
             _context = context;
         }
 
-
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -48,6 +48,7 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(model);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult> Create(Turma model)
         {
@@ -55,8 +56,9 @@ namespace API_ORIGINAL_01.Controllers
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetById", new { id = model.Id }, model);
-        }  
+        }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, TurmaUsuarios model)
         {
@@ -67,6 +69,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = model.TurmaId }, model);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}/Usuarios/{UsuarioId}")]
         public async Task<ActionResult> DeleteUsuario(int id, int UsuarioId)
         {
@@ -83,7 +86,7 @@ namespace API_ORIGINAL_01.Controllers
         }
 
 
-
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -116,7 +119,7 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(model);
         }
 
-
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Turma model)
         {
@@ -133,7 +136,7 @@ namespace API_ORIGINAL_01.Controllers
             return NoContent();
         }
 
-
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
@@ -148,10 +151,7 @@ namespace API_ORIGINAL_01.Controllers
         }
 
 
-
-
-
-
+        [Authorize(Roles = "Administrador")]
         [HttpPost("{id}/alunos")]
         public async Task<ActionResult> AddAluno(int id, TurmaAlunos model)
         {
@@ -162,7 +162,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = model.TurmaId }, model);
         }
 
-
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}/alunos/{AlunoId}")]
         public async Task<ActionResult> DeleteAluno(int id, int AlunoId)
         {

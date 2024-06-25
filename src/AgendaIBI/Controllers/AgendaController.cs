@@ -6,18 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    //[Authorize(Roles = "Administrador, Professor")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AgendasController : ControllerBase
     {
         private readonly AppDbContext _context;
-
         public AgendasController(AppDbContext context)
         {
             _context = context;
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -27,6 +27,7 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(model);
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpPost]
         public async Task<ActionResult> Creat(Agenda model)
         {
@@ -36,6 +37,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = model.Id }, model);
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -48,10 +50,9 @@ namespace API_ORIGINAL_01.Controllers
             GerarLinks(model);
 
             return Ok(model);
-
-
-
         }
+
+
          [HttpGet("data/{alunoId}")]
          public async Task<ActionResult> GetByData(DateTime data, int  alunoId)
          {
@@ -68,6 +69,7 @@ namespace API_ORIGINAL_01.Controllers
          return Ok(model);
          }
 
+        
         [HttpGet("Aluno/{alunoId}")]
         public async Task<ActionResult> GetAllByAlunoId(int alunoId)
         {
@@ -84,7 +86,7 @@ namespace API_ORIGINAL_01.Controllers
         }
 
 
-
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, Agenda model)
         {
@@ -103,6 +105,7 @@ namespace API_ORIGINAL_01.Controllers
 
         }
 
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
@@ -115,6 +118,8 @@ namespace API_ORIGINAL_01.Controllers
 
             return NoContent();
         }
+
+        
 
         private void GerarLinks(Agenda model)
         {

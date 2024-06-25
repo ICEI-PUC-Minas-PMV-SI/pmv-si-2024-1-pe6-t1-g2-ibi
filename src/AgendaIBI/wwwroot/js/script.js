@@ -1,7 +1,7 @@
 const baseUrl = 'https://garods-001-site1.dtempurl.com/';
+const token = localStorage.getItem('jwtToken');
 
 function getUserRole() {
-    const token = localStorage.getItem('jwtToken');
     if (token) {
         try {
             const decodedToken = jwt_decode(token);

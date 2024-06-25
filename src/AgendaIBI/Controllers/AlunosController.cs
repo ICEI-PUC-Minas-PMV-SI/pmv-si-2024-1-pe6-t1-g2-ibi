@@ -7,7 +7,7 @@ using System;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    //[Authorize(Roles = "Administrador")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AlunosController : ControllerBase
@@ -19,6 +19,7 @@ namespace API_ORIGINAL_01.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -49,6 +50,7 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(model);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
         public async Task<ActionResult> Creat(Aluno model)
         {
@@ -60,7 +62,7 @@ namespace API_ORIGINAL_01.Controllers
 
 
 
-
+        [Authorize(Roles = "Administrador,Professor")]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -95,6 +97,7 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(model);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public async Task<ActionResult> update(int id, Aluno model)
         {
@@ -113,6 +116,7 @@ namespace API_ORIGINAL_01.Controllers
 
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
@@ -134,6 +138,7 @@ namespace API_ORIGINAL_01.Controllers
             model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "delete", metodo: "Delete"));
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPost("{id}/usuarios")]
         public async Task<ActionResult> AddUsuario(int id, AlunosResponsaveis model)
         {
@@ -144,6 +149,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = model.AlunoId }, model);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}/usuarios/{UsuarioId}")]
         public async Task<ActionResult> DeleteUsuario(int id, int UsuarioId)
         {

@@ -28,8 +28,8 @@ async function getUserByID() {
 function preencherCampos(data) {
 
     const datas = data.dataNascimento;
-    data1 = datas.slice(0,10);
-    data2 = data1.split("-");
+    const data1 = datas.slice(0,10);
+    const data2 = data1.split("-");
     const datanova = data2[2] + "/" + data2[1] + "/" + data2[0];
 
     idForm.value = data.id;
@@ -41,7 +41,7 @@ function preencherCampos(data) {
 async function deleteUser(){
     const idToDelete = idForm.value;
     try {
-    const response = await fetch(baseUrl + "api/Alunos/${idToDelete}", {
+    const response = await fetch(baseUrl + `api/Alunos/${idToDelete}`, {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ async function updateUser(){
         "matricula": matriculaForm.value,
         "dataNascimento": dataFormatada2
     }
-    try {const response = await fetch(baseUrl + "api/Alunos/${idToUpdate}", {
+    try {const response = await fetch(baseUrl + `api/Alunos/${idToUpdate}`, {
         method: "PUT",
         headers: {
             'Content-Type': 'application/json'

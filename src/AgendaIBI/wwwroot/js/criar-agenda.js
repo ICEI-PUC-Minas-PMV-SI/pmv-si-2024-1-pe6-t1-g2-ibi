@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const alunoID = alunoIDInput.value.trim();
         
         if (alunoID) {
-            fetch(baseUrl + `api/Alunos/${alunoID}`)
+            fetch(baseUrl + `api/Alunos/${alunoID}`, {
+                'Authorization': token
+            })
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Aluno não encontrado');
@@ -73,7 +75,9 @@ if (criarAgendaForm) {
 
         // Verificar se já existe uma agenda para o aluno e data especificados
         try {
-            const checkResponse = await fetch( baseUrl + `api/Agendas`);
+            const checkResponse = await fetch( baseUrl + `api/Agendas`, {
+                headers: {'Authorization': "Bearer " + token}
+            });
             if (checkResponse.ok) {
                 const existingAgendas = await checkResponse.json();
                 if (existingAgendas.length > 0) {
@@ -105,7 +109,8 @@ if (criarAgendaForm) {
             const resposta = await fetch( baseUrl +'api/Agendas', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': "Bearer " + token
                 },
                 body: JSON.stringify(dados)
             });

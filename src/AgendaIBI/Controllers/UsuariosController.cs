@@ -10,7 +10,7 @@ using System.Text;
 
 namespace API_ORIGINAL_01.Controllers
 {
-    //[Authorize(Roles = "Administrador")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -23,6 +23,7 @@ namespace API_ORIGINAL_01.Controllers
             _context = context;
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
@@ -52,9 +53,8 @@ namespace API_ORIGINAL_01.Controllers
             return Ok(usuarios);
         }
 
-
+        [Authorize(Roles = "Administrador")]
         [HttpPost]
-
         public async Task<ActionResult> Creat(UsuarioDto model)
         {
             Usuario novo = new Usuario()
@@ -71,6 +71,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = novo.Id }, novo);
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
@@ -110,6 +111,7 @@ namespace API_ORIGINAL_01.Controllers
 
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public async Task<ActionResult> Update(int id, UsuarioDto model)
         {
@@ -132,6 +134,7 @@ namespace API_ORIGINAL_01.Controllers
 
         }
 
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
