@@ -51,14 +51,18 @@ function displayUserDetails(userId, dia) {
     const obsProf = document.getElementById('obsprof');
     const obsResp = document.getElementById('obsresp');
     
-    fetch(baseUrl + `api/Agendas`)
+    fetch(baseUrl + `api/Agendas`, {
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => response.json())
     .then(data => imprimirAgenda(data, userId, dia))    
     .catch(error => {
         console.error('Erro ao ler contatos via API JSONServer:', error);
     });
 
-    fetch(baseUrl + `api/Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => response.json())
     .then(aluno=> preencherAluno(aluno))
     .catch(error => {
@@ -123,7 +127,9 @@ function displayUserDetails(userId, dia) {
 
     async function updateAgenda(){        
 
-        fetch(baseUrl + `api/Agendas`)
+        fetch(baseUrl + `api/Agendas`,{
+            headers: {'Authorization': "Bearer " + token}
+        })
         .then(response => response.json())
         .then(data => updateAgenda2(data, userId, dia))  
         .catch(error => {
@@ -175,7 +181,8 @@ function displayUserDetails(userId, dia) {
                     try {const response = await fetch(baseUrl + `api/Agendas/${idToUpdate}`, {
                         method: "PUT",
                         headers: {
-                            'Content-Type': 'application/json'
+                            'Content-Type': 'application/json',
+                            'Authorization': "Bearer " + token
                         },
                         body: JSON.stringify(formUpdate)
                     })
@@ -196,7 +203,9 @@ function displayUserDetails(userId, dia) {
 
     async function deleteAgenda(){
 
-        fetch(baseUrl + `api/Agendas`)
+        fetch(baseUrl + `api/Agendas`,{
+            headers: {'Authorization': "Bearer " + token}
+        })
         .then(response => response.json())
         .then(data => deleteAgenda2(data, userId, dia))  
         .catch(error => {
@@ -217,7 +226,8 @@ function displayUserDetails(userId, dia) {
                         const response = await fetch(baseUrl + `api/Agendas/${idToDelete}`, {
                             method: "DELETE",
                             headers: {
-                                'Content-Type': 'application/json'
+                                'Content-Type': 'application/json',
+                                'Authorization': "Bearer " + token
                             }
                         })
                         if(response.ok) {

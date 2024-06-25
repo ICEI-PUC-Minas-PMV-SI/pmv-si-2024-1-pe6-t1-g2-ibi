@@ -25,7 +25,9 @@ if (turmaId) {
 // Função para exibir os detalhes do usuário
 function displayUserDetails(turmaId) {
     
-    fetch( baseUrl + `api/Turmas/${turmaId}`)
+    fetch( baseUrl + `api/Turmas/${turmaId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => response.json())
     .then(data => imprimirTurma(data))
     .catch(error => {
@@ -110,7 +112,8 @@ async function addAluno(idAluno){
         const response = await fetch(baseUrl + `api/Turmas/${turmaId}/Alunos`, {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         },
             body: JSON.stringify(userData)
         })
@@ -138,6 +141,7 @@ async function deleteTableEntry(idAlunoDel){
         let response;
         response = await fetch(baseUrl + `api/Turmas/${idTurmaDelete}/Alunos/${idAlunoDelete}`, {
             method: "DELETE",
+            headers: {'Authorization': "Bearer " + token}
         })
         if(response.ok){
             alert(`Você removeu o id ${idAlunoDelete} da turma ${idTurmaDelete}`);
@@ -154,7 +158,8 @@ async function excluirTurma () {
             const response = await fetch(baseUrl + `api/Turmas/${turmaId}`, {
                 method: "DELETE",
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': "Bearer " + token
                 }})
                 if(response.ok) {
                     alert(`Você excluiu a turma ${turmaId}`);

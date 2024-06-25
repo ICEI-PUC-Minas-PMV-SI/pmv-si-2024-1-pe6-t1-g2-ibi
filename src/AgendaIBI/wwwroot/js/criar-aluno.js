@@ -18,7 +18,8 @@ document.getElementById('criar-aluno').addEventListener('submit', function(event
     fetch( baseUrl + 'api/alunos', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + token
       },
       body: JSON.stringify(userData)
     })

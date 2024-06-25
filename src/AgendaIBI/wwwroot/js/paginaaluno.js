@@ -24,7 +24,9 @@ if (userId) {
 // Função para exibir os detalhes do usuário
 function displayUserDetails(userId) {
     
-    fetch(baseUrl + `api/Alunos/${userId}`)
+    fetch(baseUrl + `api/Alunos/${userId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => response.json())
     .then(data => imprimirAluno(data))
     .catch(error => {

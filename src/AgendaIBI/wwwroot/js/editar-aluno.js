@@ -10,7 +10,9 @@ const dataForm = document.getElementById('data');
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `api/Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => {
         if (response.status === 404) {
           alert('Aluno não encontrado');
@@ -44,7 +46,8 @@ async function deleteUser(){
     const response = await fetch(baseUrl + `api/Alunos/${idToDelete}`, {
         method: "DELETE",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         }})
         if(response.ok) {
             alert(`Você excluiu o usuário ${idToDelete}`);
@@ -69,7 +72,8 @@ async function updateUser(){
     try {const response = await fetch(baseUrl + `api/Alunos/${idToUpdate}`, {
         method: "PUT",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         },
         body: JSON.stringify(formUpdate)
     })

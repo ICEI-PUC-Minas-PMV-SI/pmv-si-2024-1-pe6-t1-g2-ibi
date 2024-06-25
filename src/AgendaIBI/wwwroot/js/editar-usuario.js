@@ -13,7 +13,9 @@ const btnForm = document.getElementById('novo-TurmaAluno');
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `api/Usuarios/${searchId}`)
+    fetch(baseUrl + `api/Usuarios/${searchId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => {
         if (response.status === 404) {
           alert('Usuário não encontrado');
@@ -44,7 +46,8 @@ async function deleteUser(){
     const response = await fetch(baseUrl + `api/Usuarios/${idToDelete}`, {
         method: "DELETE",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         }})
         if(response.ok) {
             alert(`Você excluiu o usuário ${idToDelete}`);
@@ -64,7 +67,8 @@ async function updateUser(){
     try {const response = await fetch(baseUrl + `api/Usuarios/${idToDelete}`, {
         method: "PUT",
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         },
         body: JSON.stringify(formUpdate)
     })
@@ -129,6 +133,7 @@ async function deleteTableEntry(button){
         if(idLinha.startsWith('turma')){
             response = await fetch(baseUrl + `api/Turmas/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
+                headers: {'Authorization': "Bearer " + token}
             })
             if(response.ok){
                 alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} da turma ${idToDelete}`);
@@ -136,6 +141,7 @@ async function deleteTableEntry(button){
             }}  else if(idLinha.startsWith('aluno')){
             response = await fetch(baseUrl + `api/Alunos/${idToDelete}/Usuarios/${idUsuario}`, {
                 method: "DELETE",
+                headers: {'Authorization': "Bearer " + token}
             })
             if(response.ok){
                 alert(`Você excluiu o ${getPerfilName(+perfilForm.value).toLowerCase()} do aluno ${idToDelete}`);
@@ -164,7 +170,8 @@ async function addTurma(idTurma){
         const response = await fetch(baseUrl + `api/Turmas/${idTurma}/Usuarios`, {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         },
             body: JSON.stringify(userData)
         })
@@ -191,7 +198,8 @@ async function addAluno(idAluno){
         const response = await fetch(baseUrl + `api/Alunos/${idAluno}/Usuarios`, {
             method: 'POST',
             headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': "Bearer " + token
         },
             body: JSON.stringify(userData)
         })

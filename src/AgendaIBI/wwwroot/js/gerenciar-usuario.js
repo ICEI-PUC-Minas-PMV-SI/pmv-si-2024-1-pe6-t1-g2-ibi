@@ -13,7 +13,9 @@ const mostrarResponsavel = document.getElementById('mostrar-responsavel');
 mostrarProfessor.addEventListener("click", imprimirProfessores);
 mostrarResponsavel.addEventListener("click", imprimirResponsavel);
 
-fetch(baseUrl +'api/Usuarios')
+fetch(baseUrl +'api/Usuarios',{
+    headers: {'Authorization': "Bearer " + token}
+})
     .then(response => response.json())
     .then(data => imprimirUsuarios(data))
     .catch(error => {

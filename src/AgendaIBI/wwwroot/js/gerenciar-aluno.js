@@ -1,7 +1,9 @@
 const bodyTabela = document.getElementById('table-body');
 
 
-fetch( baseUrl + 'api/Alunos')
+fetch( baseUrl + 'api/Alunos',{
+    headers: {'Authorization': "Bearer " + token}
+})
     .then(response => response.json())
     .then(data => imprimirTurmas(data))
     .catch(error => {

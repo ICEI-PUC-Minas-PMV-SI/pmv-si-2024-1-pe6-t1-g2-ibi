@@ -3,7 +3,9 @@ document.getElementById('search-btn').addEventListener("click",getUserByID);
 
 async function getUserByID() {
     const searchId = document.getElementById("search-id").value;
-    fetch(baseUrl + `api/Alunos/${searchId}`)
+    fetch(baseUrl + `api/Alunos/${searchId}`,{
+        headers: {'Authorization': "Bearer " + token}
+    })
     .then(response => {
         if (response.status === 404) {
           alert('Aluno não encontrado');

@@ -14,7 +14,8 @@ document.getElementById('criar-usuario').addEventListener('submit', async functi
     const response = await fetch(baseUrl + 'api/usuarios', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + token
       },
       body: JSON.stringify(userData)
     })
