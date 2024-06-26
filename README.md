@@ -6,8 +6,8 @@
 
 `SEMESTRE: 6º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
-
+O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia. Durante o projeto, terá como foco a criação da página web e app mobile, principalmente com o foco no registro de atividades dos alunos pelos professores/coordenadores. Além disso, será realizada com a estrutura montada do backend, possibilitando, assim, o registro dos dados na nuvem.
+ 
 ## Integrantes
 
 * Afrânio jorge Barbosa Campos Filho
@@ -31,9 +31,6 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 | ETAPA 3         |[Planejar, desenvolver e gerenciar uma aplicação Web](docs/frontend-web.md) |
 | ETAPA 4        |[Planejar, desenvolver e gerenciar uma aplicação Móvel](docs/frontend-mobile.md) <br>  |
 | ETAPA 5         | [Apresentação](presentation/README.md) |
-## Instruções de utilização
-
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
 
 # Código
 
