@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         
         if (alunoID) {
             fetch(baseUrl + `api/Alunos/${alunoID}`, {
-                'Authorization': token
+                headers: {'Authorization': 'Bearer ' + token}
             })
             .then(response => {
                 if (!response.ok) {

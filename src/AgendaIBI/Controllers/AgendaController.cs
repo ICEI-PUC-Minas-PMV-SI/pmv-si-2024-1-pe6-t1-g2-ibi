@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.JsonPatch;
+
 
 namespace API_ORIGINAL_01.Controllers
 {
@@ -69,7 +71,7 @@ namespace API_ORIGINAL_01.Controllers
          return Ok(model);
          }
 
-        
+        [Authorize(Roles = "Responsavel,Administrador,Professor")]
         [HttpGet("Aluno/{alunoId}")]
         public async Task<ActionResult> GetAllByAlunoId(int alunoId)
         {
@@ -102,7 +104,42 @@ namespace API_ORIGINAL_01.Controllers
 
             return NoContent();
 
+        }
 
+        [Authorize(Roles = "Responsavel")]
+        [HttpPatch("{id}")]
+        public async Task<ActionResult> PatchResponsavel(int id, [FromBody] JsonPatchDocument<Agenda> patchDoc)
+        {
+            var modeloDb = await _context.Agendas.FirstOrDefaultAsync(c => c.Id == id);
+
+            if (modeloDb == null) {
+                return NotFound();
+            }
+
+            if (modeloDb.CienteResponsavel)
+            {
+                return BadRequest("Operação não permitida, o responsável já está ciente.");
+            }
+
+            patchDoc.ApplyTo(modeloDb, ModelState);
+
+            if (!ModelState.IsValid) {
+                return BadRequest(ModelState);
+            }
+
+            try {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException) {
+                if (!_context.Agendas.Any(e => e.Id == id)) {
+                    return NotFound();
+                }
+                else {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
         [Authorize(Roles = "Administrador,Professor")]

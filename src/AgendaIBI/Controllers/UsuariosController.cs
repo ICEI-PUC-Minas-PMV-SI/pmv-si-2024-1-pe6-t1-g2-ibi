@@ -71,7 +71,7 @@ namespace API_ORIGINAL_01.Controllers
             return CreatedAtAction("GetById", new { id = novo.Id }, novo);
         }
 
-        [Authorize(Roles = "Administrador")]
+        [Authorize(Roles = "Responsavel,Professor,Administrador")]
         [HttpGet("{id}")]
         public async Task<ActionResult> GetById(int id)
         {
