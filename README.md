@@ -7,6 +7,9 @@
 `SEMESTRE: 6º`
 
 O presente projeto tem como escopo a elaboração de uma agenda virtual para o Instituto Batista Itatiaia. O projeto terá como foco a criação da página web e app mobile, principalmente com o foco no registro de atividades dos alunos pelos professores/coordenadores. Além disso, será realizada com a estrutura montada do backend, possibilitando, assim, o registro dos dados na nuvem.
+
+Segue a apresentação do projeto:
+https://youtu.be/rRZ7b9SwSmU
  
 ## Integrantes
 
